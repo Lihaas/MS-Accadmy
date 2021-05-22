@@ -1,0 +1,50 @@
+.navbar {
+  display: none;
+}
+
+@media screen and (max-width: 946px) {
+  .navbar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 11vh;
+    background-color: white;
+    box-shadow: 0rem 0.5rem 1rem #639CC6;
+  }
+
+  .nav-wrapper {
+    padding: 0.5rem 3% 0rem 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .brand {
+    width: 16rem;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .brand img{
+    height: 100%;
+  }
+
+  .nav-drawer {
+    display: block;
+    background-color: white;
+    height: 0;
+    transition: height 0.4s ease-in-out;
+    margin-top: 0.3rem;
+    overflow-y: hidden;
+  }
+
+  .nav-drawer a {
+    display: block;
+    text-decoration: none;
+    color: #525252;
+    padding: 1rem 3%;
+  }
+}

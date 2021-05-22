@@ -1,0 +1,63 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 11vh;
+}
+
+.nav-wrapper{
+    padding: 1rem 7% 1rem 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.brand {
+  width: 16rem;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+.brand img{
+    height: 100%;
+}
+
+.nav-center-items{
+    width: 44%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-center-items a,.nav-right-items a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.9rem;
+}
+
+.nav-right-items{
+    width: 18%;
+}
+
+.sign-up{
+    background-color: #3164F4;
+    color: white !important;
+    margin-left: 1rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.4rem;
+}
+
+@media screen and (max-width: 1086px) {
+    .nav-wrapper{
+        padding: 0.4rem 3% 0.4rem 3%
+    }
+}
+
+@media screen and (max-width: 946px) {
+    .navbar{
+        display: none;
+    }
+}
