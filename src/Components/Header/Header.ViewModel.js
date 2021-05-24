@@ -5,7 +5,7 @@ export const changeBackground = (headerRef) => {
         headerRef.current.style.background = "white";
         headerRef.current.style.paddingTop = "0.4rem";
         headerRef.current.style.paddingBottom = "0.4rem";
-        headerRef.current.style.boxShadow = "0rem 0.4rem 1rem #639CC6";
+        headerRef.current.style.boxShadow = "0rem 0.4rem 0.4rem rgba(0,0,0,0.3)";
       }
     }
     if (window.pageYOffset < 84) {

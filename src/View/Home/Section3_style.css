@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+/* ---------------Section 3 of Home Page--------------- */
+.section3 {
+  font-size: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+}
+
+/* -----------------Top part of Screen----------------- */
+.sec3_top_view {
+  display: flex;
+  height: auto;
+  width: auto;
+  margin-bottom: 1%;
+}
+
+/* -----------------Top Heading, Logos and Ratings----------------- */
+.sec3_top_left_view {
+  min-width: 35%;
+  max-width: 35rem;
+  margin: .3% 5% 0% 5%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* ---------------Logos and Rating--------------- */
+.sec3_logo_and_ratings {
+  display: flex;
+  margin: 3% 0;
+}
+.sec3_top_heading {
+  font-size: 2.5rem;
+  width: 100%;
+  box-shadow: 5px 9px 15px #b2bec3;
+}
+/* ---------------Logos--------------- */
+.sec3_logos {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  margin: auto;
+}
+
+.sec3_logo1 img {
+  max-height: 4rem;
+  margin-bottom: 1.5rem;
+}
+.sec3_logo2 img {
+  max-height: 3.8rem;
+  margin-bottom: 1.5rem;
+}
+.sec3_logo3 img {
+  max-height: 8rem;
+}
+
+/* -----------------Rating----------------- */
+.sec3_logo_ratings {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.sec3_logo_ratings p {
+  margin-bottom: 2rem;
+}
+
+/* ---------------Right side's logo--------------- */
+.sec3_top_right_view {
+  position: relative;
+  left: 17%;
+  top: 7rem;
+}
+
+/* -----------------About Us tag and Article----------------- */
+.sec3_bottom_view {
+  font-size: 1.2rem;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.sec3_bottom_view p {
+  font-size: 100%;
+  width: 80%;
+  margin: 2% auto;
+  text-align: left;
+}
+.sec3_aboutUS_tag {
+  color: #ffffff;
+  background-color: #3164f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 83px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 1025px) {
+  .section3 {
+    width: auto;
+  }
+  .sec3_top_view {
+    width: 78vw;
+    margin: auto 8%;
+    flex-direction: column;
+  }
+
+  .sec3_top_left_view {
+    margin: auto;
+  }
+
+  .sec3_top_heading {
+    font-size: 4rem;
+    width: 70vw;
+    box-shadow: 5px 9px 15px #b2bec3;
+  }
+
+  /* -----------Logos and ratings----------- */
+  .sec3_logo_and_ratings {
+    margin: 4% -15%;
+    align-items: center;
+  }
+  .sec3_logo1 img {
+    max-height: 6rem;
+    margin-bottom: 2.5rem;
+  }
+  .sec3_logo2 img {
+    max-height: 5.8rem;
+    margin-bottom: 2.5rem;
+  }
+  .sec3_logo3 img {
+    max-height: 11rem;
+  }
+
+  .sec3_logo_ratings {
+    font-size: 200%;
+  }
+
+  /* -----------Center Logo - from right side view----------- */
+  .sec3_top_right_view {
+    left: 18%;
+    top: auto;
+    margin-bottom: -15%;
+  }
+  .sec3_top_right_view img {
+    height: 500px;
+  }
+
+  /* -----------Bottom View----------- */
+  .sec3_bottom_view {
+    width: 100%;
+  }
+  .sec3_bottom_view p {
+    width: 85%;
+    font-size: 200%;
+    margin: 15% auto 5% auto;
+  }
+  .sec3_aboutUS_tag {
+    font-size: 200%;
+    min-height: 130px;
+    margin-left: -12%;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html{
+    width: auto;
+  }
+  .section3 {
+    width: 100%;
+  }
+  .sec3_top_heading {
+    font-size: 1.5rem;
+    min-width: 80vw;
+  }
+
+  /* -----Logo---- */
+  .sec3_logo1 img {
+    max-height: 4rem;
+    margin-bottom: 4rem;
+  }
+  .sec3_logo2 img {
+    max-height: 3.8rem;
+    margin-bottom: 4rem;
+  }
+  .sec3_logo3 img {
+    max-height: 8rem;
+    margin-bottom: 2rem;
+  }
+
+  .sec3_logo_ratings {
+    display: none;
+  }
+
+  /* -----Right View logo---- */
+  .sec3_top_right_view {
+    left: 10%;
+  }
+  .sec3_top_right_view img {
+    height: 250px;
+  }
+
+  /* -----sec3_bottom_view Tags---- */
+  .sec3_bottom_view {
+    margin: auto;
+  }
+  .sec3_bottom_view p {
+    width: 85%;
+    font-size: 90%;
+  }
+  .sec3_aboutUS_tag {
+    font-size: 100%;
+    min-height: 80px;
+    margin: auto;
+    width: auto;
+  }
+}

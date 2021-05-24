@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import React from "react";
-import "../../StyleSheets/Home/Section5_style.css";
-import logo1 from "../../Assets/Image/Sec401.png";
-import logo2 from "../../Assets/Image/Sec402.png";
+import "./Section5_style.css";
+import logo1 from "./images/Sec401.png";
+import logo2 from "./images/Sec402.png";
 
 const Section5 = () => {
   return (
@@ -34,7 +34,7 @@ const Section5 = () => {
           </div>
 
           <div className="sec5_exam_box2">
-            <div className="info">
+            <div className="sec5_exam_info">
               <h1>Exam 2</h1>
               <p>
                 We exclusively deals in UGC net Paper1 & Paper 2 Commerce. We
@@ -50,7 +50,7 @@ const Section5 = () => {
 
           <div className="sec5_exam_box3">
             <img src={logo2} alt="" />
-            <div className="info">
+            <div className="sec5_exam_info">
               <h1>Test Series</h1>
               <p>
                 We exclusively deals in UGC net Paper1 & Paper 2 Commerce. We
@@ -63,7 +63,9 @@ const Section5 = () => {
             </div>
           </div>
         </div>
-        <button className="sec5_free_trail_button">Free Trail Class</button>
+        <div className="sec5_free_trail_button_div">
+          <button className="sec5_free_trail_button">Free Trail Class</button>
+        </div>
       </div>
     </Router>
   );

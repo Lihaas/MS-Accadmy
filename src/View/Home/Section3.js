@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "./../../StyleSheets/Home/Section3_style.css";
+import "./Section3_style.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import logo1 from "../../Assets/Image/youtube.png";
-import logo2 from "../../Assets/Image/googleplay.png";
-import logo3 from "../../Assets/Image/exam.png";
-import logo4 from "../../Assets/Image/rightBox.png";
+import logo1 from "./images/youtube.png";
+import logo2 from "./images/googleplay.png";
+import logo3 from "./images/exam.png";
+import logo4 from "./images/rightBox.png";
 
 const Section3 = () => {
   return (
@@ -20,7 +20,7 @@ const Section3 = () => {
             {/* -----------------Logo----------------- */}
             <div className="sec3_logos">
               <Link to="#" className="sec3_logo1">
-                <img src={logo1} alt="this" />
+                <img src={logo1} alt="" />
               </Link>
               <Link to="#" className="sec3_logo2">
                 <img src={logo2} alt="" />

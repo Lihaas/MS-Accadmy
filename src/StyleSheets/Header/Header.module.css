@@ -4,6 +4,7 @@
   left: 0;
   width: 100vw;
   height: 11vh;
+  z-index: 99;
 }
 
 .nav-wrapper{
@@ -20,6 +21,7 @@
   height: 10vh;
   display: flex;
   align-items: center;
+  text-align: left;
 }
 
 .brand img{
@@ -35,10 +37,11 @@
 .nav-center-items a,.nav-right-items a {
     text-decoration: none;
     color: black;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .nav-right-items{
+    text-align: right;
     width: 18%;
 }
 
