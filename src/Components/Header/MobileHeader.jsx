@@ -29,7 +29,7 @@ const MobileHeader = () => {
         <a href="#">Results</a>
         <a href="#">App</a>
         <a href="#">Login</a>
-        <a href="#">SignUp</a>
+        <a href="/sign-up">SignUp</a>
         <a href="#" className={styles["sign-up"]}>
           SignUp
         </a>

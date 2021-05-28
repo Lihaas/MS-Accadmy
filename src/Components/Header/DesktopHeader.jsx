@@ -28,7 +28,7 @@ const DesktopHeader = () => {
         </div>
         <div className={styles["nav-right-items"]}>
           <a href="#">Login</a>
-          <a href="#" className={styles["sign-up"]}>
+          <a href="/sign-up" className={styles["sign-up"]}>
             SignUp
           </a>
         </div>
