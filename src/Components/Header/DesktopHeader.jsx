@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import styles from "../../StyleSheets/Header/Header.module.css";
 import Logo from "../../Assets/Image/logo.png";
 import {changeBackground} from "./Header.ViewModel"
+import {NavLink} from "react-router-dom"
 
 const DesktopHeader = () => {
 
@@ -20,17 +21,17 @@ const DesktopHeader = () => {
         </div>
 
         <div className={styles["nav-center-items"]}>
-          <a href="#">Home</a>
-          <a href="#">Courses</a>
-          <a href="#">ContactUs</a>
-          <a href="#">Results</a>
-          <a href="#">App</a>
+          <NavLink to={{pathname:"/home"}}>Home</NavLink>
+          <NavLink to={{pathname:"/courses"}}>Courses</NavLink>
+          <NavLink to={{pathname:"/notes"}}>Notes</NavLink>
+          <NavLink to={{pathname:"/contact-us"}}>ContactUs</NavLink>
+          <NavLink to={{pathname:"/about-us"}}>About Us</NavLink>
         </div>
         <div className={styles["nav-right-items"]}>
-          <a href="#">Login</a>
-          <a href="/sign-up" className={styles["sign-up"]}>
+          <NavLink to={{pathname: "/sign-up"}}>Login</NavLink>
+          <NavLink to={{pathname:"/sign-up"}} className={styles["sign-up"]}>
             SignUp
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>

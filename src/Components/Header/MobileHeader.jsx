@@ -1,14 +1,16 @@
 import styles from "../../StyleSheets/Header/MobileHeader.module.css";
 import HamMenuIcon from "../../Assets/Icons/menu.svg";
-import Logo from "../../Assets/Image/logo.png"
+import Logo from "../../Assets/Image/logo.png";
 import { useRef, useState } from "react";
 import { navDrawerHandler } from "./Header.ViewModel";
+import { NavLink } from "react-router-dom";
 
 const MobileHeader = () => {
   const drawerRef = useRef(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  const drawerHandler = () => navDrawerHandler(isDrawerOpen, setIsDrawerOpen, drawerRef)
+  const drawerHandler = () =>
+    navDrawerHandler(isDrawerOpen, setIsDrawerOpen, drawerRef);
 
   return (
     <div className={styles.navbar}>
@@ -23,16 +25,15 @@ const MobileHeader = () => {
       </div>
 
       <div className={styles["nav-drawer"]} ref={drawerRef}>
-        <a href="#">Home</a>
-        <a href="#">Courses</a>
-        <a href="#">ContactUs</a>
-        <a href="#">Results</a>
-        <a href="#">App</a>
-        <a href="#">Login</a>
-        <a href="/sign-up">SignUp</a>
-        <a href="#" className={styles["sign-up"]}>
+        <NavLink to={{ pathname: "/home" }}>Home</NavLink>
+        <NavLink to={{ pathname: "/courses" }}>Courses</NavLink>
+        <NavLink to={{ pathname: "/notes" }}>Notes</NavLink>
+        <NavLink to={{ pathname: "/contact-us" }}>ContactUs</NavLink>
+        <NavLink to={{ pathname: "/about-us" }}>About Us</NavLink>
+        <NavLink to={{ pathname: "/sign-up" }}>Login</NavLink>
+        <NavLink to={{ pathname: "/sign-up" }} className={styles["sign-up"]}>
           SignUp
-        </a>
+        </NavLink>
       </div>
     </div>
   );
