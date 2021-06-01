@@ -30,7 +30,7 @@ const MobileHeader = () => {
         <NavLink to={{ pathname: "/notes" }}>Notes</NavLink>
         <NavLink to={{ pathname: "/contact-us" }}>ContactUs</NavLink>
         <NavLink to={{ pathname: "/about-us" }}>About Us</NavLink>
-        <NavLink to={{ pathname: "/sign-up" }}>Login</NavLink>
+        <NavLink to={{ pathname: "/login" }}>Login</NavLink>
         <NavLink to={{ pathname: "/sign-up" }} className={styles["sign-up"]}>
           SignUp
         </NavLink>

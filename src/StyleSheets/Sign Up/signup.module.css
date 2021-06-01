@@ -70,7 +70,40 @@
   width: 10rem;
   margin-top: 2rem;
 }
-
+.dialog{
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0vh;
+  right: 0vw;
+  width: 100%;
+  height: 95%;
+  margin-top: 5%;
+  filter: none !important;
+  display: none;
+  border: none;
+  background: rgba(0,0,0,.3);
+}
+.otp-section{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background-color: #ffff;
+  margin: 0% auto;
+  height: 15vh;
+  padding: 2%;
+  border-radius: 5px;
+  box-shadow: 3px 4px #ededed;
+}
+.otp-section input{
+  margin-bottom: 10px;
+  border: 1px solid #3164f4;
+  border-radius: 4px;
+  height: 3vh;
+}
+.otp-section button{
+  width: 20%;
+}
 @media screen and (max-width: 1271px) {
   .sign-up-form form {
     margin-left: 1rem;
@@ -81,6 +114,9 @@
   .section-wrapper {
     padding-left: 3%;
     padding-right: 3%;
+  }
+  .otp-section{
+    width: 30%;
   }
 }
 
@@ -129,5 +165,12 @@
   .sign-up .sign-up-form {
     margin: 0;
   }
+  .otp-section{
+    width: 40%;
+  }
+}  
+@media screen and (max-width: 500px){
+.otp-section{
+  width: 60%;
 }
-
+}

@@ -7,6 +7,8 @@ import examDetail from "./Components/Exam Detail/index"
 import Home from "./View/Home";
 import Notes from "./Components/Notes/index";
 import ContactUs from "./View/ContactUs";
+import Dashboard from "./Components/dashboard/index"
+import Login from "./Components/Login/index"
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
           <Route exact path="/courses" component={examDetail} />
           <Route exact path="/notes" component={Notes} />
           <Route exact path="/contact-us" component={ContactUs} />
+          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/login" component={Login} />
         </Switch>
         <Footer />
       </div>

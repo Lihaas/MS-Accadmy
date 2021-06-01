@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import styles from '../../StyleSheets/Sign Up/signup.module.css'
+import styles from '../../StyleSheets/Login/login.module.css'
 import signUpImage from '../../Assets/Image/study-at-home-2527770-2114673.png'
 import firebase from "../../firebase"
 import  { Redirect } from 'react-router-dom'
 
-const SignUp = ()=>{
+const Login = ()=>{
   const [login,setLogin] = useState(false);
   const [incorrect,setIncorrect] = useState(false);
   const [recapMessage,setRecapMessage] = useState(false);
@@ -54,12 +54,8 @@ const SignUp = ()=>{
               </p>
               <div className={styles["sign-up-form"]}>
               <form>
-                  <label>Name</label>
-                  <input type="text" id="name" placeholder="Full Name (e.g, Ashish Garg)" />
                   <label>Phone Number</label>
-                  <input type="text" id="phoneNumber" placeholder="Mobile Number (e.g, 8989112233)" size="10" />
-                  <label>Email</label>
-                  <input type="email" id="email" placeholder="Email (e.g, ashish@gmail.com)"/>
+                  <input type="text" id="phoneNumber" placeholder="Mobile Number (e.g, 8989112233)"/>
                   {
                     recapMessage?
                     <p style={{color:"red"}}>Please fill recaptcha</p>
@@ -89,4 +85,4 @@ const SignUp = ()=>{
    
 }
 
-export default SignUp;
+export default Login;

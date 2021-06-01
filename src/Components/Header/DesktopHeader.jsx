@@ -28,7 +28,7 @@ const DesktopHeader = () => {
           <NavLink to={{pathname:"/about-us"}}>About Us</NavLink>
         </div>
         <div className={styles["nav-right-items"]}>
-          <NavLink to={{pathname: "/sign-up"}}>Login</NavLink>
+          <NavLink to={{pathname: "/login"}}>Login</NavLink>
           <NavLink to={{pathname:"/sign-up"}} className={styles["sign-up"]}>
             SignUp
           </NavLink>
