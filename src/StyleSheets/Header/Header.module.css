@@ -7,13 +7,13 @@
   z-index: 99;
 }
 
-.nav-wrapper{
-    padding: 1rem 7% 1rem 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-    transition: all 0.2s ease-in-out;
+.nav-wrapper {
+  padding: 1rem 7% 1rem 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
 }
 
 .brand {
@@ -24,43 +24,80 @@
   text-align: left;
 }
 
-.brand img{
-    height: 100%;
+.brand img {
+  height: 100%;
 }
 
-.nav-center-items{
-    width: 44%;
-    display: flex;
-    justify-content: space-between;
+.nav-center-items {
+  width: 44%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.nav-center-items a,.nav-right-items a {
-    text-decoration: none;
-    color: black;
-    font-size: 1rem;
+.nav-center-items a,
+.nav-right-items a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
 }
 
-.nav-right-items{
-    text-align: right;
-    width: 18%;
+.nav-right-items {
+  text-align: right;
+  width: 18%;
 }
 
-.sign-up{
-    background-color: #3164F4;
-    color: white !important;
-    margin-left: 1rem;
-    padding: 0.6rem 1.5rem;
-    border-radius: 0.4rem;
+.sign-up {
+  background-color: #3164f4;
+  color: white !important;
+  margin-left: 1rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.4rem;
+}
+
+.profile-dropdown {
+  width: 14.2rem;
+  height: 9.5rem;
+  background: white;
+  position: absolute;
+  top: 3.5rem;
+  left: 0.7rem;
+  border-radius: 0.3rem;
+  display: none;
+}
+
+.profile-dropdown-item, .courses-dropdown-item {
+  display: block;
+  text-align: left;
+  padding: 0.7rem 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.profile-dropdown-item:hover, .courses-dropdown-item:hover{
+    background-color: lightgray;
+}
+
+.active-profile-dropdown-item{
+    background: lightgrey;
+}
+
+.courses-dropdown{
+  width: 14.2rem;
+  height: 6.5rem;
+  background: white;
+  position: absolute;
+  top: 3rem;
+  border-radius: 0.3rem;
+  display: none;
 }
 
 @media screen and (max-width: 1086px) {
-    .nav-wrapper{
-        padding: 0.4rem 3% 0.4rem 3%
-    }
+  .nav-wrapper {
+    padding: 0.4rem 3% 0.4rem 3%;
+  }
 }
 
 @media screen and (max-width: 946px) {
-    .navbar{
-        display: none;
-    }
+  .navbar {
+    display: none;
+  }
 }

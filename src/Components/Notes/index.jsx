@@ -3,13 +3,24 @@ import samplepic from "../../Assets/Image/istockphoto-1209904658-612x612.jpg"
 import pdf from "../../Assets/Image/pdf.png"
 import notes from "../../Assets/Notes/sampleNotes.pdf"
 import dropdown from "../../Assets/Image/dropdownicon.png"
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Paper1NotesData } from "../../Firebase/NotesData";
 
 const Notes = () => {
     const [show,setShow]=useState(false);
     const [show1,setShow1]=useState(false);
     const [show2,setShow2]=useState(false);
     const [show3,setShow3]=useState(false);
+    const [notesData, setNotesData] = useState({})
+
+    useEffect(()=>{
+      Paper1NotesData(setNotesData)
+    },[])
+
+    //  Object.keys(notesData).map(item =>  // item = chapter 1
+            // notesData[item].map(chapterData => {})
+    // })
+
   return (
     <div className={styles.notes}>
       <section className={styles["paper-detail"]}>

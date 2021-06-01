@@ -3,8 +3,16 @@ import signUpImage from "../../Assets/Image/study-at-home-2527770-2114673.png";
 import providingImage1 from "../../Assets/Image/istockphoto-1209904658-612x612.jpg";
 import providingImage2 from "../../Assets/Image/wide-test-series.png";
 import providingImage3 from "../../Assets/Image/online-study-2710520-2261196.png";
+import { useEffect, useState } from "react";
+import { Paper1YoutubeData } from "../../Firebase/CoursesData";
 
-const examDetail = () => {
+const ExamDetail = () => {
+  const [youtubeData, setYoutubeData] = useState([]);
+
+  useEffect(() => {
+    Paper1YoutubeData(setYoutubeData);
+  }, []);
+
   return (
     <div className={styles.examDetail}>
       <br></br>
@@ -31,7 +39,9 @@ const examDetail = () => {
         <div className={styles["section-wrapper"]}>
           <div className={styles["image-section"]}>
             <img src={providingImage1} />
-            <span>200+ Full HD<br></br>Video Lectures</span>
+            <span>
+              200+ Full HD<br></br>Video Lectures
+            </span>
           </div>
           <div className={styles["image-section"]}>
             <img src={providingImage2} />
@@ -39,7 +49,9 @@ const examDetail = () => {
           </div>
           <div className={styles["image-section"]}>
             <img src={providingImage3} />
-            <span>A-Z India's Best<br></br> Study Materials</span>
+            <span>
+              A-Z India's Best<br></br> Study Materials
+            </span>
           </div>
         </div>
         <div className={styles["button"]}>
@@ -49,22 +61,32 @@ const examDetail = () => {
       <section className={styles["demo-class"]}>
         <h1>Our Demo Class</h1>
         <div className={styles["section-wrapper"]}>
-          <div className={styles["video-section"]}>
-          <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+          {youtubeData.map((video, index) => {
+            return (
+              <div className={styles["video-section"]} key={index}>
+                <iframe
+                  src={video.link}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen={true}
+                ></iframe>
+                <span>{video.title}</span>
+              </div>
+            );
+          })}
+          {/* <div className={styles["video-section"]}>
+            <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
             <span>ABCD</span>
           </div>
           <div className={styles["video-section"]}>
-            <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+            <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
             <span>ABCD</span>
           </div>
           <div className={styles["video-section"]}>
-            <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+            <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
             <span>ABCD</span>
-          </div>
-          <div className={styles["video-section"]}>
-            <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
-            <span>ABCD</span>
-          </div>
+          </div> */}
         </div>
         <div className={styles["button"]}>
           <button>See More</button>
@@ -74,4 +96,4 @@ const examDetail = () => {
   );
 };
 
-export default examDetail;
+export default ExamDetail;

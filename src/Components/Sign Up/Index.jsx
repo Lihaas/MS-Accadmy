@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from '../../StyleSheets/Sign Up/signup.module.css'
 import signUpImage from '../../Assets/Image/study-at-home-2527770-2114673.png'
-import firebase from "../../firebase"
+import firebase from "../../Firebase/firebase"
 import  { Redirect } from 'react-router-dom'
 
 const SignUp = ()=>{

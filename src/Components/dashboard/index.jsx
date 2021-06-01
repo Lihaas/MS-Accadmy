@@ -69,14 +69,14 @@ const Dashboard=()=>{
                 <h1>Updates</h1>
             <Carousel>
                 <div className={styles["youtube-video"]}>
-                <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
                 <p>New Video Release</p>
                 </div>
                 <div className={styles["youtube-video"]}>
-                <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
                 <p>New Video Release</p>
                 </div><div className={styles["youtube-video"]}>
-                <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
                 <p>New Video Release</p>
                 </div>
             </Carousel>
