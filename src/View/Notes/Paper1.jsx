@@ -6,7 +6,7 @@ import dropdown from "../../Assets/Image/dropdownicon.png"
 import { useEffect, useState } from "react";
 import { Paper1NotesData } from "../../Firebase/NotesData";
 
-const Notes = () => {
+const NotesPaper1 = () => {
     const [show,setShow]=useState(false);
     const [show1,setShow1]=useState(false);
     const [show2,setShow2]=useState(false);
@@ -165,4 +165,4 @@ const Notes = () => {
   );
 };
 
-export default Notes;
+export default NotesPaper1;

@@ -66,7 +66,7 @@ const DesktopHeader = () => {
                 <div className={styles["profile-dropdown"]} id="profile-dropdown">
                   <NavLink to={{pathname: "/dashboard"}} className={styles["profile-dropdown-item"]} activeClassName={styles["active-profile-dropdown-item"]}>Profile</NavLink>
                   <NavLink to={{pathname: "/test"}} className={styles["profile-dropdown-item"]} activeClassName={styles["active-profile-dropdown-item"]}>Test</NavLink>
-                  <a href="#" onClick={userLogout} className={styles["profile-dropdown-item"]}>Logout</a>
+                  <a href="/" onClick={userLogout} className={styles["profile-dropdown-item"]}>Logout</a>
                 </div>
               </div>
             </>
