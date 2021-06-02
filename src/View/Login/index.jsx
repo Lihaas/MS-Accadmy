@@ -28,8 +28,7 @@ const Login = () => {
                   id="phoneNumber"
                   placeholder="Mobile Number (e.g, 8989112233)"
                   required
-                  minLength="10"
-                  maxLength="10"
+                  pattern="[0-9]{10}"
                 />
                   <p id="recapMessage" style={{color: "red",display: "none"}}>Please fill recaptcha</p>
                 <div id="recaptchabox" className={styles["captchabox"]}></div>
