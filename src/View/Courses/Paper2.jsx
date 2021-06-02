@@ -4,13 +4,13 @@ import providingImage1 from "../../Assets/Image/istockphoto-1209904658-612x612.j
 import providingImage2 from "../../Assets/Image/wide-test-series.png";
 import providingImage3 from "../../Assets/Image/online-study-2710520-2261196.png";
 import { useEffect, useState } from "react";
-import { Paper1YoutubeData } from "../../Firebase/CoursesData";
+import { Paper2YoutubeData } from "../../Firebase/CoursesData";
 
 const Paper2 = () => {
   const [youtubeData, setYoutubeData] = useState([]);
 
   useEffect(() => {
-    Paper1YoutubeData(setYoutubeData);
+    Paper2YoutubeData(setYoutubeData);
   }, []);
 
   return (
@@ -55,7 +55,12 @@ const Paper2 = () => {
           </div>
         </div>
         <div className={styles["button"]}>
-          <button>See More</button>
+          <a
+            href="https://www.youtube.com/c/MOHITSHARMACLASSES"
+            target="_blank"
+          >
+            <button>See More</button>
+          </a>
         </div>
       </section>
       <section className={styles["demo-class"]}>
@@ -75,21 +80,14 @@ const Paper2 = () => {
               </div>
             );
           })}
-          {/* <div className={styles["video-section"]}>
-            <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-            <span>ABCD</span>
-          </div>
-          <div className={styles["video-section"]}>
-            <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-            <span>ABCD</span>
-          </div>
-          <div className={styles["video-section"]}>
-            <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-            <span>ABCD</span>
-          </div> */}
         </div>
         <div className={styles["button"]}>
-          <button>See More</button>
+          <a
+            href="https://www.youtube.com/c/MOHITSHARMACLASSES"
+            target="_blank"
+          >
+            <button>See More</button>
+          </a>
         </div>
       </section>
     </div>

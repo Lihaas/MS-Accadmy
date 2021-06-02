@@ -55,7 +55,12 @@ const CoursesPaper1 = () => {
           </div>
         </div>
         <div className={styles["button"]}>
-          <button>See More</button>
+          <a
+            href="https://www.youtube.com/c/MOHITSHARMACLASSES"
+            target="_blank"
+          >
+            <button>See More</button>
+          </a>
         </div>
       </section>
       <section className={styles["demo-class"]}>
@@ -89,7 +94,12 @@ const CoursesPaper1 = () => {
           </div> */}
         </div>
         <div className={styles["button"]}>
-          <button>See More</button>
+          <a
+            href="https://www.youtube.com/c/MOHITSHARMACLASSES"
+            target="_blank"
+          >
+            <button>See More</button>
+          </a>
         </div>
       </section>
     </div>

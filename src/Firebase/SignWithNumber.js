@@ -1,5 +1,4 @@
 import firebase from "./firebase";
-import { Redirect } from "react-router-dom";
 export const otpSender = (e) => {
   e.preventDefault();
   const captcha = new firebase.auth.RecaptchaVerifier("recaptchabox");

@@ -42,40 +42,20 @@ const SignUp = () => {
                   placeholder="Email (e.g, ashish@gmail.com)"
                   required
                 />
-                <dialog id="dialog-box" className={styles["dialog"]}>
-              <div className={styles["otp-section"]}>
-                <h1>Registration</h1>
-                <hr />
-                <label>Full Name</label>  
-                <input type="text" disabled></input>
-                <label>Phone</label>  
-                <input type="text" disabled></input>
-                <label>Email</label>  
-                <input type="text" disabled></input>
-                <label>Address</label>
-                <label>Address Line 1</label>
-                <input type="text" disabled></input>
-                <label>Address Line 2</label>
-                <input type="text" disabled></input>
-                <label>City</label>
-                <input type="text" disabled></input>
-                <label>Pinode</label>
-                <input type="text" disabled></input>
-                <label>State</label>
-                <input type="text" disabled></input>
-                <label>Batch</label>
-                <select>
-                  <option>Option-A</option>
-                  <option>Option-B</option>
-                </select>
-              </div>
-                </dialog>
+                  <label>Address</label>
+                  <textarea placeholder="Full Address (e.g, xyz street,xyz,pincode-xxxxxx)" required/>
+                  <label>Batch</label>
+                  <select>
+                  <option selected="true" disabled="disabled">Select</option>
+                  <option>Batch-A</option>
+                  <option>Batch-B</option>
+                  </select>
                   <p id="recapMessage" style={{color: "red",display: "none"}}>Please fill recaptcha</p>
                 <div id="recaptchabox" className={styles["captchabox"]}></div>
                 <button type="submit">Join Us</button>
               </form>
             </div>
-            {/* <dialog id="dialog-box" className={styles["dialog"]}>
+            <dialog id="dialog-box" className={styles["dialog"]}>
               <div className={styles["otp-section"]}>
                 <label>Enter OTP</label>
                 <input
@@ -98,7 +78,7 @@ const SignUp = () => {
                   :null
                 }
               </div>
-            </dialog> */}
+            </dialog>
           </div>
         </div>
       </section>
