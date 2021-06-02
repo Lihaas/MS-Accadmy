@@ -1,6 +1,6 @@
 .home {
   background: radial-gradient(
-    farthest-side at 20% 35%,
+    farthest-side at 20% 0%,
     white 1%,
     white 1%,
     #72b3e4
@@ -85,6 +85,10 @@ h5 {
 
 .hero-image img {
   height: 75vh;
+}
+
+.section-1, .section-2, .section-3, .section-4, .section-5, .section-6{
+  margin-top: -4rem;
 }
 
 .section-1 .upcomming-batch {

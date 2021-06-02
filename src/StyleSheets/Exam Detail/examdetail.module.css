@@ -1,0 +1,106 @@
+.examDetail{
+    margin-top: 150px;
+}
+section{
+    margin-bottom: 60px;
+}
+.section-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-section,.video-section{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.image-section img{
+    width: 100%;
+    justify-content: center;
+}
+.image-section span{
+    text-align: center;
+}
+.providing h1{
+    margin-left: 10%;
+}
+.button{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+.button button{
+    background-color: #0000FF;
+    color: #FFFF;
+    border-color: #0000FF;
+    border-radius: 5px;
+    width: 90px;
+    height: 25px;
+}
+.demo-class h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.providing .section-wrapper .image-section img{
+    width:80%;
+}
+.providing .section-wrapper .image-section ,.video-section{
+    display: flex;
+    flex-direction: column;
+}
+.video-section{
+    margin-left: 15px;
+}
+.video-section span{
+    margin-top: 10px;
+}
+@media screen and (max-width:1024px){
+    .paper-detail .section-wrapper .paper-detail p{
+        width: 100%;
+    }
+    .demo-class h1{
+        margin-bottom: 10px;
+    }
+    .demo-class .section-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .video-section{
+        margin:10px auto;
+    }
+    iframe{
+        width: 120%;
+        height: 15em;
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width:750px){
+    .section-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 10px;
+    }
+    .demo-class .section-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .paper-detail .section-wrapper .paper-detail p{
+        margin: 10px auto;
+        font-size: 13px;
+        text-align: left;
+    }
+    .providing .image-section{
+        width: 60%;
+    }
+    .paper-detail img{
+        width: 80%;
+    }
+    iframe{
+        width: 100%;
+        height: 100%;
+    }
+}
