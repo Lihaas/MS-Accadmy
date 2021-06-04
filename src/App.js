@@ -6,7 +6,7 @@ import SignUp from "./View/Sign Up/Index"
 import Home from "./View/Home";
 import NotesPaper1 from "./View/Notes/Paper1"
 import NotesPaper2 from "./View/Notes/Paper2"
-import ContactUs from "./View/ContactUs";
+import ContactUs from "./View/ContactUs/index.jsx";
 import Dashboard from "./View/dashboard/index"
 import Login from "./View/Login/index"
 import CoursesPaper1 from "./View/Courses/Paper1"

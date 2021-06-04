@@ -1,6 +1,6 @@
 import styles from "../../StyleSheets/Home/Home.module.css";
 import CoachingCenter from "../../Assets/Image/coaching_center.jpg";
-
+import whatsapp from "../../Assets/Image/chatonwhatsapp.png"
 const ContactUs = () => {
   return (
     <div className={styles.home}>
@@ -32,6 +32,10 @@ const ContactUs = () => {
                 />
                 <button type="submit">Submit</button>
               </form>
+              <div className={styles["whatsapp-section"]}>
+              <h1>OR</h1>
+              <a href="https://wa.me/919996177761" target="_blank"><img src={whatsapp} className={styles["whatsapp-png"]}/></a>
+              </div>
             </div>
             <div className={styles["image-layer"]}>
               <div>

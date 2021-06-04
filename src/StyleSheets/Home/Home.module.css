@@ -698,7 +698,6 @@ h5 {
   .section-1 .upcomming-batch {
     width: 80%;
   }
-
   .section-1 .contact-section .contact-form {
     width: 80%;
   }
@@ -712,7 +711,22 @@ h5 {
     font-size: 0.9rem;
   }
 }
-
+.whatsapp-section{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  text-align: center;
+}
+.whatsapp-section h1{
+  font-size: 30px !important;
+  color: #503b3b;
+}
+.whatsapp-png{
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
 @media screen and (max-width: 740px) {
   .mobile-hero-section .mobile-hero-top h2 {
     text-align: center;

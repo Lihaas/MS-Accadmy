@@ -66,3 +66,25 @@ export const notesDropdownHandler = () => {
   }
 }
 
+export const courseHideShow = () =>{
+  var courseDropDownMenu = document.querySelector("#course-drop-down");
+  if (
+    courseDropDownMenu.style.display === "none" ||
+    courseDropDownMenu.style.display === ""
+  ) {
+    courseDropDownMenu.style.display = "block";
+  } else {
+    courseDropDownMenu.style.display = "none";
+  }
+}
+export const noteHideShow = () =>{
+  var notesDropDownMenu = document.querySelector("#notes-drop-down");
+  if (
+    notesDropDownMenu.style.display === "none" ||
+    notesDropDownMenu.style.display === ""
+  ) {
+    notesDropDownMenu.style.display = "block";
+  } else {
+    notesDropDownMenu.style.display = "none";
+  }
+}
