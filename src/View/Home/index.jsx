@@ -17,8 +17,16 @@ import Image4 from "../../Assets/Image/image4.png";
 import CoachingCenter from "../../Assets/Image/coaching_center.jpg";
 import {Carousel} from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { NavLink } from "react-router-dom";
+import {UpdateData} from "../../Firebase/UpdateData" 
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [updateData,setUpdateData] = useState([])
+
+  useEffect(()=>{
+    UpdateData(setUpdateData);
+  },[])
   return (
     <>
       <div className={styles.home}>
@@ -28,7 +36,7 @@ const Home = () => {
             <p>Online</p>
             <h5>Education</h5>
             <h4>FOR UGC NET</h4>
-            <button>Register Now</button>
+            <NavLink to={{pathname: "/sign-up"}}><button>Register Now</button></NavLink>
           </div>
           <div className={styles["hero-image"]}>
             <img src={Mohit} className={styles["float-img"]} />
@@ -65,15 +73,40 @@ const Home = () => {
             <div className={styles["upcomming-batch"]}>
               <h1>Upcoming Batches</h1>
               <Carousel>
-                <div className={styles["batch"]}>
+                {
+                  updateData.map((item)=>{
+                    if(item.video==="null")
+                    {
+                      return(
+                        <div className={styles["batch"]}>
+                      <span className={styles["title"]}>{item.title}</span>
+                      <a href={item.redirect} target="_blank"><img src={item.img}/></a>
+                      <p className={styles["title"]}>{item.description}</p>
+                        </div>
+                      )
+                    }else{
+                      return(
+                        <div className={styles["batch"]}>
+                        <span className={styles["title"]}>{item.title}</span>
+                        <iframe
+                        src={item.video}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen={true}
+                      ></iframe>
+                        <p className={styles["title"]}>{item.description}</p>
+                          </div>
+                      )
+                    }
+                  })
+                }
+                {/*<div className={styles["batch"]}>
                   <span className={styles["title"]}>UGC NET 2021</span>
                 </div>
                 <div className={styles["batch"]}>
                   <span className={styles["title"]}>UGC NET 2021</span>
-                </div>
-                <div className={styles["batch"]}>
-                  <span className={styles["title"]}>UGC NET 2021</span>
-                </div>
+                </div> */}
             </Carousel>
             </div>
             <div className={styles["contact-section"]}>

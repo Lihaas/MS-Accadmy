@@ -108,10 +108,17 @@ h5 {
   border-radius: 1rem;
   overflow: hidden;
   padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .upcomming-batch .batch .title {
   color: white;
+}
+.upcomming-batch .batch img , .upcomming-batch .batch a{
+  width: 350px !important;
+  height: 150px;
+  margin: 15px auto 15px auto;
 }
 
 .section-2 .section-wrapper h1 {

@@ -1,15 +1,20 @@
 import styles from "../../StyleSheets/dashboard/dashboard.module.css"
 import dp from "../../Assets/Image/sample dp.png"
-import { useState } from "react"
 import dropdown from "../../Assets/Image/dropdownicon.png"
 import {Carousel} from "react-responsive-carousel"
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";import {UpdateData} from "../../Firebase/UpdateData" 
+import { useEffect, useState } from "react";
 
 const Dashboard=()=>{
     const [show,setShow] = useState(false)
     const [show1,setShow1] = useState(false)
     const [show2,setShow2] = useState(false)
     const [show3,setShow3] = useState(false)
+    const [updateData,setUpdateData] = useState([])
+
+    useEffect(()=>{
+      UpdateData(setUpdateData);
+    },[])
     return(
         <div className={styles.dashboard}>
             <div className={styles["left-box"]}>
@@ -68,17 +73,34 @@ const Dashboard=()=>{
             <section className={styles["carousel-box"]}>
                 <h1>Updates</h1>
             <Carousel>
-                <div className={styles["youtube-video"]}>
-                <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-                <p>New Video Release</p>
-                </div>
-                <div className={styles["youtube-video"]}>
-                <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-                <p>New Video Release</p>
-                </div><div className={styles["youtube-video"]}>
-                <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-                <p>New Video Release</p>
-                </div>
+            {
+                  updateData.map((item)=>{
+                    if(item.video==="null")
+                    {
+                      return(
+                        <div className={styles["batch"]}>
+                      <span className={styles["title"]}>{item.title}</span>
+                      <a href={item.redirect} target="_blank"><img src={item.img}/></a>
+                      <p className={styles["title"]}>{item.description}</p>
+                        </div>
+                      )
+                    }else{
+                      return(
+                        <div className={styles["batch"]}>
+                        <span className={styles["title"]}>{item.title}</span>
+                        <iframe
+                        src={item.video}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen={true}
+                      ></iframe>
+                        <p className={styles["title"]}>{item.description}</p>
+                          </div>
+                      )
+                    }
+                  })
+                }
             </Carousel>
             </section>
             </div>

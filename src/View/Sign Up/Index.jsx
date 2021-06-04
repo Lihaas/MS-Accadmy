@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "../../StyleSheets/Sign Up/signup.module.css"
 import signUpImage from "../../Assets/Image/study-at-home-2527770-2114673.png";
 import { otpSender, otpVerification } from "../../Firebase/SignWithNumber";

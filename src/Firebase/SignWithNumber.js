@@ -20,7 +20,7 @@ export const otpSender = (e) => {
 export const otpVerification = (setUser) =>{
   document.getElementById("incorrectOTP").style.display = "none";
   let code = document.getElementById("otpBox").value;
-  window.confirminationResult.confirm(code).then(()=>{
+  window.confirminationResult.confirm(code).then((result)=>{
     setUser(true)
   }).catch(()=>{
     document.getElementById("incorrectOTP").style.display = "block";

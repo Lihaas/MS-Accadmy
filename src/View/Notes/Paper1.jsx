@@ -8,7 +8,6 @@ import {show} from "./dropdown";
 const NotesPaper1 = () => {
     const [notesData, setNotesData] = useState({})
     let max = 0;
-    const  [size,setSize] = useState(-1)
     useEffect(()=>{
       Paper1NotesData(setNotesData)
     },[])
