@@ -96,31 +96,43 @@ h5 {
   text-align: center;
 }
 
-.section-1 .upcomming-batch h1 {
-  margin-bottom: 2rem;
+.section-1 .section-wrapper .upcomming-batch h1 {
+  margin-bottom: 20px !important;
   font-size: 2.3rem;
 }
 
 .upcomming-batch .batch {
   width: 100%;
   background: #005dff;
-  height: 50vh;
+  height: 100%;
   border-radius: 1rem;
   overflow: hidden;
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.upcomming-batch .batch .title {
+.upcomming-batch .batch span {
   color: white;
 }
-.upcomming-batch .batch img , .upcomming-batch .batch a{
+.upcomming-batch .batch img , 
+.upcomming-batch .batch a,
+.upcomming-batch .batch iframe
+{
   width: 350px !important;
   height: 150px;
-  margin: 15px auto 15px auto;
 }
-
+.upcomming-batch .batch iframe{
+  margin-bottom: 0px !important;
+}
+.title{
+  margin-bottom: 5px;
+}
+.description{
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
 .section-2 .section-wrapper h1 {
   font-size: 2.2rem;
   margin-bottom: 2rem;

@@ -70,10 +70,13 @@ const Dashboard=()=>{
             </section>
             </div>
             <div className={styles["right-box"]}>
-            <section className={styles["carousel-box"]}>
-                <h1>Updates</h1>
-            <Carousel>
-            {
+            <section className={styles["carousel-section"]}>
+          <div className={styles["section-wrapper"]}
+          >
+            <div className={styles["upcomming-batch"]}>
+              <h1>Updates</h1>
+              <Carousel>
+                {
                   updateData.map((item)=>{
                     if(item.video==="null")
                     {
@@ -81,7 +84,7 @@ const Dashboard=()=>{
                         <div className={styles["batch"]}>
                       <span className={styles["title"]}>{item.title}</span>
                       <a href={item.redirect} target="_blank"><img src={item.img}/></a>
-                      <p className={styles["title"]}>{item.description}</p>
+                      <span className={styles["description"]}>{item.description}</span>
                         </div>
                       )
                     }else{
@@ -95,14 +98,22 @@ const Dashboard=()=>{
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen={true}
                       ></iframe>
-                        <p className={styles["title"]}>{item.description}</p>
+                        <span className={styles["description"]}>{item.description}</span>
                           </div>
                       )
                     }
                   })
                 }
+                {/*<div className={styles["batch"]}>
+                  <span className={styles["title"]}>UGC NET 2021</span>
+                </div>
+                <div className={styles["batch"]}>
+                  <span className={styles["title"]}>UGC NET 2021</span>
+                </div> */}
             </Carousel>
-            </section>
+            </div>
+            </div>
+        </section>
             </div>
         </div>
     )

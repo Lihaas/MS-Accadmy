@@ -71,7 +71,7 @@ const Home = () => {
           <div className={styles["section-wrapper"]}
           >
             <div className={styles["upcomming-batch"]}>
-              <h1>Upcoming Batches</h1>
+              <h1>Updates</h1>
               <Carousel>
                 {
                   updateData.map((item)=>{
@@ -81,7 +81,7 @@ const Home = () => {
                         <div className={styles["batch"]}>
                       <span className={styles["title"]}>{item.title}</span>
                       <a href={item.redirect} target="_blank"><img src={item.img}/></a>
-                      <p className={styles["title"]}>{item.description}</p>
+                      <span className={styles["description"]}>{item.description}</span>
                         </div>
                       )
                     }else{
@@ -95,7 +95,7 @@ const Home = () => {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen={true}
                       ></iframe>
-                        <p className={styles["title"]}>{item.description}</p>
+                        <span className={styles["description"]}>{item.description}</span>
                           </div>
                       )
                     }
