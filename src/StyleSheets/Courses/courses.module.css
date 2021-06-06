@@ -31,12 +31,14 @@ section{
     margin-top: 30px;
 }
 .button button{
-    background-color: #0000FF;
-    color: #FFFF;
-    border-color: #0000FF;
-    border-radius: 5px;
-    width: 90px;
-    height: 25px;
+    background: #3164f4;
+    border: 0;
+    border-radius: 0.8rem;
+    height: 2.5rem;
+    font-size: 0.9rem;
+    color: white;
+    width: 10rem;
+    margin-top: 1rem;
 }
 .demo-class h1{
     text-align: center;
@@ -54,6 +56,62 @@ section{
 }
 .video-section span{
     margin-top: 10px;
+}
+.see-more-section{
+    position: fixed;
+    top: 12vh;
+    background-color: #FFFF;
+    width: 100vw;
+    height: 88vh;
+    overflow: auto;
+    display: none;
+    /* display: none; */
+}
+.book-heading{
+    background-color: #3164f4;
+    display: flex;
+}
+.heading-area{
+    width: 95%;
+}
+.close-image{
+    width: 5%;
+}
+.close-image img{
+    width: 50%;
+}
+.book-card-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,150px));
+    gap: 10px;
+    margin: 10px;
+}
+.book-card-section a{
+    text-decoration: none;
+    color: black;
+}
+.book-card{
+    border: 1px solid black;
+    /* height: 40vh;
+    width: 15vw; */
+    background-color: #0000;
+    margin-right: 15px !important;
+    display: flex;
+    flex-direction: column;
+}
+.book-image{
+    height: 90%;
+}
+.book-image img{
+    height: 100%;
+    width: 100%;
+}
+.book-text{
+    height: 10%;
+}
+.book-text p{
+    margin: 0%;
+    padding: 0%;
 }
 @media screen and (max-width:1024px){
     .paper-detail .section-wrapper .paper-detail p{

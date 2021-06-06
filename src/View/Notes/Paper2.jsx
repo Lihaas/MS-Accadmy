@@ -10,6 +10,7 @@ const NotesPaper1 = () => {
     let max=0;
     useEffect(()=>{
       Paper2NotesData(setNotesData)
+      window.scrollTo(0,0)
     },[])
     //  Object.keys(notesData).map(item =>  // item = chapter 1
             // notesData[item].map(chapterData => {})

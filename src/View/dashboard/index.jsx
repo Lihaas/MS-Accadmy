@@ -1,5 +1,5 @@
 import styles from "../../StyleSheets/dashboard/dashboard.module.css"
-import dp from "../../Assets/Image/sample dp.png"
+import dp from "../../Assets/Image/male-user.png"
 import dropdown from "../../Assets/Image/dropdownicon.png"
 import {Carousel} from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.min.css";import {UpdateData} from "../../Firebase/UpdateData" 
@@ -14,6 +14,7 @@ const Dashboard=()=>{
 
     useEffect(()=>{
       UpdateData(setUpdateData);
+      window.scrollTo(0,0)
     },[])
     return(
         <div className={styles.dashboard}>

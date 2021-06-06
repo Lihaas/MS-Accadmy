@@ -89,6 +89,15 @@
   border-radius: 0.3rem;
   display: none;
 }
+.notes-dropdown{
+  width: 14.2rem;
+  height: 8.5rem;
+  background: white;
+  position: absolute;
+  top: 3rem;
+  border-radius: 0.3rem;
+  display: none;
+}
 
 @media screen and (max-width: 1086px) {
   .nav-wrapper {

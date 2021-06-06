@@ -12,10 +12,10 @@
     width: 50%;
 }
 .dp{
-    width: 90%;
-    justify-content: center;
+    width: 100%;
+    justify-content: right;
     align-items: center;
-    text-align: center;
+    text-align: right;
 }
 .account-information{
     display: flex;

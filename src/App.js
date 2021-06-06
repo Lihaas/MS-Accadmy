@@ -11,12 +11,13 @@ import Dashboard from "./View/dashboard/index"
 import Login from "./View/Login/index"
 import CoursesPaper1 from "./View/Courses/Paper1"
 import CoursesPaper2 from "./View/Courses/Paper2"
+import {desktopDropdownHandler} from "./Components/Header/Header.ViewModel"
 
 const App = () => {
   return (
     <Router>
       <Header />
-      <div className="content-wrapper">
+      <div className="content-wrapper" onClick={desktopDropdownHandler}>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
@@ -26,6 +27,7 @@ const App = () => {
           <Route exact path="/courses/paper2" component={CoursesPaper2} />
           <Route exact path="/notes/paper1" component={NotesPaper1} />
           <Route exact path="/notes/paper2" component={NotesPaper2} />
+          <Route exact path="/notes/testseries" component={NotesPaper2} />
           <Route exact path="/contact-us" component={ContactUs} />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/login" component={Login} />

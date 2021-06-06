@@ -5,13 +5,38 @@ import providingImage2 from "../../Assets/Image/wide-test-series.png";
 import providingImage3 from "../../Assets/Image/online-study-2710520-2261196.png";
 import { useEffect, useState } from "react";
 import { Paper1YoutubeData } from "../../Firebase/CoursesData";
-
+import { bookData } from "../../Firebase/bookData";
+import closeicon from "../../Assets/Image/closeIcon.png";
 const CoursesPaper1 = () => {
   const [youtubeData, setYoutubeData] = useState([]);
+  const [bookdata, setbookdata] = useState([]);
 
   useEffect(() => {
     Paper1YoutubeData(setYoutubeData);
+    bookData(setbookdata);
+    window.scrollTo(0,0);
   }, []);
+
+  const seeMoreDialog = () => {
+    if (
+      document.getElementById("see-more").style.display === "none" ||
+      document.getElementById("see-more").style.display === ""
+    ) {
+      document.getElementById("see-more").style.display = "block";
+    } else {
+      document.getElementById("see-more").style.display = "none";
+    }
+  };
+  const closeDialog = () => {
+    if (
+      document.getElementById("see-more").style.display === "none" ||
+      document.getElementById("see-more").style.display === ""
+    ) {
+      document.getElementById("see-more").style.display = "block";
+    } else {
+      document.getElementById("see-more").style.display = "none";
+    }
+  };
 
   return (
     <div className={styles.examDetail}>
@@ -55,12 +80,47 @@ const CoursesPaper1 = () => {
           </div>
         </div>
         <div className={styles["button"]}>
-          <a
-            href="https://www.youtube.com/c/MOHITSHARMACLASSES"
-            target="_blank"
+          <button
+            onClick={() => {
+              seeMoreDialog();
+            }}
           >
-            <button>See More</button>
-          </a>
+            See More
+          </button>
+          <div className={styles["see-more-section"]} id="see-more">
+            <div className={styles["book-heading"]}>
+              <div className={styles["heading-area"]}>
+            <h1>
+              Books
+            </h1>
+              </div>
+            <div className={styles["close-image"]}>
+              <img
+                src={closeicon}
+                onClick={() => {
+                  closeDialog();
+                }}
+              />
+            </div>
+            </div>
+            <div className={styles["book-card-section"]}>
+              {bookdata.map((item, index) => {
+                let link="https://api.whatsapp.com/send?phone=919996177761&text=" + item.name
+                return (
+                  <div className={styles["book-card"]} key={index}>
+                      <a href={link} target="_blank">
+                      <div className={styles["book-image"]}>
+                        <img src={item.img} />
+                      </div>
+                      <div className={styles["book-text"]}>
+                        <p>{item.name}</p>
+                      </div>
+                  </a>
+                    </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
       <section className={styles["demo-class"]}>

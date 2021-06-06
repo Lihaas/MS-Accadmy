@@ -352,7 +352,8 @@ h5 {
   color: grey;
 }
 
-.contact-form form input {
+.contact-form form input,
+.contact-form form select {
   width: 20rem;
   height: 2.3rem;
   margin-top: 0.4rem;
@@ -361,7 +362,9 @@ h5 {
   padding-left: 1rem;
   outline: none;
 }
-
+.contact-form form select {
+  width: 21.2rem;
+}
 .contact-form form button {
   background: #3164f4;
   border: 0;
@@ -629,11 +632,14 @@ h5 {
   }
 
   .contact-form form input,
+  .contact-form form select,
   .section-1 .contact-form form input {
     width: 100%;
     height: 2.1rem;
   }
-
+  .contact-form form select {
+    width: 18.5rem;
+  }
   .section-4 .section-wrapper .exam-1,
   .section-4 .section-wrapper .exam-2,
   .section-4 .section-wrapper .test-series {

@@ -10,6 +10,7 @@ const NotesPaper1 = () => {
     let max = 0;
     useEffect(()=>{
       Paper1NotesData(setNotesData)
+      window.scrollTo(0,0)
     },[])
   return (
     <div className={styles.notes}>
@@ -35,7 +36,7 @@ const NotesPaper1 = () => {
           <h1>Chapters</h1>
           <br></br>
           {
-            Object.keys(notesData).reverse().map((item,index)=>{
+            Object.keys(notesData).map((item,index)=>{
               max=index;
               return(
               <div className={styles["chapter"]} key={index}>

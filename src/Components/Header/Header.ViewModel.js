@@ -88,3 +88,22 @@ export const noteHideShow = () =>{
     notesDropDownMenu.style.display = "none";
   }
 }
+
+export const desktopDropdownHandler = ()=>{
+  var notesDropdown = document.querySelector("#notes-dropdown");
+  var coursesDropdown = document.querySelector("#courses-dropdown");
+  var profileDropdown = document.querySelector("#profile-dropdown");
+  if(
+  coursesDropdown.style.display === "block" ||
+  notesDropdown.style.display === "block"
+  ){
+    coursesDropdown.style.display = "none";
+    notesDropdown.style.display = "none";
+  }
+  if(profileDropdown!==null &&  
+    profileDropdown.style.display === "block")
+    {
+      profileDropdown.style.display = "none";
+    }
+  // console.log(document.getElementById("profile-dropdown").style)
+}

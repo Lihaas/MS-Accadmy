@@ -1,11 +1,14 @@
-import React, {  useState } from "react";
+import React, {  useEffect, useState } from "react";
 import styles from "../../StyleSheets/Login/login.module.css";
 import signUpImage from "../../Assets/Image/study-at-home-2527770-2114673.png";
 import { otpSender, otpVerification } from "../../Firebase/SignWithNumber";
 import { Redirect } from "react-router-dom";
-
+import dp from "../../Assets/Image/male-user.png";
 const Login = () => {
   const [user,setUser] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, []);
   return (
     <div>
       <br></br>
@@ -37,6 +40,8 @@ const Login = () => {
             </div>
             <dialog id="dialog-box" className={styles["dialog"]}>
               <div className={styles["otp-section"]}>
+                <h1>Verification</h1>
+                <img src={dp} />
                 <label>Enter OTP</label>
                 <input
                   type="password"

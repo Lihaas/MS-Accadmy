@@ -78,4 +78,8 @@
       .result-2{
           flex-direction: column-reverse;
       }
+      .member-1 img,.member-2 img,.member-3 img{
+        height: 20%;
+        margin: auto;
+      }
 }
