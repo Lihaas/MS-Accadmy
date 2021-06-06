@@ -10,6 +10,10 @@ const SignUp = () => {
     window.scrollTo(0,0);
   }, []);
   const [user,setUser] = useState(false);
+  const Verification = (event)=>{
+    event.preventDefault();
+    otpVerification(setUser);
+}
   return (
     <div>
       <br></br>
@@ -39,6 +43,7 @@ const SignUp = () => {
                   placeholder="Mobile Number (e.g, 8989112233)"
                   required
                   pattern="[0-9]{10}"
+                  maxLength="10"
                 />
                 <label>Email</label>
                 <input
@@ -63,18 +68,19 @@ const SignUp = () => {
               <div className={styles["otp-section"]}>
                 <h1>Register Yourself</h1>
                 <img src={dp} />
+                <form onSubmit={Verification}>
                 <label>Enter OTP</label>
                 <input
                   type="password"
                   placeholder="enter otp"
                   id="otpBox"
+                  maxLength="6"
+                  required
+                  pattern="[0-9]{6}"
                 ></input>
                 <p style={{color:"red",display: "none",margin:"0"}} id="incorrectOTP">Please enter correct OTP </p>
                 <button
-                  type="button"
-                  onClick={() => {
-                    otpVerification(setUser);
-                  }}
+                  type="submit"
                 >
                   login
                 </button>
@@ -83,6 +89,7 @@ const SignUp = () => {
                   <Redirect to="/dashboard" />
                   :null
                 }
+                </form>
               </div>
             </dialog>
           </div>

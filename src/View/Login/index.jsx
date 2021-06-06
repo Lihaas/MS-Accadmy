@@ -9,6 +9,10 @@ const Login = () => {
   useEffect(() => {
     window.scrollTo(0,0);
   }, []);
+  const Verification = (event)=>{
+      event.preventDefault();
+      otpVerification(setUser);
+  }
   return (
     <div>
       <br></br>
@@ -32,6 +36,7 @@ const Login = () => {
                   placeholder="Mobile Number (e.g, 8989112233)"
                   required
                   pattern="[0-9]{10}"
+                  maxLength="10"
                 />
                   <p id="recapMessage" style={{color: "red",display: "none"}}>Please fill recaptcha</p>
                 <div id="recaptchabox" className={styles["captchabox"]}></div>
@@ -42,18 +47,19 @@ const Login = () => {
               <div className={styles["otp-section"]}>
                 <h1>Verification</h1>
                 <img src={dp} />
+                <form onSubmit={Verification}>
                 <label>Enter OTP</label>
                 <input
                   type="password"
                   placeholder="enter otp"
                   id="otpBox"
+                  maxLength="6"
+                  required
+                  pattern="[0-9]{6}"
                 ></input>
                 <p style={{color:"red",display: "none",margin:"0"}} id="incorrectOTP">Please enter correct OTP </p>
                 <button
-                  type="button"
-                  onClick={() => {
-                    otpVerification(setUser);
-                  }}
+                  type="submit"
                 >
                   login
                 </button>
@@ -62,6 +68,7 @@ const Login = () => {
                   <Redirect to="/dashboard" />
                   :null
                 }
+                </form>
               </div>
             </dialog>
           </div>

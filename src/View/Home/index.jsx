@@ -75,11 +75,11 @@ const Home = () => {
               <h1>Updates</h1>
               <Carousel>
                 {
-                  updateData.map((item)=>{
+                  updateData.map((item,index)=>{
                     if(item.video==="null")
                     {
                       return(
-                        <div className={styles["batch"]}>
+                        <div className={styles["batch"]} key={index}>
                       <span className={styles["title"]}>{item.title}</span>
                       <a href={item.redirect} target="_blank"><img src={item.img}/></a>
                       <span className={styles["description"]}>{item.description}</span>
@@ -87,7 +87,7 @@ const Home = () => {
                       )
                     }else{
                       return(
-                        <div className={styles["batch"]}>
+                        <div className={styles["batch"]} key={index}>
                         <span className={styles["title"]}>{item.title}</span>
                         <iframe
                         src={item.video}
@@ -119,11 +119,11 @@ const Home = () => {
               <div className={styles["contact-form"]}>
               <form>
                   <label>Full Name</label>
-                  <input type="text" />
+                  <input type="text" required/>
                   <label>Phone Number</label>
-                  <input type="text" />
+                  <input type="text" required maxLength="10" pattern="[0-9]{10}"/>
                   <label>Batch Name</label>
-                  <input type="text" />
+                  <input type="text" required/>
                   <button type="submit">Join</button>
                 </form>
               </div>
@@ -280,19 +280,21 @@ const Home = () => {
               <div className={styles["contact-form"]}>
                 <form>
                   <label>Full Name</label>
-                  <input type="text" placeholder="Full Name" />
+                  <input type="text" placeholder="Full Name" required/>
                   <label>Phone Number</label>
-                  <input type="text" placeholder="Phone Number" />
+                  <input type="text" placeholder="Phone Number" required pattern="[0-9]{10}" maxLength="10"/>
                   <label>Batch Name</label>
                   <input
                     type="text"
                     placeholder="What Batch Do You Want To Choose?"
+                    required
                   />
                   <label>Batch Type</label>
-                  <input
-                    type="text"
-                    placeholder="Which Type Of Batch Do You Want?"
-                  />
+                  <select>
+                  <option>Paper-I commerce</option>
+                  <option>Paper-II commerce</option>
+                  <option>Both</option>
+                </select>
                   <button type="submit">Submit</button>
                 </form>
               </div>

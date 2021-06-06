@@ -21,7 +21,7 @@ const ContactUs = () => {
                 <label>Full Name</label>
                 <input type="text" placeholder="Full Name" required/>
                 <label>Phone Number</label>
-                <input type="text" placeholder="Phone Number" required pattern="[0-9]{10}"/>
+                <input type="text" placeholder="Phone Number" required pattern="[0-9]{10}" maxLength="10"/>
                 <label>Email</label>
                 <input type="email" placeholder="Email" required/>
                 <label>Batch Name</label>

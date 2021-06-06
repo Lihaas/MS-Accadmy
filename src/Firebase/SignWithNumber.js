@@ -18,10 +18,6 @@ export const otpSender = (e) => {
 };
 
 export const otpVerification = (setUser) => {
-  if(document.getElementById("otpBox").value.length!==6)
-  {
-    alert("Please enter 6-digit otp sent on your mobile");
-  }else{
     document.getElementById("incorrectOTP").style.display = "none";
     document.getElementById("otpBox").style.borderColor = "#3164f4";
     let code = document.getElementById("otpBox").value;
@@ -35,5 +31,4 @@ export const otpVerification = (setUser) => {
         document.getElementById("otpBox").style.borderColor = "red";
         document.getElementById("otpBox").style.height = "2.5rem";
       });
-  }
 };

@@ -57,7 +57,7 @@
 .profile-dropdown {
   width: 14.2rem;
   height: 9.5rem;
-  background: white;
+  background: #3164f4;
   position: absolute;
   top: 3.5rem;
   left: 0.7rem;
@@ -65,25 +65,25 @@
   display: none;
 }
 
-.profile-dropdown-item, .courses-dropdown-item {
+.profile-dropdown-item, .courses-dropdown-item,.notes-dropdown-item{
   display: block;
   text-align: left;
   padding: 0.7rem 0.3rem;
   border-radius: 0.3rem;
+  color: rgb(255, 255, 255) !important;
 }
 
-.profile-dropdown-item:hover, .courses-dropdown-item:hover{
-    background-color: lightgray;
+.profile-dropdown-item:hover, .courses-dropdown-item:hover,.notes-dropdown-item:hover{
+    background-color: #ffff;
+    color: rgb(0,0,0) !important;
 }
 
-.active-profile-dropdown-item{
-    background: lightgrey;
-}
 
 .courses-dropdown{
   width: 14.2rem;
   height: 6.5rem;
-  background: white;
+  background: #3164f4;
+  color: #FFFF;
   position: absolute;
   top: 3rem;
   border-radius: 0.3rem;
@@ -92,7 +92,8 @@
 .notes-dropdown{
   width: 14.2rem;
   height: 8.5rem;
-  background: white;
+  background: #3164f4;
+  color: #FFFF;
   position: absolute;
   top: 3rem;
   border-radius: 0.3rem;
