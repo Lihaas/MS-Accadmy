@@ -26,18 +26,10 @@ const Paper2 = () => {
       document.getElementById("see-more").style.display === ""
     ) {
       document.getElementById("see-more").style.display = "block";
+      document.getElementById("bookbtn").value = "Hide";
     } else {
       document.getElementById("see-more").style.display = "none";
-    }
-  };
-  const closeDialog = () => {
-    if (
-      document.getElementById("see-more").style.display === "none" ||
-      document.getElementById("see-more").style.display === ""
-    ) {
-      document.getElementById("see-more").style.display = "block";
-    } else {
-      document.getElementById("see-more").style.display = "none";
+      document.getElementById("bookbtn").value = "See More";
     }
   };
 
@@ -82,30 +74,8 @@ const Paper2 = () => {
             </span>
           </div>
         </div>
-        <div className={styles["button"]}>
-        <button
-            onClick={() => {
-              seeMoreDialog();
-            }}
-          >
-            See More
-          </button>
-          <div className={styles["see-more-section"]} id="see-more">
-            <div className={styles["book-heading"]}>
-              <div className={styles["heading-area"]}>
-            <h1>
-              Books
-            </h1>
-              </div>
-            <div className={styles["close-image"]}>
-              <img
-                src={closeicon}
-                onClick={() => {
-                  closeDialog();
-                }}
-              />
-            </div>
-            </div>
+        <div>
+        <div className={styles["see-more-section"]} id="see-more">
             <div className={styles["book-card-section"]}>
               {bookdata.map((item, index) => {
                 let link="https://api.whatsapp.com/send?phone=919996177761&text=" + item.name
@@ -123,7 +93,12 @@ const Paper2 = () => {
                 );
               })}
             </div>
-        </div>
+          </div>
+        <div className={styles["button"]}>
+        <input onClick={() => {
+              seeMoreDialog();
+            }} type="button" value="See More" id="bookbtn"></input>
+          </div>
         </div>
       </section>
       <section className={styles["demo-class"]}>

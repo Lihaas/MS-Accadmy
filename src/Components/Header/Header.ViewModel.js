@@ -30,98 +30,29 @@ export const navDrawerHandler = (isDrawerOpen, openDrawer, drawerRef) => {
   }
 };
 
-export const profileDropdownHandler = () => {
-  var profileDropdown = document.querySelector("#profile-dropdown");
-  var notesDropdown = document.querySelector("#notes-dropdown");
-  var coursesDropdown = document.querySelector("#courses-dropdown");
-  if (
-    profileDropdown.style.display === "none" ||
-    profileDropdown.style.display === ""
-  ) {
-    profileDropdown.style.display = "block";
-    notesDropdown.style.display = "none";
-    coursesDropdown.style.display = "none";
-  } else {
-    profileDropdown.style.display = "none";
-  }
-};
-
-export const coursesDropdownHandler = () => {
-  var coursesDropdown = document.querySelector("#courses-dropdown");
-  var notesDropdown = document.querySelector("#notes-dropdown");
-  var profileDropdown = document.querySelector("#profile-dropdown");
-  if (
-    coursesDropdown.style.display === "none" ||
-    coursesDropdown.style.display === ""
-  ) {
-    coursesDropdown.style.display = "block";
-    notesDropdown.style.display = "none";
-    if(profileDropdown!==null)
-    {
-      profileDropdown.style.display = "none";
-    }
-  } else {
-    coursesDropdown.style.display = "none";
-  }
-}
-
-export const notesDropdownHandler = () => {
-  var notesDropdown = document.querySelector("#notes-dropdown");
-  var coursesDropdown = document.querySelector("#courses-dropdown");
-  var profileDropdown = document.querySelector("#profile-dropdown");
-  if (
-    notesDropdown.style.display === "none" ||
-    notesDropdown.style.display === ""
-  ) {
-    notesDropdown.style.display = "block";
-    coursesDropdown.style.display = "none";
-    if(profileDropdown!==null)
-    {
-      profileDropdown.style.display = "none";
-    }
-  } else {
-    notesDropdown.style.display = "none";
-  }
-}
-
 export const courseHideShow = () =>{
   var courseDropDownMenu = document.querySelector("#course-drop-down");
+  var notesDropDownMenu = document.querySelector("#notes-drop-down");
   if (
     courseDropDownMenu.style.display === "none" ||
     courseDropDownMenu.style.display === ""
   ) {
     courseDropDownMenu.style.display = "block";
+    notesDropDownMenu.style.display = "none";
   } else {
     courseDropDownMenu.style.display = "none";
   }
 }
 export const noteHideShow = () =>{
   var notesDropDownMenu = document.querySelector("#notes-drop-down");
+  var courseDropDownMenu = document.querySelector("#course-drop-down");
   if (
     notesDropDownMenu.style.display === "none" ||
     notesDropDownMenu.style.display === ""
   ) {
     notesDropDownMenu.style.display = "block";
+    courseDropDownMenu.style.display = "none";
   } else {
     notesDropDownMenu.style.display = "none";
   }
-}
-
-export const desktopDropdownHandler = ()=>{
-  var notesDropdown = document.querySelector("#notes-dropdown");
-  var coursesDropdown = document.querySelector("#courses-dropdown");
-  var profileDropdown = document.querySelector("#profile-dropdown");
-  if(
-  coursesDropdown.style.display === "block" ||
-  notesDropdown.style.display === "block"
-  ){
-    coursesDropdown.style.display = "none";
-    notesDropdown.style.display = "none";
-  }
-  if(profileDropdown!==null &&  
-    profileDropdown.style.display === "block")
-    {
-      profileDropdown.style.display = "none";
-    }
-  // console.log(document.getElementById("profile-dropdown").style)
 }

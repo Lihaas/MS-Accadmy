@@ -1,15 +1,27 @@
 import styles from "../../StyleSheets/Header/MobileHeader.module.css";
 import HamMenuIcon from "../../Assets/Icons/menu.svg";
 import Logo from "../../Assets/Image/logo.png";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { navDrawerHandler } from "./Header.ViewModel";
 import { NavLink } from "react-router-dom";
 import dropdown from "../../Assets/Image/dropdownicon.png"
 import {noteHideShow,courseHideShow} from "./Header.ViewModel"
+import { isUserLoggedIn, logout } from "../../Firebase/Authentication";
 
 const MobileHeader = () => {
   const drawerRef = useRef(null);
+  const [userLoggedIn, setUserLoggedIn] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  useEffect(()=>{ 
+    checkLogin();
+    userLogout();
+  },[])
+  const checkLogin = () => {
+    isUserLoggedIn(setUserLoggedIn);
+  };
+  const userLogout = () => {
+    logout(setUserLoggedIn)
+  }
 
   const drawerHandler = () =>
     navDrawerHandler(isDrawerOpen, setIsDrawerOpen, drawerRef);
@@ -40,10 +52,21 @@ const MobileHeader = () => {
         </div>
         <NavLink to={{ pathname: "/contact-us" }} onClick={drawerHandler}>Contact Us</NavLink>
         <NavLink to={{ pathname: "/about-us" }} onClick={drawerHandler}>About Us</NavLink>
-        <NavLink to={{ pathname: "/login" }} onClick={drawerHandler}>Login</NavLink>
-        <NavLink to={{ pathname: "/sign-up" }} className={styles["sign-up"]} onClick={drawerHandler}>
-          SignUp
-        </NavLink>
+        {
+          !userLoggedIn?
+          <>
+          <NavLink to={{ pathname: "/login" }} onClick={drawerHandler}>Login</NavLink>
+          <NavLink to={{ pathname: "/sign-up" }} className={styles["sign-up"]} onClick={drawerHandler}>
+            SignUp
+          </NavLink>
+          </>
+          :
+          <>
+            <NavLink to={{pathname: "/dashboard"}} onClick={drawerHandler}>Profile</NavLink>
+            <NavLink to={{pathname: "/test"}} onClick={drawerHandler}>Test</NavLink>
+            <a href="/" onClick={()=>{userLogout()}} onClick={drawerHandler}>Logout</a>
+          </>
+        }
       </div>
     </div>
   );

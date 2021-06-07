@@ -94,10 +94,10 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    width: 20% !important;
     background-color: #ffff;
     margin: 0% auto;
-    height: 50vh;
+    height: 300px;
+    width: 250px;
     padding: 2%;
     border-radius: 20px;
     box-shadow: 3px 4px rgb(163, 156, 156);
@@ -134,9 +134,6 @@
     .section-wrapper {
       padding-left: 3%;
       padding-right: 3%;
-    }
-    .otp-section{
-      width: 40% !important;
     }
   }
   
@@ -185,12 +182,6 @@
     .sign-up .sign-up-form {
       margin: 0;
     }
-    .otp-section{
-      width: 60% !important;
-    }
   }  
 @media screen and (max-width: 500px){
-  .otp-section{
-    width: 60%;
-  }
 }

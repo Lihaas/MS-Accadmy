@@ -30,7 +30,7 @@ section{
     text-align: center;
     margin-top: 30px;
 }
-.button button{
+.button button,.button input{
     background: #3164f4;
     border: 0;
     border-radius: 0.8rem;
@@ -58,33 +58,17 @@ section{
     margin-top: 10px;
 }
 .see-more-section{
-    position: fixed;
-    top: 12vh;
     background-color: #FFFF;
-    width: 100vw;
-    height: 88vh;
-    overflow: auto;
+    width: 80vw;
     display: none;
-    /* display: none; */
-}
-.book-heading{
-    background-color: #3164f4;
-    display: flex;
-}
-.heading-area{
-    width: 95%;
-}
-.close-image{
-    width: 5%;
-}
-.close-image img{
-    width: 50%;
+    margin: 15px auto;
 }
 .book-card-section{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(200px,150px));
+    grid-template-columns: repeat(auto-fill,minmax(150px,200px));
     gap: 10px;
-    margin: 10px;
+    /* display: flex; */
+    justify-content: space-between;
 }
 .book-card-section a{
     text-decoration: none;
@@ -92,8 +76,6 @@ section{
 }
 .book-card{
     border: 1px solid black;
-    /* height: 40vh;
-    width: 15vw; */
     background-color: #0000;
     margin-right: 15px !important;
     display: flex;
@@ -112,6 +94,7 @@ section{
 .book-text p{
     margin: 0%;
     padding: 0%;
+    text-align: center;
 }
 @media screen and (max-width:1024px){
     .paper-detail .section-wrapper .paper-detail p{

@@ -17,7 +17,7 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <div className="content-wrapper" onClick={desktopDropdownHandler}>
+      <div className="content-wrapper" >
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
