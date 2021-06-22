@@ -21,19 +21,26 @@
     font-size: 2em;
     cursor: pointer;
 }
-.notes-area{
-    margin-top: 2em;
-    margin-bottom: 2em;
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
+.chapter{
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 .notes-one{
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.notes-one img{
+    width: 200px;
+    height: 120px;
+}
+.notes-one p{
+    margin-top: 2px;
 }
 .dropdown{
-    width: 1.5%;
+    width: 2%;
+    margin-left: 10px;
 }
 .chapter h1{
     font-size: 1.5em;

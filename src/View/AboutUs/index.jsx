@@ -3,7 +3,11 @@ import poster1 from "../../Assets/Image/0002.jpg";
 import poster2 from "../../Assets/Image/0003.jpg";
 import boom from "../../Assets/Image/boom.png";
 import dp from "../../Assets/Image/sample dp.png"
+import { useEffect } from "react";
 const AboutUs = () => {
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, []);
   return (
     <div className={styles.aboutus}>
       <section className={styles["boom-poster"]}>

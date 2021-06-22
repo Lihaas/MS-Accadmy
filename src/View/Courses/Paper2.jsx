@@ -4,14 +4,34 @@ import providingImage1 from "../../Assets/Image/istockphoto-1209904658-612x612.j
 import providingImage2 from "../../Assets/Image/wide-test-series.png";
 import providingImage3 from "../../Assets/Image/online-study-2710520-2261196.png";
 import { useEffect, useState } from "react";
-import { Paper1YoutubeData } from "../../Firebase/CoursesData";
+import { Paper2YoutubeData } from "../../Firebase/CoursesData";
+import { bookData } from "../../Firebase/bookData";
+import closeicon from "../../Assets/Image/closeIcon.png";
 
 const Paper2 = () => {
   const [youtubeData, setYoutubeData] = useState([]);
+  const [bookdata, setbookdata] = useState([]);
+
 
   useEffect(() => {
-    Paper1YoutubeData(setYoutubeData);
+    Paper2YoutubeData(setYoutubeData);
+    bookData(setbookdata);
+    window.scrollTo(0,0)
+
   }, []);
+
+  const seeMoreDialog = () => {
+    if (
+      document.getElementById("see-more").style.display === "none" ||
+      document.getElementById("see-more").style.display === ""
+    ) {
+      document.getElementById("see-more").style.display = "block";
+      document.getElementById("bookbtn").value = "Hide";
+    } else {
+      document.getElementById("see-more").style.display = "none";
+      document.getElementById("bookbtn").value = "See More";
+    }
+  };
 
   return (
     <div className={styles.examDetail}>
@@ -54,8 +74,31 @@ const Paper2 = () => {
             </span>
           </div>
         </div>
+        <div>
+        <div className={styles["see-more-section"]} id="see-more">
+            <div className={styles["book-card-section"]}>
+              {bookdata.map((item, index) => {
+                let link="https://api.whatsapp.com/send?phone=919996177761&text=" + item.name
+                return (
+                  <div className={styles["book-card"]} key={index}>
+                      <a href={link} target="_blank">
+                      <div className={styles["book-image"]}>
+                        <img src={item.img} />
+                      </div>
+                      <div className={styles["book-text"]}>
+                        <p>{item.name}</p>
+                      </div>
+                  </a>
+                    </div>
+                );
+              })}
+            </div>
+          </div>
         <div className={styles["button"]}>
-          <button>See More</button>
+        <input onClick={() => {
+              seeMoreDialog();
+            }} type="button" value="See More" id="bookbtn"></input>
+          </div>
         </div>
       </section>
       <section className={styles["demo-class"]}>
@@ -75,21 +118,14 @@ const Paper2 = () => {
               </div>
             );
           })}
-          {/* <div className={styles["video-section"]}>
-            <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-            <span>ABCD</span>
-          </div>
-          <div className={styles["video-section"]}>
-            <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-            <span>ABCD</span>
-          </div>
-          <div className={styles["video-section"]}>
-            <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-            <span>ABCD</span>
-          </div> */}
         </div>
         <div className={styles["button"]}>
-          <button>See More</button>
+          <a
+            href="https://www.youtube.com/c/MOHITSHARMACLASSES"
+            target="_blank"
+          >
+            <button>See More</button>
+          </a>
         </div>
       </section>
     </div>

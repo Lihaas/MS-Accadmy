@@ -1,15 +1,21 @@
 import styles from "../../StyleSheets/dashboard/dashboard.module.css"
-import dp from "../../Assets/Image/sample dp.png"
-import { useState } from "react"
+import dp from "../../Assets/Image/male-user.png"
 import dropdown from "../../Assets/Image/dropdownicon.png"
 import {Carousel} from "react-responsive-carousel"
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";import {UpdateData} from "../../Firebase/UpdateData" 
+import { useEffect, useState } from "react";
 
 const Dashboard=()=>{
     const [show,setShow] = useState(false)
     const [show1,setShow1] = useState(false)
     const [show2,setShow2] = useState(false)
     const [show3,setShow3] = useState(false)
+    const [updateData,setUpdateData] = useState([])
+
+    useEffect(()=>{
+      UpdateData(setUpdateData);
+      window.scrollTo(0,0)
+    },[])
     return(
         <div className={styles.dashboard}>
             <div className={styles["left-box"]}>
@@ -65,22 +71,50 @@ const Dashboard=()=>{
             </section>
             </div>
             <div className={styles["right-box"]}>
-            <section className={styles["carousel-box"]}>
-                <h1>Updates</h1>
-            <Carousel>
-                <div className={styles["youtube-video"]}>
-                <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-                <p>New Video Release</p>
+            <section className={styles["carousel-section"]}>
+          <div className={styles["section-wrapper"]}
+          >
+            <div className={styles["upcomming-batch"]}>
+              <h1>Updates</h1>
+              <Carousel>
+                {
+                  updateData.map((item)=>{
+                    if(item.video==="null")
+                    {
+                      return(
+                        <div className={styles["batch"]}>
+                      <span className={styles["title"]}>{item.title}</span>
+                      <a href={item.redirect} target="_blank"><img src={item.img}/></a>
+                      <span className={styles["description"]}>{item.description}</span>
+                        </div>
+                      )
+                    }else{
+                      return(
+                        <div className={styles["batch"]}>
+                        <span className={styles["title"]}>{item.title}</span>
+                        <iframe
+                        src={item.video}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen={true}
+                      ></iframe>
+                        <span className={styles["description"]}>{item.description}</span>
+                          </div>
+                      )
+                    }
+                  })
+                }
+                {/*<div className={styles["batch"]}>
+                  <span className={styles["title"]}>UGC NET 2021</span>
                 </div>
-                <div className={styles["youtube-video"]}>
-                <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-                <p>New Video Release</p>
-                </div><div className={styles["youtube-video"]}>
-                <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-                <p>New Video Release</p>
-                </div>
+                <div className={styles["batch"]}>
+                  <span className={styles["title"]}>UGC NET 2021</span>
+                </div> */}
             </Carousel>
-            </section>
+            </div>
+            </div>
+        </section>
             </div>
         </div>
     )

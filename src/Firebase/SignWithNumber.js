@@ -1,9 +1,8 @@
 import firebase from "./firebase";
-import { Redirect } from "react-router-dom";
 export const otpSender = (e) => {
   e.preventDefault();
   const captcha = new firebase.auth.RecaptchaVerifier("recaptchabox");
-  const phoneNumber = "+91" + (document.getElementById("phoneNumber").value);
+  const phoneNumber = "+91" + document.getElementById("phoneNumber").value;
   document.getElementById("recapMessage").style.display = "block";
   firebase
     .auth()
@@ -18,12 +17,18 @@ export const otpSender = (e) => {
     });
 };
 
-export const otpVerification = (setUser) =>{
-  document.getElementById("incorrectOTP").style.display = "none";
-  let code = document.getElementById("otpBox").value;
-  window.confirminationResult.confirm(code).then(()=>{
-    setUser(true)
-  }).catch(()=>{
-    document.getElementById("incorrectOTP").style.display = "block";
-  })
-}
+export const otpVerification = (setUser) => {
+    document.getElementById("incorrectOTP").style.display = "none";
+    document.getElementById("otpBox").style.borderColor = "#3164f4";
+    let code = document.getElementById("otpBox").value;
+    window.confirminationResult
+      .confirm(code)
+      .then((result) => {
+        setUser(true);
+      })
+      .catch(() => {
+        document.getElementById("incorrectOTP").style.display = "block";
+        document.getElementById("otpBox").style.borderColor = "red";
+        document.getElementById("otpBox").style.height = "2.5rem";
+      });
+};

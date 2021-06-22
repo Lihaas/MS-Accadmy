@@ -1,22 +1,17 @@
 import styles from "../../StyleSheets/Notes/notes.module.css";
 import samplepic from "../../Assets/Image/istockphoto-1209904658-612x612.jpg"
-import pdf from "../../Assets/Image/pdf.png"
-import notes from "../../Assets/Notes/sampleNotes.pdf"
 import dropdown from "../../Assets/Image/dropdownicon.png"
 import { useEffect, useState } from "react";
-import { Paper1NotesData } from "../../Firebase/NotesData";
+import { Paper2NotesData } from "../../Firebase/NotesData";
+import {show} from "./dropdown";
 
-const NotesPaper2 = () => {
-    const [show,setShow]=useState(false);
-    const [show1,setShow1]=useState(false);
-    const [show2,setShow2]=useState(false);
-    const [show3,setShow3]=useState(false);
+const NotesPaper1 = () => {
     const [notesData, setNotesData] = useState({})
-
+    let max=0;
     useEffect(()=>{
-      Paper1NotesData(setNotesData)
+      Paper2NotesData(setNotesData)
+      window.scrollTo(0,0)
     },[])
-
     //  Object.keys(notesData).map(item =>  // item = chapter 1
             // notesData[item].map(chapterData => {})
     // })
@@ -44,125 +39,31 @@ const NotesPaper2 = () => {
       <section className={styles["chapter-section"]}>
           <h1>Chapters</h1>
           <br></br>
-          <div className={styles["chapter"]}>
-              <h1 onClick={()=>{setShow(!show)}}>1.ABCD &nbsp;&nbsp;<img src={dropdown} className={styles["dropdown"]}/></h1> 
+          {
+            Object.keys(notesData).map((item,index)=>{
+              max=index;
+              return(
+              <div className={styles["chapter"]} key={index}>
+              <h1 onClick={()=>{show(index,max)}}>{item}<img src={dropdown} className={styles["dropdown"]}/></h1>
+              <div id={index} style={{display: "none"}}>
               {
-                  show?
-                  <div className={styles["notes-area"]}>
-                      <div className={styles["notes-one"]}>
-                      <a href={notes} download><img src={pdf} /></a>
-                      <span>abcd</span>
-                      </div>
-                      <div className={styles["notes-one"]}>
-                      <a href={notes} download><img src={pdf} /></a>
-                      <span>abcd</span>
-                      </div>
-                      <div className={styles["notes-one"]}>
-                      <a href={notes} download><img src={pdf} /></a>
-                      <span>abcd</span>
-                      </div>
-                      <div className={styles["notes-one"]}>
-                      <a href={notes} download><img src={pdf} /></a>
-                      <span>abcd</span>
-                      </div>
-                      <div className={styles["notes-one"]}>
-                      <a href={notes} download><img src={pdf} /></a>
-                      <span>abcd</span>
-                      </div>
-                  </div>
-                  :null
+                notesData[item].map((subitem,index)=>{
+                  return(
+                  <div className={styles["notes-one"]} key={index}>
+                    <a href={subitem.pdf} target="_blank" download><img src={subitem.img} /></a>
+                    <p>{subitem.title}</p>
+                    </div> 
+                  )
+                })
               }
-          </div>
-          <div className={styles["chapter"]}>
-              <h1 onClick={()=>{setShow1(!show1)}}>2.ABCD&nbsp;&nbsp;<img src={dropdown} className={styles["dropdown"]}/></h1>
-              {
-                  show1?
-                  <div className={styles["notes-area"]}>
-                  <div className={styles["notes-one"]}>
-                  <a href={notes} download><img src={pdf} /></a>
-                  <span>abcd</span>
-                  </div>
-                  <div className={styles["notes-one"]}>
-                  <a href={notes} download><img src={pdf} /></a>
-                  <span>abcd</span>
-                  </div>
-                  <div className={styles["notes-one"]}>
-                  <a href={notes} download><img src={pdf} /></a>
-                  <span>abcd</span>
-                  </div>
-                  <div className={styles["notes-one"]}>
-                  <a href={notes} download><img src={pdf} /></a>
-                  <span>abcd</span>
-                  </div>
-                  <div className={styles["notes-one"]}>
-                  <a href={notes} download><img src={pdf} /></a>
-                  <span>abcd</span>
-                  </div>
               </div>
-                  :null
-              }
-          </div>
-          <div className={styles["chapter"]}>
-              <h1 onClick={()=>{setShow2(!show2)}}>3.ABCD&nbsp;&nbsp;<img src={dropdown} className={styles["dropdown"]}/></h1>
-              {
-                  show2?
-                  <div className={styles["notes-area"]}>
-                  <div className={styles["notes-one"]}>
-                  <a href={notes} download><img src={pdf} /></a>
-                  <span>abcd</span>
-                  </div>
-                  <div className={styles["notes-one"]}>
-                  <a href={notes} download><img src={pdf} /></a>
-                  <span>abcd</span>
-                  </div>
-                  <div className={styles["notes-one"]}>
-                  <a href={notes} download><img src={pdf} /></a>
-                  <span>abcd</span>
-                  </div>
-                  <div className={styles["notes-one"]}>
-                  <a href={notes} download><img src={pdf} /></a>
-                  <span>abcd</span>
-                  </div>
-                  <div className={styles["notes-one"]}>
-                  <a href={notes} download><img src={pdf} /></a>
-                  <span>abcd</span>
-                  </div>
               </div>
-                  :null
-              }
-          </div>
-          <div className={styles["chapter"]}>
-              <h1 onClick={()=>{setShow3(!show3)}}>4.ABCD&nbsp;&nbsp;<img src={dropdown} className={styles["dropdown"]}/></h1>
-              {
-                  show3?
-                  <div className={styles["notes-area"]}>
-                  <div className={styles["notes-one"]}>
-                  <a href={notes} download><img src={pdf} /></a>
-                  <span>abcd</span>
-                  </div>
-                  <div className={styles["notes-one"]}>
-                  <a href={notes} download><img src={pdf} /></a>
-                  <span>abcd</span>
-                  </div>
-                  <div className={styles["notes-one"]}>
-                  <a href={notes} download><img src={pdf} /></a>
-                  <span>abcd</span>
-                  </div>
-                  <div className={styles["notes-one"]}>
-                  <a href={notes} download><img src={pdf} /></a>
-                  <span>abcd</span>
-                  </div>
-                  <div className={styles["notes-one"]}>
-                  <a href={notes} download><img src={pdf} /></a>
-                  <span>abcd</span>
-                  </div>
-              </div>
-                  :null
-              }
-          </div>
+              )
+            })
+          }
       </section>
     </div>
   );
 };
 
-export default NotesPaper2;
+export default NotesPaper1;

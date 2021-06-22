@@ -39,13 +39,35 @@
     height: 0;
     transition: height 0.4s ease-in-out;
     margin-top: 0.3rem;
-    overflow-y: hidden;
+    overflow-y: auto;
   }
-
-  .nav-drawer a {
+  .nav-drawer h1,
+  .nav-drawer NavLink,
+  .nav-drawer a
+  {
     display: block;
     text-decoration: none;
     color: #525252;
     padding: 1rem 3%;
+    font-size: 20px;
+  }
+  .nav-drawer h1{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-drawer h1 img{
+    width: 5%;
+    height: 2%;
+  }
+  .nav-drawer h1:hover,
+  .nav-drawer NavLink:hover,
+  .nav-drawer a:hover{
+    background-color: #005dff;
+    color: #FFFF;
+  }
+  .hide-show{
+    display: none;
+    margin-left: 10vw;
   }
 }

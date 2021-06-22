@@ -96,24 +96,43 @@ h5 {
   text-align: center;
 }
 
-.section-1 .upcomming-batch h1 {
-  margin-bottom: 2rem;
+.section-1 .section-wrapper .upcomming-batch h1 {
+  margin-bottom: 20px !important;
   font-size: 2.3rem;
 }
 
 .upcomming-batch .batch {
   width: 100%;
   background: #005dff;
-  height: 50vh;
+  height: 100%;
   border-radius: 1rem;
   overflow: hidden;
   padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.upcomming-batch .batch .title {
+.upcomming-batch .batch span {
   color: white;
 }
-
+.upcomming-batch .batch img , 
+.upcomming-batch .batch a,
+.upcomming-batch .batch iframe
+{
+  width: 350px !important;
+  height: 150px;
+}
+.upcomming-batch .batch iframe{
+  margin-bottom: 0px !important;
+}
+.title{
+  margin-bottom: 5px;
+}
+.description{
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
 .section-2 .section-wrapper h1 {
   font-size: 2.2rem;
   margin-bottom: 2rem;
@@ -333,7 +352,8 @@ h5 {
   color: grey;
 }
 
-.contact-form form input {
+.contact-form form input,
+.contact-form form select {
   width: 20rem;
   height: 2.3rem;
   margin-top: 0.4rem;
@@ -342,7 +362,9 @@ h5 {
   padding-left: 1rem;
   outline: none;
 }
-
+.contact-form form select {
+  width: 21.2rem;
+}
 .contact-form form button {
   background: #3164f4;
   border: 0;
@@ -610,11 +632,14 @@ h5 {
   }
 
   .contact-form form input,
+  .contact-form form select,
   .section-1 .contact-form form input {
     width: 100%;
     height: 2.1rem;
   }
-
+  .contact-form form select {
+    width: 18.5rem;
+  }
   .section-4 .section-wrapper .exam-1,
   .section-4 .section-wrapper .exam-2,
   .section-4 .section-wrapper .test-series {
@@ -679,7 +704,6 @@ h5 {
   .section-1 .upcomming-batch {
     width: 80%;
   }
-
   .section-1 .contact-section .contact-form {
     width: 80%;
   }
@@ -693,7 +717,22 @@ h5 {
     font-size: 0.9rem;
   }
 }
-
+.whatsapp-section{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  text-align: center;
+}
+.whatsapp-section h1{
+  font-size: 30px !important;
+  color: #503b3b;
+}
+.whatsapp-png{
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
 @media screen and (max-width: 740px) {
   .mobile-hero-section .mobile-hero-top h2 {
     text-align: center;

@@ -1,11 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import styles from "../../StyleSheets/Login/login.module.css";
 import signUpImage from "../../Assets/Image/study-at-home-2527770-2114673.png";
 import { otpSender, otpVerification } from "../../Firebase/SignWithNumber";
 import { Redirect } from "react-router-dom";
-
+import dp from "../../Assets/Image/male-user.png";
 const Login = () => {
   const [user,setUser] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, []);
+  const Verification = (event)=>{
+      event.preventDefault();
+      otpVerification(setUser);
+  }
   return (
     <div>
       <br></br>
@@ -28,7 +35,7 @@ const Login = () => {
                   id="phoneNumber"
                   placeholder="Mobile Number (e.g, 8989112233)"
                   required
-                  minLength="10"
+                  pattern="[0-9]{10}"
                   maxLength="10"
                 />
                   <p id="recapMessage" style={{color: "red",display: "none"}}>Please fill recaptcha</p>
@@ -38,18 +45,21 @@ const Login = () => {
             </div>
             <dialog id="dialog-box" className={styles["dialog"]}>
               <div className={styles["otp-section"]}>
+                <h1>Verification</h1>
+                <img src={dp} />
+                <form onSubmit={Verification}>
                 <label>Enter OTP</label>
                 <input
                   type="password"
                   placeholder="enter otp"
                   id="otpBox"
+                  maxLength="6"
+                  required
+                  pattern="[0-9]{6}"
                 ></input>
                 <p style={{color:"red",display: "none",margin:"0"}} id="incorrectOTP">Please enter correct OTP </p>
                 <button
-                  type="button"
-                  onClick={() => {
-                    otpVerification(setUser);
-                  }}
+                  type="submit"
                 >
                   login
                 </button>
@@ -58,6 +68,7 @@ const Login = () => {
                   <Redirect to="/dashboard" />
                   :null
                 }
+                </form>
               </div>
             </dialog>
           </div>

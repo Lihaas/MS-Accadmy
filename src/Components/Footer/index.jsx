@@ -1,5 +1,6 @@
 import styles from "../../StyleSheets/Footer/Footer.module.css";
 import Logo from "../../Assets/Image/logo.png"
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -11,17 +12,16 @@ const Footer = () => {
       </div>
       <div className={styles["footer-menu-wrapper"]}>
         <div className={styles["footer-menu"]}>
-          <a href="#">Home</a>
+          <NavLink to={{pathname:"/"}}>Home</NavLink>
           <a href="#">Courses</a>
-          <a href="#">About Us</a>
-          <a href="#">Contact Us</a>
-          <a href="#">Test Series</a>
+          <NavLink to={{pathname:"/about-us"}}>About Us</NavLink>
+          <NavLink to={{pathname:"/contact-us"}}>Contact Us</NavLink>
+          <NavLink to={{pathname:"/notes/testseries"}}>Test Series</NavLink>
         </div>
         <div className={styles["footer-menu"]}>
-          <a href="#">Facebook</a>
-          <a href="#">Instagram</a>
-          <a href="#">Linkedin</a>
-          <a href="#">Youtube</a>
+          <a href="https://www.facebook.com/MOHITSHARMACLASSES" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/mohit_sharma_classes/" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/channel/UCzhtAfVRg98UEoQypkgnebw" target="_blank">Youtube</a>
         </div>
         <div className={styles["footer-menu"]}>
           <a href="#">Privacy Policy</a>

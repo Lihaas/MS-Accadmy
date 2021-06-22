@@ -12,10 +12,10 @@
     width: 50%;
 }
 .dp{
-    width: 90%;
-    justify-content: center;
+    width: 100%;
+    justify-content: right;
     align-items: center;
-    text-align: center;
+    text-align: right;
 }
 .account-information{
     display: flex;
@@ -63,32 +63,54 @@
     background-color: rgb(71, 70, 70);
 }
 .carousel-box{
-    background-color: blue;
+    background: #005dff;
+    border-radius: 10px;
     width: 80%;
     margin: 1em auto;
     padding-top: .6em;
 }
-Carousel{
-    width: 60%;
-}
-.carousel-box h1{
-    color: #ffff;
+  
+  .carousel-section .upcomming-batch {
     text-align: center;
-}
-.youtube-video{
-    margin-top:1em;
-}
-.youtube-video p{
-    margin-bottom:19px;
-}
-iframe{
-    height: 200px;
-}
-@media screen and (max-width:1300px){
-    .carousel-box{
-        width: 100%;
-    }
-}
+  }
+  
+  .carousel-section .section-wrapper .upcomming-batch h1 {
+    margin-bottom: 20px !important;
+    font-size: 2.3rem;
+  }
+  
+  .upcomming-batch .batch {
+    width: 100%;
+    background: #005dff;
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .upcomming-batch .batch span {
+    color: white;
+  }
+  .upcomming-batch .batch img , 
+  .upcomming-batch .batch a,
+  .upcomming-batch .batch iframe
+  {
+    width: 350px !important;
+    height: 150px;
+  }
+  .upcomming-batch .batch iframe{
+    margin-bottom: 0px !important;
+  }
+  .title{
+    margin-bottom: 5px;
+  }
+  .description{
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
 @media screen and (max-width:900px){
     .left-box{
         width: 50%;

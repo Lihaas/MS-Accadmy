@@ -17,8 +17,17 @@ import Image4 from "../../Assets/Image/image4.png";
 import CoachingCenter from "../../Assets/Image/coaching_center.jpg";
 import {Carousel} from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { NavLink } from "react-router-dom";
+import {UpdateData} from "../../Firebase/UpdateData" 
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [updateData,setUpdateData] = useState([])
+
+  useEffect(()=>{
+    UpdateData(setUpdateData);
+    window.scrollTo(0,0)
+  },[])
   return (
     <>
       <div className={styles.home}>
@@ -28,7 +37,7 @@ const Home = () => {
             <p>Online</p>
             <h5>Education</h5>
             <h4>FOR UGC NET</h4>
-            <button>Register Now</button>
+            <NavLink to={{pathname: "/sign-up"}}><button>Register Now</button></NavLink>
           </div>
           <div className={styles["hero-image"]}>
             <img src={Mohit} className={styles["float-img"]} />
@@ -63,17 +72,42 @@ const Home = () => {
           <div className={styles["section-wrapper"]}
           >
             <div className={styles["upcomming-batch"]}>
-              <h1>Upcoming Batches</h1>
+              <h1>Updates</h1>
               <Carousel>
-                <div className={styles["batch"]}>
+                {
+                  updateData.map((item,index)=>{
+                    if(item.video==="null")
+                    {
+                      return(
+                        <div className={styles["batch"]} key={index}>
+                      <span className={styles["title"]}>{item.title}</span>
+                      <a href={item.redirect} target="_blank"><img src={item.img}/></a>
+                      <span className={styles["description"]}>{item.description}</span>
+                        </div>
+                      )
+                    }else{
+                      return(
+                        <div className={styles["batch"]} key={index}>
+                        <span className={styles["title"]}>{item.title}</span>
+                        <iframe
+                        src={item.video}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen={true}
+                      ></iframe>
+                        <span className={styles["description"]}>{item.description}</span>
+                          </div>
+                      )
+                    }
+                  })
+                }
+                {/*<div className={styles["batch"]}>
                   <span className={styles["title"]}>UGC NET 2021</span>
                 </div>
                 <div className={styles["batch"]}>
                   <span className={styles["title"]}>UGC NET 2021</span>
-                </div>
-                <div className={styles["batch"]}>
-                  <span className={styles["title"]}>UGC NET 2021</span>
-                </div>
+                </div> */}
             </Carousel>
             </div>
             <div className={styles["contact-section"]}>
@@ -85,11 +119,11 @@ const Home = () => {
               <div className={styles["contact-form"]}>
               <form>
                   <label>Full Name</label>
-                  <input type="text" />
+                  <input type="text" required/>
                   <label>Phone Number</label>
-                  <input type="text" />
+                  <input type="text" required maxLength="10" pattern="[0-9]{10}"/>
                   <label>Batch Name</label>
-                  <input type="text" />
+                  <input type="text" required/>
                   <button type="submit">Join</button>
                 </form>
               </div>
@@ -246,19 +280,21 @@ const Home = () => {
               <div className={styles["contact-form"]}>
                 <form>
                   <label>Full Name</label>
-                  <input type="text" placeholder="Full Name" />
+                  <input type="text" placeholder="Full Name" required/>
                   <label>Phone Number</label>
-                  <input type="text" placeholder="Phone Number" />
+                  <input type="text" placeholder="Phone Number" required pattern="[0-9]{10}" maxLength="10"/>
                   <label>Batch Name</label>
                   <input
                     type="text"
                     placeholder="What Batch Do You Want To Choose?"
+                    required
                   />
                   <label>Batch Type</label>
-                  <input
-                    type="text"
-                    placeholder="Which Type Of Batch Do You Want?"
-                  />
+                  <select>
+                  <option>Paper-I commerce</option>
+                  <option>Paper-II commerce</option>
+                  <option>Both</option>
+                </select>
                   <button type="submit">Submit</button>
                 </form>
               </div>
