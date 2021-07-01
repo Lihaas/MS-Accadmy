@@ -98,6 +98,7 @@
 .dropdown:hover .dropdown-content,.dropdown:hover .profile-dropdown-content  {
   display: block;
 }
+
 @media screen and (max-width: 1086px) {
   .nav-wrapper {
     padding: 0.4rem 3% 0.4rem 3%;

@@ -63,7 +63,7 @@ const MobileHeader = () => {
           :
           <>
             <NavLink to={{pathname: "/dashboard"}} onClick={drawerHandler}>Profile</NavLink>
-            <NavLink to={{pathname: "/test"}} onClick={drawerHandler}>Test</NavLink>
+            <NavLink to={{pathname: "/test-series"}} onClick={drawerHandler}>Test</NavLink>
             <a href="/" onClick={()=>{userLogout()}} onClick={drawerHandler}>Logout</a>
           </>
         }
