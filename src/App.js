@@ -38,7 +38,7 @@ const App = () => {
       <Router>
           <div>
         <Switch>
-          <Route exact path="/admin" component={Admin} />
+          {/* <Route exact path="/admin" component={Admin} />
           <Route exact path="/admin/subject/:subjectId" component={Subject} />
           <Route exact path="/admin/addsubject/:subjectId" component={AddSubject} />
           <Route exact path="/admin/chapter/:chapterId" component={Chapter} />
@@ -46,7 +46,7 @@ const App = () => {
           <Route exact path="/admin/test/:testId" component={AdminTest} />
           <Route exact path="/admin/addtest/:testId" component={AddTest} />
           <Route exact path="/admin/addquestion/:questionId" component={AddQuestion} />
-          <Route exact path="/admin/addfile" component={AddFile} />
+          <Route exact path="/admin/addfile" component={AddFile} /> */}
           <Route exact path="/admin/question" component={Questions} /> 
           <Route exact path="/admin/add-question/:quesid" component={QuestionList} />
         </Switch>
