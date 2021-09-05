@@ -1,0 +1,23 @@
+  
+  .subject-card-body {
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .subject-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #FFF;
+    margin: 10px 0px;
+    height: 15vh;
+    z-index: 0;
+  }
+  .subject-card-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 80px 0px;
+  }

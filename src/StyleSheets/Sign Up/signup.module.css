@@ -127,6 +127,7 @@
   width: 10rem;
   margin-top: 1rem;
 }
+
 @media screen and (max-width: 1271px) {
   .sign-up-form form {
     margin-left: 1rem;

@@ -11,6 +11,7 @@ export const isUserLoggedIn = (onDataFetched) => {
 export const logout = (onDataFetched) => {
   firebase.auth().signOut().then(() => {
     onDataFetched(false)
+    localStorage.clear();
     console.log("User logged out successfully")
   }).catch((error) => {
     console.log(error)

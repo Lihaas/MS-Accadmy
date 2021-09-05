@@ -184,18 +184,61 @@ h5 {
   width: 10rem;
 }
 
-.section-3 .section-wrapper .row-1,
-.section-3 .section-wrapper .row-2,
 .section-2 .section-wrapper .social-media {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.section-3 .section-wrapper .row-2 {
+.section-3 h1{
+  padding-top: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+.section-3 hr{
+  width: 60%;
+  height: 1px;
+  background-color: #000;
+}
+.section-3 .section-wrapper
+{
+  display: flex;
+}
+.section-3 .section-wrapper .row-1,
+.section-3 .section-wrapper .row-2  {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+}
+.section-3 .section-wrapper .row-1{
+  flex-direction: column;
+}
+.section-3 .section-wrapper .row-1 .charestics{
+  display: flex;
+  align-items: center;
+}
+.section-3 .section-wrapper .row-1 .charestics div{
+  min-width: 70px;
+  min-height: 70px;
+  margin: 10px 0px;
+  background-color: #31155281;
+  display: flex;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.section-3 .section-wrapper .row-1 .charestics div img{
+  width: 60px;
+  height: 55px;
+}
+.section-2 {
   margin-top: 6rem;
 }
-
+.section-3 .section-wrapper .row-2 img{
+  overflow: hidden;
+  width: 100%;
+}
+/* 
 .section-3 .section-wrapper .row-1 .img,
 .section-3 .section-wrapper .row-2 .img {
   width: 40%;
@@ -214,7 +257,7 @@ h5 {
 .section-3 .section-wrapper .row-2 .details h1,
 .section-3 .section-wrapper .row-1 .details h1 {
   font-size: 2rem;
-}
+} */
 
 .section-4 .top-section div {
   text-align: right;
@@ -240,43 +283,58 @@ h5 {
 
 .section-4 .section-wrapper .exam-1,
 .section-4 .section-wrapper .exam-2,
+.section-4 .section-wrapper .exam-3,
 .section-4 .section-wrapper .test-series {
   display: flex;
   justify-content: space-between;
   width: 80%;
   margin: auto;
+  flex-direction: row;
 }
 
 .section-4 .section-wrapper .exam-2,
+.section-4 .section-wrapper .exam-3,
 .section-4 .section-wrapper .test-series {
   margin-top: 5rem;
 }
 
 .section-4 .section-wrapper .exam-1 .exam-img,
-.section-4 .section-wrapper .exam-2 .exam-img {
+.section-4 .section-wrapper .exam-2 .exam-img,
+.section-4 .section-wrapper .exam-3 .exam-img
+.section-4 .section-wrapper .test-series .exam-img
+{
   width: 20%;
 }
 
 .section-4 .section-wrapper .exam-1 .exam-img img,
-.section-4 .section-wrapper .exam-2 .exam-img img {
+.section-4 .section-wrapper .exam-2 .exam-img img, 
+.section-4 .section-wrapper .exam-3 .exam-img img,
+.section-4 .section-wrapper .test-series .exam-img img {
   width: 100%;
 }
 
-.section-4 .section-wrapper .exam-1 .exam-detail {
+.section-4 .section-wrapper .exam-1 .exam-detail,
+.section-4 .section-wrapper .exam-3 .exam-detail {
   width: 70%;
 }
 
 .section-4 .section-wrapper .exam-1 .exam-detail h1,
 .section-4 .section-wrapper .exam-2 .exam-detail h1,
+.section-4 .section-wrapper .exam-3 .exam-detail h1,
 .section-4 .section-wrapper .test-series .details h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
-.section-4 .section-wrapper .exam-2 .exam-detail {
+.section-4 .section-wrapper .exam-2 .exam-detail, 
+.section-4 .section-wrapper .test-series .details {
   width: 70%;
 }
 
-.section-4 .section-wrapper .test-series .details button {
+.section-4 .section-wrapper .test-series .details button,
+.section-4 .section-wrapper .exam-1 .exam-detail button,
+.section-4 .section-wrapper .exam-2 .exam-detail button ,
+.section-4 .section-wrapper .exam-3 .exam-detail button 
+  {
   background: #3164f4;
   margin-top: 1rem;
   color: white;
@@ -389,10 +447,10 @@ h5 {
   left: 3rem;
 }
 
-.section-5 .section-wrapper .image-layer div img {
+.section-5 .section-wrapper .image-layer div video {
   position: absolute;
   width: 30rem;
-  top: -4rem;
+  top: 0rem;
   left: -3rem;
   box-shadow: 0.6rem 0.6rem 0.2rem rgba(0, 0, 0, 0.4);
 }
@@ -403,28 +461,66 @@ h5 {
   background: white;
 }
 
-.section-6 div {
+.section-6{
+  background: url(../../Assets/Image/graduate\ banner.jpg) no-repeat;
+  background-size: cover;
+  background-position-y: -50px;
+  height: 50vh; 
+  padding-top: 50px;
+  overflow: hidden;
+}
+.carousel-content{
+  /* background: #FFF; */
+  background-color: #A9C9FF;
+  background-image: linear-gradient(45deg, #A9C9FF 0%, #FFBBEC 100%);
+  box-shadow: 0 8px 30px -7px #c9dff0;
+  margin: 0 20px;
+  padding: 0 10px;
+  border-radius: 20px;
+    border: 0;
+    width: 85% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important; 
+    align-items: center;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.carousel-content img{
+  width: 50% !important;
+}
+.carousel-content img,
+.carousel-content h3,
+.carousel-content p{
+  margin: 0px;
+  padding: 0px;
+}
+.carousel-content h3{
+  font-size: 1em;
+}
+.carousel-content p{
+  font-size: .8em;
+}
+/* pack details  */
+.pack-detail-box{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  padding: 10px;
+  background-color: #FFF;
+}
+.pack-detail{
   display: flex;
-}
-
-.section-6 div:nth-child(1) {
-  justify-content: space-between;
-}
-
-.section-6 div:nth-child(1) img {
-  width: 20%;
-}
-
-.section-6 div:nth-child(2) {
-  margin: 2.5rem;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
-
-.section-6 div:nth-child(2) h1 {
-  margin: 0;
-  padding-left: 2rem;
-  font-size: 2.5rem;
+.pack-detail img{
+  width: 30%;
 }
 @media screen and (max-width: 1535px) {
 
@@ -475,7 +571,7 @@ h5 {
     width: 25rem;
   }
 
-  .section-5 .section-wrapper .image-layer div img {
+  .section-5 .section-wrapper .image-layer div video {
     width: 25rem;
   }
   .contact-form form {
@@ -564,9 +660,6 @@ h5 {
     display: none;
   }
 
-  .section-3 {
-    display: none;
-  }
 
   .section-2 .section-wrapper .social-media .social-apps {
     width: 100%;
@@ -585,7 +678,13 @@ h5 {
   }
 
   .section-2 .about-us {
-    display: none;
+    background: #3164f4;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    line-height: 4.5rem;
+    flex-wrap: wrap;
   }
 
   .section-6 div:nth-child(2) h1 {
@@ -636,10 +735,11 @@ h5 {
     height: 2.1rem;
   }
   .contact-form form select {
-    width: 18.5rem;
+    width: 100%;
   }
   .section-4 .section-wrapper .exam-1,
   .section-4 .section-wrapper .exam-2,
+  .section-4 .section-wrapper .exam-3,
   .section-4 .section-wrapper .test-series {
     width: 90%;
     align-items: center;
@@ -647,17 +747,15 @@ h5 {
   }
   .section-4 .section-wrapper .exam-1 .exam-img,
   .section-4 .section-wrapper .exam-2 .exam-img,
-  .section-4 .section-wrapper .test-series .img {
+  .section-4 .section-wrapper .exam-3 .exam-img,
+  .section-4 .section-wrapper .test-series .exam-img {
     width: 7rem;
   }
 
-  .section-4 .section-wrapper .test-series .img img {
-    margin-left: -2.3rem;
-    width: 200%;
-  }
 
   .section-4 .section-wrapper .exam-1 .exam-detail,
   .section-4 .section-wrapper .exam-2 .exam-detail,
+  .section-4 .section-wrapper .exam-3 .exam-detail,
   .section-4 .section-wrapper .test-series .details {
     width: 85%;
     padding-left: 2rem;
@@ -670,12 +768,14 @@ h5 {
 
   .section-4 .section-wrapper .exam-1 .exam-detail h1,
   .section-4 .section-wrapper .exam-2 .exam-detail h1,
+  .section-4 .section-wrapper .exam-3 .exam-detail h1,
   .section-4 .section-wrapper .test-series .details h1 {
     font-size: 1.5rem;
   }
 
   .section-4 .section-wrapper .exam-1 .exam-detail p,
   .section-4 .section-wrapper .exam-2 .exam-detail p,
+  .section-4 .section-wrapper .exam-3 .exam-detail p,
   .section-4 .section-wrapper .test-series .details p {
     font-size: 0.8rem;
   }
@@ -714,6 +814,13 @@ h5 {
     width: 100%;
     font-size: 0.9rem;
   }
+  .pack-detail-box{
+    padding: 0px;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .pack-detail img{
+    width: 20%;
+  }
 }
 .whatsapp-section{
   display: flex;
@@ -730,6 +837,11 @@ h5 {
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+.section-6{
+  background: url(../../Assets/Image/graduate\ banner.jpg) no-repeat;
+  background-size: cover;
+  background-position-y: 0px;
 }
 @media screen and (max-width: 740px) {
   .mobile-hero-section .mobile-hero-top h2 {
@@ -793,17 +905,6 @@ h5 {
 }
 
 @media screen and (max-width: 635px) {
-  .section-6 div:nth-child(1) img:nth-child(1),
-  .section-6 div:nth-child(1) img:nth-child(2),
-  .section-6 div:nth-child(1) img:nth-child(3) {
-    display: none;
-  }
-  .section-6 div:nth-child(1) {
-    justify-content: center;
-  }
-  .section-6 div:nth-child(1) img:nth-child(4) {
-    width: 50%;
-  }
   .section-5 .section-wrapper div:nth-child(1) h1 {
     font-size: 1.5rem;
   }
@@ -831,10 +932,29 @@ h5 {
     padding: 0 4%;
     margin-top: 0.5rem;
   }
+  .section-3 .section-wrapper .row-2{
+    display: none;
+  }
+  .section-3 .section-wrapper .row-1{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 460px) {
     .mobile-hero-top span{
       font-size: 0.75rem;
+    }
+    .pack-detail-box{
+      grid-template-columns: repeat(1,1fr);
+    }
+    .section-2 .about-us {
+      background: #3164f4;
+      width: 100%;
+      height: 10rem;
+      text-align: center;
+      font-size: 2rem;
+      color: white;
+      line-height: 4.5rem;
+      flex-wrap: wrap;
     }
 }

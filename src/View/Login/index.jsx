@@ -1,9 +1,10 @@
 import React, {  useEffect, useState } from "react";
 import styles from "../../StyleSheets/Login/login.module.css";
 import signUpImage from "../../Assets/Image/study-at-home-2527770-2114673.png";
-import { otpSender, otpVerification } from "../../Firebase/SignWithNumber";
+import { otpSender, LoginVerification } from "../../Firebase/SignWithNumber";
 import { Redirect } from "react-router-dom";
 import dp from "../../Assets/Image/male-user.png";
+import Loader from "../loading spinner/Loader";
 const Login = () => {
   const [user,setUser] = useState(false);
   useEffect(() => {
@@ -11,7 +12,7 @@ const Login = () => {
   }, []);
   const Verification = (event)=>{
       event.preventDefault();
-      otpVerification(setUser);
+      LoginVerification(setUser);
   }
   return (
     <div>
@@ -74,6 +75,7 @@ const Login = () => {
           </div>
         </div>
       </section>
+          <Loader /> 
     </div>
   );
 };

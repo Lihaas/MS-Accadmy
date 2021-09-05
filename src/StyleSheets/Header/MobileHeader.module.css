@@ -29,7 +29,8 @@
     align-items: center;
   }
 
-  .brand img{
+  .brand img,
+  .brand a{
     height: 100%;
   }
 

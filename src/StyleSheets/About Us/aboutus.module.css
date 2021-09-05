@@ -1,6 +1,10 @@
 .boom-poster {
   margin-top: 7em;
 }
+.boom{
+  width: 50%;
+  margin: auto;
+}
 .content-1 {
   text-align: center;
 }
@@ -27,42 +31,69 @@
     text-align: center;
     margin-top: 0%;
 }
-.team-member{
-    width: 80%;
-    margin: 0% auto;
-    margin-top: 2%;
+
+.section-3
+{
+
+  background-color: #ededed;
 }
-.member-1,.member-2,.member-3{
-    display: flex;
+.section-3 h1{
+  padding-top: 20px;
+  text-align: center;
+  font-size: 2rem;
 }
-.member-1 img,.member-2 img, .member-3 img{
-    width: 20%;
+.section-3 hr{
+  width: 60%;
+  height: 1px;
+  background-color: #000;
 }
-.member-2{
-    flex-direction: row-reverse;
+.section-3 .section-wrapper
+{
+  display: flex;
+  width: 90%;
+  margin: auto;
 }
-.text{
-    display: flex;
-    flex-direction: column;
-    margin-top: 2em;
-    justify-content: space-between;
-    margin-left: 5%;
+.section-3 .section-wrapper .row-1,
+.section-3 .section-wrapper .row-2  {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
 }
-.text h1,.text h6,.text p{
-    text-align: left;
+.section-3 .section-wrapper .row-1{
+  flex-direction: column;
 }
-.member-2 .text{
-    text-align: left;
+.section-3 .section-wrapper .row-1 .charestics{
+  display: flex;
+  align-items: center;
 }
-.text h1{
-    font-size: 2em;
+.section-3 .section-wrapper .row-1 .charestics div{
+  min-width: 70px;
+  min-height: 70px;
+  margin: 10px 0px;
+  background-color: #31155281;
+  display: flex;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
 }
+.section-3 .section-wrapper .row-1 .charestics div img{
+  width: 60px;
+  height: 55px;
+}
+.section-3 .section-wrapper .row-2 img{
+  overflow: hidden;
+  width: 100%;
+}
+
 @media screen and (max-width:1100px){
     .text-section{
         margin-top: 0%;
       }
 }
 @media screen and (max-width:900px){
+  .boom{
+    width: 80%;
+  }
     .result-1 ,.result-2{
         flex-direction: column;
       }
@@ -78,8 +109,17 @@
       .result-2{
           flex-direction: column-reverse;
       }
-      .member-1 img,.member-2 img,.member-3 img{
-        height: 20%;
-        margin: auto;
-      }
+}
+@media screen and (max-width: 635px) {
+  .section-3 .section-wrapper .row-2{
+    display: none;
+  }
+  .section-3 .section-wrapper .row-1{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px){
+  .boom{
+    width: 90%;
+  }
 }

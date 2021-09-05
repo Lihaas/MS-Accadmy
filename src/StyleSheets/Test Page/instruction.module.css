@@ -1,0 +1,61 @@
+.Info{
+    padding-top: 2em;
+    padding-left: 5em;
+    overflow: auto;
+}
+.Info h1{
+    color: #009edb;
+}
+.instruction-1{
+    padding-right: 5%
+}
+.start-test{
+    position: fixed;
+    bottom: 0vh;
+    left: 0vw;
+    border: 1px solid #000;
+    width: 100%;
+    height: 15vh;
+    background-color: #009edb;
+    display: flex;
+    margin: auto;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+}
+.test-btn{
+    width: 100%;
+}
+.start-test button{
+    width: 150px;
+    height: 40px;
+    border: 1px solid #000;
+    /* position: relative;
+    left: 35em; */
+    font-size: 1.5em;
+    background-color: #FFF;
+    color: #000;
+    transition: .5s;
+    float: right;
+    margin-right: 30px;
+}
+.start-test button:hover{
+    background-color: #000;
+    color: #FFF;
+
+}
+.circle{
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    margin-right: 5px;
+}
+/* p{
+    margin: 0px;
+    margin-bottom: 5px;
+    text-align: left;
+    display: flex;
+    margin-left: 50px;
+} */

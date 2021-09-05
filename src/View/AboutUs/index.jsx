@@ -3,6 +3,12 @@ import poster1 from "../../Assets/Image/0002.jpg";
 import poster2 from "../../Assets/Image/0003.jpg";
 import boom from "../../Assets/Image/boom.png";
 import dp from "../../Assets/Image/sample dp.png"
+import study from "../../Assets/Image/study (1).png";
+import star from "../../Assets/Image/star (1).png";
+import experience from "../../Assets/Image/experience (1).png";
+import expert from "../../Assets/Image/expert (1).png";
+import qualification from "../../Assets/Image/qualification (1).png";
+import Mohit from "../../Assets/Image/mohit.png";
 import { useEffect } from "react";
 const AboutUs = () => {
   useEffect(() => {
@@ -27,7 +33,7 @@ const AboutUs = () => {
               <br />
               Cleared Exam 2020
             </span>
-            <img src={boom} />
+            <img src={boom} className={styles["boom"]}/>
           </div>
         </div>
       </section>
@@ -65,36 +71,49 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-    <section className={styles["team"]}>
-        <h1>Team</h1>
-        <p>Meet the people behind our magical product</p>
-        <div className={styles["team-member"]}>
-            <div className={styles["member-1"]}>
-                <img src={dp} />
-                <div className={styles["text"]}>
-                <h1>Nikhil</h1>
-                <h4>Founder & CEO</h4><br></br>
-                <p>Meet the people behind our magical<br></br>product. Meet the people behind our<br></br>magical product</p>
+    
+
+      <section className={styles["section-3"]}>
+          <h1>About Mohit Sharma</h1>
+          <hr></hr>
+          <div className={styles["section-wrapper"]}>
+            <div className={styles["row-1"]}>
+              <div className={styles["charestics"]}>
+                <div>
+                  <img src={study} />
                 </div>
-            </div>
-            <div className={styles["member-2"]}>
-                <img src={dp} />
-                <div className={styles["text"]}>
-                <h1>Sahil Verma</h1>
-                <h4>Full stack Developer</h4><br></br>
-                <p>Meet the people behind our magical<br></br>product. Meet the people behind our<br></br>magical product</p>
+                  <p>2 times JRF</p>
+              </div>
+              <div className={styles["charestics"]}>
+                <div>
+                  <img src={star} />
                 </div>
-            </div>
-            <div className={styles["member-3"]}>
-                <img src={dp} />
-                <div className={styles["text"]}>
-                <h1>Shivam Sharma</h1>
-                <h4>Android Developer</h4><br></br>
-                <p>Meet the people behind our magical<br></br>product. Meet the people behind our<br></br>magical product</p>
+                <p>8+ Years Of Teaching Experience</p>
+              </div>
+              <div className={styles["charestics"]}>
+                <div>
+                  <img src={experience} />
                 </div>
+                <p>Teaching 100K+ Students On YouTube</p>
+              </div>
+              <div className={styles["charestics"]}>
+                <div>
+                  <img src={expert} />
+                </div>
+                <p>Deals in Paper 1 & Paper 2(commerce)</p>
+              </div>
+              <div className={styles["charestics"]}>
+                <div>
+                  <img src={qualification} />
+                </div>
+                <p>B.Com, M.Com, MBA</p>
+              </div>
             </div>
-        </div>
-    </section>
+            <div className={styles["row-2"]}>
+              <img src={Mohit} />
+            </div>
+            </div>
+            </section>
     </div>
   );
 };

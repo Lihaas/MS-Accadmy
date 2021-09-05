@@ -14,7 +14,6 @@ const MobileHeader = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   useEffect(()=>{ 
     checkLogin();
-    userLogout();
   },[])
   const checkLogin = () => {
     isUserLoggedIn(setUserLoggedIn);
@@ -29,7 +28,7 @@ const MobileHeader = () => {
     <div className={styles.navbar}>
       <div className={styles["nav-wrapper"]}>
         <div className={styles.brand}>
-          <img src={Logo} />
+          <a href="/home"><img src={Logo} /></a>
           <span>M Smart Academy</span>
         </div>
         <div className={styles["ham-menu-icon"]} onClick={drawerHandler}>
@@ -43,13 +42,14 @@ const MobileHeader = () => {
         <div className={styles["hide-show"]} id="course-drop-down">
         <NavLink to={{ pathname: "/courses/paper1" }} onClick={drawerHandler}>Paper 1</NavLink>
         <NavLink to={{ pathname: "/courses/paper2" }} onClick={drawerHandler}>Paper 2</NavLink>
+        <NavLink to={{ pathname: "/test-series" }} onClick={drawerHandler}>Test Series</NavLink>
         </div>
         <h1 onClick={noteHideShow}>Notes <img src={dropdown} /></ h1>
         <div className={styles["hide-show"]} id="notes-drop-down">
         <NavLink to={{ pathname: "/notes/paper1" }} onClick={drawerHandler}>Paper 1</NavLink>
         <NavLink to={{ pathname: "/notes/paper2" }} onClick={drawerHandler}>Paper 2</NavLink>
-        <NavLink to={{ pathname: "/notes/testseries" }} onClick={drawerHandler}>Test Series</NavLink>
         </div>
+        <NavLink to={{ pathname: "/test-series" }} onClick={drawerHandler}>Test Series</NavLink>
         <NavLink to={{ pathname: "/contact-us" }} onClick={drawerHandler}>Contact Us</NavLink>
         <NavLink to={{ pathname: "/about-us" }} onClick={drawerHandler}>About Us</NavLink>
         {
@@ -64,7 +64,7 @@ const MobileHeader = () => {
           <>
             <NavLink to={{pathname: "/dashboard"}} onClick={drawerHandler}>Profile</NavLink>
             <NavLink to={{pathname: "/test-series"}} onClick={drawerHandler}>Test</NavLink>
-            <a href="/" onClick={()=>{userLogout()}} onClick={drawerHandler}>Logout</a>
+            <a href="/" onClick={()=>{userLogout();drawerHandler();}} >Logout</a>
           </>
         }
       </div>
