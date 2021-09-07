@@ -1,0 +1,190 @@
+.heading-poster {
+  text-align: center;
+  margin-top: 8em;
+  margin-bottom: 8em;
+}
+.heading-poster h1,
+.heading-poster p {
+  margin: 0%;
+  padding: 0%;
+}
+.result-section {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 100px;
+}
+.card_container {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  padding: auto;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  color: white;
+  border-radius: 10px;
+}
+.card_content {
+  width: 90%;
+  height: 105%;
+  background: #3164f4;
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 20px;
+  cursor: pointer;
+  /* box-shadow: 8px 8px 22px #0a0a0a, -8px -8px 22px #1f75c4; */
+  /* box-shadow: -8px -8px 22px #1f75c4; */
+  transition: 0.3s all ease-in-out;
+}
+.card_content:hover {
+  margin-top: -10px;
+}
+.card_header {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 40px auto;
+}
+.card_button button {
+  margin-top: 20px;
+  margin-right: 1em;
+  background-color: #fff;
+  border: 2px solid #000;
+  min-width: 150px;
+  min-height: 40px;
+  color: #000;
+  line-height: 20px;
+  border-radius: 30px;
+  z-index: 1;
+  padding: 10px 20px;
+  border: 1px outset #000;
+  transition: 0.5s;
+}
+.card_button button:hover {
+  background-color: #000;
+  color: #fff;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+.card-subinfo {
+  display: flex;
+  justify-content: space-around;
+}
+.card-subinfo p {
+  margin: 5px;
+}
+.result-image {
+  width: 50%;
+}
+.result-box h1 {
+  text-align: left;
+}
+.mock-card {
+  margin-bottom: 100px;
+}
+.mock-card h1,
+.mock-card p {
+  text-align: center;
+}
+.mock-card p {
+  margin-bottom: 50px;
+}
+.card-section {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  border: 1px solid #000;
+  width: 23%;
+  height: 70vh;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.card:hover {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 3px solid #000;
+  opacity: .4;
+  filter: blur(10px);
+}
+
+.card h1 {
+  color: #d20000;
+}
+.card img {
+  width: 50%;
+  margin: 10px auto;
+}
+.discount-banner {
+  background-color: #d20000;
+  height: 5vh;
+}
+.discount-banner h3 {
+  color: #fff;
+  z-index: 99;
+  text-align: center;
+}
+.paper-1 {
+  display: flex;
+  height: 5%;
+  margin-top: 10px;
+}
+.paper-1 p {
+  color: #000;
+  font-size: 10px;
+  text-decoration: solid;
+}
+.paper-1 img {
+  width: 30%;
+  height: 60%;
+}
+.label {
+  margin-bottom: 10px !important;
+}
+.card p {
+  font-size: 10px;
+  text-align: left;
+  margin-left: 20px;
+}
+.card .discount-strike {
+  text-decoration: line-through;
+  color: #000;
+  text-align: center;
+}
+.card h4 {
+  text-align: center;
+}
+.join-btn {
+  display: flex;
+  justify-content: center;
+}
+.join-btn button {
+  width: 10%;
+  background: #3164f4 0% 0% no-repeat padding-box;
+  border-radius: 9px;
+  opacity: 1;
+  border: none;
+  color: #fff;
+  height: 30px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1050px) {
+  .result-section {
+    width: 100%;
+  }
+  .result-image {
+    width: 40%;
+  }
+  .result-content {
+    width: 50%;
+  }
+  .result-image img {
+    width: 100%;
+  }
+}

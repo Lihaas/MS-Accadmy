@@ -37,6 +37,7 @@ const DesktopHeader = () => {
   <div className={styles["dropdown-content"]}>
   <NavLink to={{pathname: "/courses/paper1"}}>Paper 1</NavLink>
   <NavLink to={{pathname: "/courses/paper2"}}>Paper 2</NavLink>
+  <NavLink to={{pathname: "/test-series"}} >Test Series</NavLink>
   </div>
 </div>
 <div className={styles["dropdown"]}>
@@ -44,7 +45,6 @@ const DesktopHeader = () => {
   <div className={styles["dropdown-content"]}>
   <NavLink to={{pathname: "/notes/paper1"}} >Paper 1</NavLink>
   <NavLink to={{pathname: "/notes/paper2"}} >Paper 2</NavLink>
-  <NavLink to={{pathname: "/notes/testseries"}} >Test Series</NavLink>
   </div>
 </div>
           <NavLink to={{ pathname: "/contact-us" }} >ContactUs</NavLink>
@@ -68,7 +68,7 @@ const DesktopHeader = () => {
               <span className={styles["dropbtn"]}><img src={MaleUser} width="50"/></span>
               <div className={styles["profile-dropdown-content"]}>
               <NavLink to={{pathname: "/dashboard"}}>Profile</NavLink>
-              <NavLink to={{pathname: "/test"}}>Test</NavLink>
+              <NavLink to={{pathname: "/test-series"}}>Test</NavLink>
               <a href="/" onClick={userLogout}>Logout</a>
               </div>
               </div>
