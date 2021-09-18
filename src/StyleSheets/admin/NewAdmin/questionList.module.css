@@ -1,185 +1,195 @@
-.question-body{
-    overflow-x: hidden;
+.question-body {
+  overflow-x: hidden;
 }
-.header{
-    height: 10vh;
-    width: 100%;
-    background-color: #FFF;
-    margin: 0px 20px;
-    display: flex;
-    align-items: center;
+.header {
+  height: 10vh;
+  width: 100%;
+  background-color: #fff;
+  margin: 0px 20px;
+  display: flex;
+  align-items: center;
 }
-.header-img{
-    width: 5%;
+.header-img {
+  width: 5%;
 }
-.header img{
-    width: 40px;
-    height: 50%;
-    text-align: left;
+.header img {
+  width: 40px;
+  height: 50%;
+  text-align: left;
 }
-.header h1{
-    width: 95%;
-    text-align: center;
-    justify-content: center;
+.header h1 {
+  width: 95%;
+  text-align: center;
+  justify-content: center;
 }
-.content{
-    width: 100%;
-    height: 90vh;
-    position: fixed;
-    background-color: #EDEDED;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.content {
+  width: 100%;
+  height: 90vh;
+  position: fixed;
+  background-color: #ededed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.inner-content{
-    width: 90%;
-    height: 90%;
-    background-color: #FFF;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    padding: 20px;
-    position: relative;
+.inner-content {
+  width: 90%;
+  height: 90%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 20px;
+  position: relative;
 }
-.inner-content .create-button{
-    position: absolute;
-    right: 50px;
+.inner-content .create-button {
+  position: absolute;
+  right: 50px;
 }
-.inner-content button{
-    background-color: #004bcf;
-    color: #FFF;
-    border: none;
-    font-size: 20px;
-    width: 140px !important;
-    height: 40px !important;
-    cursor: pointer;
+.inner-content .create-button button {
+  margin: 0px 20px;
 }
-.inner-content table{
-    margin-top: 60px;
+.inner-content button {
+  background-color: #004bcf;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  width: 140px !important;
+  height: 40px !important;
+  cursor: pointer;
+}
+.inner-content table {
+  margin-top: 60px;
 }
 .inner-content table,
 .inner-content tr,
 .inner-content td,
-.inner-content th{
-    font-family: Arial, Helvetica, sans-serif;
-    border: none;
+.inner-content th {
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
 }
-.inner-content th{
-    font-size: 20px;
+.inner-content th {
+  font-size: 20px;
 }
-.inner-content table th
-.inner-content .ques-tabel-row{
-    height: 15px;
-    border: none;
+.inner-content table th .inner-content .ques-tabel-row {
+  height: 15px;
+  border: none;
 }
-.inner-content .ques-tabel-row .ques-tabel-img img{
-    width: 20px;
-    margin: 0px 10px;
-    cursor: pointer;
+.inner-content .ques-tabel-row .ques-tabel-img img {
+  width: 20px;
+  margin: 0px 10px;
+  cursor: pointer;
 }
-.show-header{
-    display: flex;
+.show-header {
+  display: flex;
 }
-.back-img img{
-    width: 30px;
-    cursor: pointer;
+.back-img img {
+  width: 30px;
+  cursor: pointer;
 }
-.show-content p{
-    margin: 0px;
-    padding: 0px;
-    font-weight: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+.show-content p {
+  margin: 0px;
+  padding: 0px;
+  font-weight: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
 }
-.show-content h2{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 20px 0px 0px 0px;
-    padding:  20px 0px 0px 0px;
-    font-size: 20px;
-    font-weight: 700;
+.show-content h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
+  font-size: 20px;
+  font-weight: 700;
 }
-.question-card{
-    margin-top: 30px;
+.question-card {
+  margin-top: 30px;
 }
-.radio-btn{
-    margin-bottom: 30px;
-    display: flex;
+.radio-btn {
+  margin-bottom: 30px;
+  display: flex;
 }
-.question-radio{
-    display: block;
-    width: 10%;
-    height: 20px;
-    margin-left: 5%;
+.question-radio {
+  display: block;
+  width: 10%;
+  height: 20px;
+  margin-left: 5%;
 }
 .question-field input,
 .question-field select,
-.question-field textarea
-{
-    display: flex;
-    width: 90%;
-    height: 40px;
-    margin: 10px auto;
-    padding: 5px;
-    font-size: 20px;
+.question-field textarea {
+  display: flex;
+  width: 90%;
+  height: 40px;
+  margin: 10px auto;
+  padding: 5px;
+  font-size: 20px;
 }
-.question-field label{
-    margin: 20px;
-    margin-left: 5%;
+.question-field label {
+  margin: 20px;
+  margin-left: 5%;
 }
-.uploadedImg{
-    display: flex;
+.uploadedImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.image-box {
+  display: flex;
+  margin-left: 5%;
+}
+.image-box:nth-child(1) {
+  width: 20%;
+}
+.image-box:nth-child(2) {
+  width: 20%;
+  align-items: flex-end;
+}
+.uploadedImg img {
+  margin-left: 5% !important;
+}
+.update-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.upload-div {
+  width: 80%;
+  display: flex;
+  margin: 0px auto;
+  align-items: center;
+  align-content: center;
+  height: 50px;
+}
+.upload-div input {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  margin-right: 20px;
+}
+.upload-div button {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.csv-upload-form {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #4268f6;
+  display: none;
+  justify-content: center;
+  z-index: 99;
+}
+@media screen and (max-width: 1220px) {
+  .radio-btn {
     flex-direction: column;
-    justify-content: left;  
-}
-.image-box{
-    display: flex;
-    margin-left: 5%;
-}
-.image-box:nth-child(1)
-{
-    width: 20%;
-}
-.image-box:nth-child(2)
-{
-    width: 20%;
-    align-items: flex-end;
-}
-.uploadedImg img{
-    margin-left: 5% !important;
-}
-.update-button{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-.upload-div{
-    width: 80%;
-    display: flex;
-    margin: 0px auto;
-    align-items: center;
-    align-content: center;
-    height: 50px;
-}
-.upload-div input{
-    width: 40%;
-    display: flex;
-    align-items: center;
-    margin: 0px;
-    margin-right: 20px;
-}
-.upload-div button{
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@media screen and (max-width: 1220px){
-    .radio-btn{
-        flex-direction: column;
-        width: 100%;
-    }
-    .question-radio{
-        width: 100%;
-    }
+    width: 100%;
+  }
+  .question-radio {
+    width: 100%;
+  }
 }

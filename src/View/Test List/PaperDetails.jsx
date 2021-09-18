@@ -19,7 +19,7 @@ const PaperDetails = (props) => {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.getElementById("blurScreen").style.display="block"
-    Axios.get("https://msacadmy.herokuapp.com/v1/get/test?chapterId=" + id, {
+    Axios.get(process.env.REACT_APP_API_URL+"/v1/get/test?chapterId=" + id, {
       headers: { Authorization: localStorage.getItem("token") },
     })
       .then((item) => {
@@ -40,7 +40,7 @@ const PaperDetails = (props) => {
           console.log(error);
         }
       });
-      Axios.get("https://msacadmy.herokuapp.com/users/me", {
+      Axios.get(process.env.REACT_APP_API_URL+"/users/me", {
         headers: { Authorization: localStorage.getItem("token") },
       })
       .then((item) => {
@@ -70,7 +70,7 @@ const PaperDetails = (props) => {
       const id = data[e.target.id]._id;
       localStorage.setItem("examID",id)
       localStorage.setItem("totalMarks",data[e.target.id].totalMarks)
-      Axios.get("https://msacadmy.herokuapp.com/v1/questions?testID=" + id, {
+      Axios.get(process.env.REACT_APP_API_URL+"/v1/questions?testID=" + id, {
         headers: { Authorization: localStorage.getItem("token") },
       })
       .then((item) => {
@@ -95,7 +95,7 @@ const PaperDetails = (props) => {
       const id = data[e.target.id]._id;
       localStorage.setItem("examID",id)
       localStorage.setItem("totalMarks",data[e.target.id].totalMarks)
-      Axios.get("https://msacadmy.herokuapp.com/v1/questions?testID=" + id, {
+      Axios.get(process.env.REACT_APP_API_URL+"/v1/questions?testID=" + id, {
         headers: { Authorization: localStorage.getItem("token") },
       })
       .then((item) => {

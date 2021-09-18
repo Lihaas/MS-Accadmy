@@ -22,7 +22,7 @@ const ContactUs = () => {
       alert("Please Select Batch Type");
     document.getElementById("blurScreen").style.display="none"
     }else{
-      Axios.post("https://msacadmy.herokuapp.com/create/form",{
+      Axios.post(process.env.REACT_APP_API_URL+"/create/form",{
         "name":document.getElementById("FullName").value,
         "phoneNumber":document.getElementById("PhoneNumber").value,
         "batchName":document.getElementById("BatchName").value,

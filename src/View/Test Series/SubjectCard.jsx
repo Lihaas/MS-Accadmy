@@ -14,7 +14,7 @@ const SubjectCard = () => {
     document.getElementById("blurScreen").style.display = "block";
     axios
       .get(
-        "https://msacadmy.herokuapp.com/v1/subject/getall?questionPaperID=" +
+        process.env.REACT_APP_API_URL+"/v1/subject/getall?questionPaperID=" +
           id.subjectId,
         {
           headers: {
@@ -38,7 +38,7 @@ const SubjectCard = () => {
       document.getElementById("blurScreen").style.display="block"
     axios
       .get(
-        "https://msacadmy.herokuapp.com/v1/chapter/getall?subejectID=" +
+        process.env.REACT_APP_API_URL+"/v1/chapter/getall?subejectID=" +
           e.target.id,
         {
           headers: {

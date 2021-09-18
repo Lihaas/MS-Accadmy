@@ -9,7 +9,7 @@ const AddSubject = () => {
   const id = useParams();
   useEffect(()=>{
     document.getElementById("blurScreen").style.display = "block";
-    axios.get("https://msacadmy.herokuapp.com/users/me", {
+    axios.get(process.env.REACT_APP_API_URL+"/users/me", {
       headers: {
         Authorization: localStorage.getItem("token"),
       },
@@ -30,7 +30,7 @@ const AddSubject = () => {
   const addSubject = (e) => {
     document.getElementById("blurScreen").style.display="block"
     e.preventDefault()
-    axios.post("https://msacadmy.herokuapp.com/create/subject", {
+    axios.post(process.env.REACT_APP_API_URL+"/create/subject", {
       subjectName: document.getElementById("subjectName").value,
       questionPaperID: id.subjectId,
     },{

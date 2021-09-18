@@ -4,18 +4,21 @@ import styles from "../../../StyleSheets/admin/NewAdmin/questionList.module.css"
 import axios from "axios";
 import showIcon from "../../../Assets/Image/view.png"
 import Loader from "../../loading spinner/Loader";
-
+import { useState } from "react";
+import Axios from "axios";
 
 const List = (props) =>{
+  const [hospitalId, setHospitalId] = useState("");
+  const [file, setFile] = useState(null);
     const deleteQuestion = (e) =>{
         document.getElementById("blurScreen").style.display="block"
-        axios.delete("https://msacadmy.herokuapp.com/v1/question/delete?qid="+e.target.id,{
+        axios.delete(process.env.REACT_APP_API_URL+"/v1/question/delete?qid="+e.target.id,{
             headers:{
               Authorization: localStorage.getItem("token")
             }
         }).then((item)=>{
           axios
-        .get("https://msacadmy.herokuapp.com/v1/questions?testID=" + props.id, {
+        .get(process.env.REACT_APP_API_URL+"/v1/questions?testID=" + props.id, {
           headers: {
             Authorization: localStorage.getItem("token"),
           },
@@ -38,13 +41,52 @@ const List = (props) =>{
       props.edit(e)
       console.log();
     }
+
+    const uploadPictureForm = () => {
+      var hospiForm = document.getElementById("hospiForm");
+      if(hospiForm.style.display === "none"){
+          hospiForm.style.display = "flex";
+      }else{
+          hospiForm.style.display = "none";
+      }
+    }
+  
+    const upload = (event) => {
+      event.preventDefault();
+      document.getElementById("blurScreen").style.display="block"
+      var formData = new FormData();
+      formData.append('csv', file)
+      Axios.post(process.env.REACT_APP_API_URL+"/v1/uploadCSV",formData,{
+        headers:{
+          "Content-Type":"multipart/form-data",
+          "Authorization":localStorage.getItem("token")
+        }
+      })
+      .then(()=>{
+        document.getElementById("blurScreen").style.display="none"
+        uploadPictureForm();
+      })
+      .catch(()=>{
+        document.getElementById("blurScreen").style.display="none"
+        alert("Error occurred, Please try again")
+      })
+    }
     return(
-        <>
+        <> 
+        <div className={styles["csv-upload-form"]} id="hospiForm">
+          <h1 style={{color:"white",position:"fixed",top:"5px",right:"17px", fontSize:"28px", cursor:"pointer"}} onClick={()=>uploadPictureForm()}>&#10539;</h1>
+          <form style={{transform:"translate(-25%)", background:"white", marginTop:"100px", width:"40%", height:"150px"}} onSubmit={(event)=>upload(event)}>
+            <input type="file" style={{marginTop:"30px", marginLeft:"20px"}} accept="csv/*" onChange={(e)=>setFile(e.target.files[0])}/>
+            <br></br>
+            <input type="submit" style={{background:"#4268f6",color:"white",width:"150px",textAlign:"center",padding:"9px 14px",fontSize:"15px", margin:"20px", marginTop:"30px", border:"0", cursor:"pointer"}} value="Upload" />
+          </form>
+      </div>
         <Loader />
         <div id="questionList">
         <div className={styles["create-button"]}>
+              <button onClick={()=>uploadPictureForm()}>Upload File</button>
               <button onClick={()=>{props.create()}}>Create New</button>
-                </div>
+                </div> 
                 {
                     props.data.length===0?
                     <h1>No Data Available</h1>

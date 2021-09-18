@@ -128,7 +128,7 @@ export const TestPanel = ({ children }) => {
         reviewedque++
       }
     }
-      Axios.post("https://msacadmy.herokuapp.com/v1/result",
+      Axios.post(process.env.REACT_APP_API_URL+"/v1/result",
       {
         "paperId":localStorage.getItem('examID'),
         "marksGain":marks,
@@ -141,7 +141,7 @@ export const TestPanel = ({ children }) => {
         }
       })
       .then((item)=>{
-        Axios.post("https://msacadmy.herokuapp.com/create/result",
+        Axios.post(process.env.REACT_APP_API_URL+"/create/result",
         {
           "tId":localStorage.getItem('examID'),
           "marksObtain":marks,

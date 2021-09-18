@@ -33,7 +33,7 @@ export const SignUpVerification = (setUser) => {
           "address": document.getElementById("address").value,
           "otpCode":"werwer@@rockon@$331"
         }
-        Axios.post("https://msacadmy.herokuapp.com/v1/users",data)
+        Axios.post(process.env.REACT_APP_API_URL+"/v1/users",data)
         .then((item)=>{
           document.getElementById("blurScreen").style.display="none"
           localStorage.setItem("token",item.data.token)
@@ -60,7 +60,7 @@ export const LoginVerification = (setUser) => {
     window.confirminationResult
       .confirm(code)
       .then((result) => {
-        Axios.post("https://msacadmy.herokuapp.com/v1/users",
+        Axios.post(process.env.REACT_APP_API_URL+"/v1/users",
         {"phoneNum":document.getElementById("phoneNumber").value,
         "otpCode":"werwer@@rockon@$331"
       })

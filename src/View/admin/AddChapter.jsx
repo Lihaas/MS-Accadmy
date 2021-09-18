@@ -8,7 +8,7 @@ const AddChapter = () =>{
   const id = useParams();
   useEffect(()=>{
     document.getElementById("blurScreen").style.display = "block";
-    axios.get("https://msacadmy.herokuapp.com/users/me", {
+    axios.get(process.env.REACT_APP_API_URL+"/users/me", {
       headers: {
         Authorization: localStorage.getItem("token"),
       },
@@ -29,7 +29,7 @@ const AddChapter = () =>{
   const addChapter = (e) => {
     document.getElementById("blurScreen").style.display="block"
     e.preventDefault()
-    axios.post("https://msacadmy.herokuapp.com/create/chapter", {
+    axios.post(process.env.REACT_APP_API_URL+"/create/chapter", {
       chapterName: document.getElementById("chapterName").value,
       subejectID: id.chapterId,
     },{

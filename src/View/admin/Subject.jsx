@@ -11,14 +11,14 @@ const Subject = () =>{
   const id = useParams();
   useEffect(() => {
     document.getElementById("blurScreen").style.display = "block";
-    Axios.get("https://msacadmy.herokuapp.com/users/me", {
+    Axios.get(process.env.REACT_APP_API_URL+"/users/me", {
       headers: {
         Authorization: localStorage.getItem("token"),
       },
     })
       .then((item) => {
         if (item.data.phoneNum === 1234567899) {
-          Axios.get("https://msacadmy.herokuapp.com/v1/subject/getall?questionPaperID="+id.subjectId, {
+          Axios.get(process.env.REACT_APP_API_URL+"/v1/subject/getall?questionPaperID="+id.subjectId, {
             headers: {
               Authorization: localStorage.getItem("token"),
             },

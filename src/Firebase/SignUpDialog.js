@@ -36,7 +36,7 @@ export const VerifyDialog = (setLogin) => {
           "address": document.getElementById("dialogAddress").value,
           "otpCode":"werwer@@rockon@$331"
         }
-        Axios.post("https://msacadmy.herokuapp.com/v1/users",data)
+        Axios.post(process.env.REACT_APP_API_URL+"/v1/users",data)
         .then((item)=>{
           document.getElementById("blurScreen").style.display="none"
           localStorage.setItem("token",item.data.token)
