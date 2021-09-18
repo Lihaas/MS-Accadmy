@@ -24,7 +24,8 @@
   text-align: left;
 }
 
-.brand img {
+.brand img,
+.brand a{
   height: 100%;
 }
 

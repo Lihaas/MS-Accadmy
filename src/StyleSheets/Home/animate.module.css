@@ -1,0 +1,41 @@
+.counter-section{
+    width: 100%;
+    background: radial-gradient(
+        farthest-side at 20% 0%,
+        white 1%,
+        white 1%,
+        #72b3e4
+      );
+      margin-top: -60px;
+      margin-bottom: -100px;
+}
+.counter-content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+}
+.counter-content fieldset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.counter-content fieldset legend{
+    text-align: center;
+}
+.counter-content fieldset legend img{
+    width: 70px;
+    height: 80px;
+}
+@media screen and (max-width: 750px){
+    .counter-content{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 400px){
+    .counter-content{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

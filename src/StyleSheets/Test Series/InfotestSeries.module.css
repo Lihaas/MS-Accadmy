@@ -1,0 +1,239 @@
+
+.testSeriesInfo{
+    background-color: #EDEDED;
+}
+.banner{
+    padding-top: .5em;
+    width: 100%;
+    height: 60vh;
+    margin: 0%;
+}
+.name-banner{
+    width: 100%;
+    height: 10vh;
+    margin-top: -1%;
+    background-color: #85a1ad;
+    /* margin-bottom: 500px; */
+}
+.name-banner h1{
+    color: #FFF;
+    padding-top: .5%;
+    padding-left: 10%;
+}
+.test-list{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    /* border: 1px solid black; */
+}
+.test-box{
+    width: 80%;
+    height: 10vh;
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 5px 20px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px 3px rgb(204, 204, 204);
+    transition: 2s;
+    display: flex;
+}
+.test-box:last-child
+{
+    margin-bottom: 10em;
+}
+.test-box:hover{
+    box-shadow: none;
+}
+.test-box-1{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.sub-test-box-1{
+    height:60%;
+}
+.sub-test-box-1 h1{
+    font-size: 1.5em;
+}
+.icons{
+    display: flex;
+}
+.sub-test-box-2{
+    height: 40%;
+    display: flex;
+}
+.question::before{
+    content: "? ";
+    color: #16a8d8;
+}
+.question{
+    margin-right: 10px !important;
+}
+.marks img{
+    width: 15%;
+}
+/* .marks::before{
+    content: "require(../../Assets/Image/text-document.png)";
+    color: #16a8d8;
+}
+.time::before{
+    content: "\f0f6";
+    color: #16a8d8;
+} */
+.time
+{
+    margin-left: -20px;
+}
+.question,
+.marks,
+.time{
+    color: #999999;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.live-btn button{
+    width: 40px !important;
+    height: 90%;
+    background-color: #b52b00;
+    border-radius: 5px;
+    border: none;
+    margin-left: 10px;
+    color: #FFF;
+}
+.live-btn p{
+    display: inline-flex;
+    margin: 0%;
+    padding: 0%;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.test-box-2{
+    width: 20%;
+    align-items: center;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+.test-box .free-btn{
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #59d05d;
+}
+.test-box-2 button{
+    width: 80px;
+    background: #3164f4 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    border: none;
+    color: #fff;
+    height: 30px;
+    cursor: pointer;
+}
+.test-box-2 .unlock-btn{
+    width: 80px;
+    background: #fff 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    border: 1px solid #000;
+    color: #fff;
+    height: 30px;
+    cursor: pointer;
+    color: #000;
+}
+.unlock-btn a{
+    text-decoration: none;
+    color: #000;
+}
+.sec-1,
+.sec-2{
+    display: flex;
+}
+.paper-name{
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width: 950px){
+    .test-box{
+        height: 20vh;
+        /* width: 100%; */
+        flex-direction: column;
+    }
+    .sub-test-box-2{
+        margin-top: 5px;
+        justify-content: start;
+        width: 100%;
+    }
+    .test-box-1{
+        margin-bottom: 10px;
+    }
+    .test-box-2{
+        width: 100%;
+        margin: auto;
+        justify-content: start;
+    }
+    .test-box-2 .free-btn{
+        margin-right: 20px;
+    }
+    .sub-test-box-2{
+        width: 500px !important;
+    }
+    .live-btn{
+        margin-left: -30px;
+    }
+}
+@media screen and (max-width: 750px){
+    .sub-test-box-2{
+        width: 300px !important;
+    }
+}
+@media screen and (max-width: 550px){
+    .test-box{
+        height: 25vh;
+    }
+    .time{
+        margin-left: 0px;
+    }
+    .sub-test-box-2{
+        margin-bottom: 10px;
+    }
+    .sec-1,
+    .sec-2{
+        flex-direction: column !important;
+    }
+    .paper-name{
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+@media screen and (max-width: 500px){
+    /* .test-box-1{
+        width: 70%;
+    }
+    .test-box-2{
+        width: 30%;
+    } */
+    .test-box{
+        height: 25vh;
+    }
+}
+@media screen and (max-width: 400px){
+    .test-box{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 350px){
+    .test-list{
+        width: 100%;
+    }
+    .test-box{
+        width: 85%;
+        margin: auto;
+    }
+}

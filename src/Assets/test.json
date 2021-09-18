@@ -182,6 +182,738 @@
             "$date": "2021-06-24T13:40:29.896Z"
         },
         "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "JSON stands for ________________",
+        "OptionA": " Java Standard Output Network",
+        "OptionB": "JavaScript Object Notation",
+        "OptionC": "JavaScript Output Name",
+        "OptionD": "Java Source Open Network",
+        "totalMarks": 10,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:19:15.295Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:19:15.295Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Which is correct format of writting JSON name/value pair",
+        "OptionA": "'name : value'",
+        "OptionB": "name = 'value'",
+        "OptionC": "name = \"value\"",
+        "OptionD": "\"name\" : \"value\"",
+        "totalMarks": 20,
+        "correctOption": "D",
+        "createdAt": {
+            "$date": "2021-06-24T13:21:38.456Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:21:38.456Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Which of the following is not a type in JSON?",
+        "OptionA": "date",
+        "OptionB": "object",
+        "OptionC": "string",
+        "OptionD": "array",
+        "totalMarks": 30,
+        "correctOption": "A",
+        "createdAt": {
+            "$date": "2021-06-24T13:28:15.727Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:28:15.727Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Paragraph",
+        "Qtitle": "Cook settled in the continent of Australia because :",
+        "OptionA": "he had under taken the task of criminal reforms",
+        "OptionB": "he was upset with the apathy of the British Government",
+        "OptionC": "he wanted to prove his claim of suitability of that part to live in",
+        "OptionD": "none of these",
+        "paragraph": "Directions (Q.1 to 12) Read the following passage to answer the given questions based on it. Some words/phrases are printed in bold to help you locate them while answering some of the questions.  One day Nandu rode his horse to the village fair. On his way back he met Somendra, the merchant. The merchant was a crafty man, ready to do anything to earn some money. The villages knew this. In fact no one knew what trick he would be up to next. Now, Nandu was poor and had no one in the world to call his own except a beautiful, white horse. He loved it more than anything else in the world. The merchant had his eye on the horse for a long time and tried to think of a way to get it for himself. Seeing Nandu, the merchant thought, Nandu is a simpleton. Let me see if I can trick him out of his horse. So he said to Nandu, You live all alone. How do you manage? What does a young boy like you need with a horse? Sell it to me and I shall make you rich in return. Nandu replied, \"No I don’t want to sell my horse.\"   But the merchant refused to give up so easily. He offered Nandu more money. Finally, when the offer reached five hundred gold coins, Nandu paused and said. Five hundred gold coins seems like a good price. But I have a condition. If you agree to it, I shall give you my horse. \"What is it?\", the merchant asked impatiently. \"Give me the money right now and I shall give you my horse when I have given you ten lashes.\" After all he would resell the horse for over a thousand gold coins in the market. He would take twenty lashes for such a gain. He agreed instantly. He ran home and got the money for Nandu and brought along his whip as well. Nandu counted the money carefully. He then took the whip and the lashes fell on the merchant’s back in quick succession. By the eighth lash the merchant was almost in tears but he told himself that there were only two lashes to go and the horse would be his. The merchant held his breath waiting for the final lashes. But Nandu had mounted his horse and was riding off. \"Wait!\", shouted the merchant in anger. \"What about the last lashes? Where are you going with the horse? We had a deal.   Nandu stopped and said, \"I agree to give you the horse only after I had given you ten lashes. But it is upsetting my horse. I’ll give you the last lashes later. Till then goodbye!\" \"Come back you cheat!\",  the merchant shouted. But the crowd that had gathered around agreed with Nandu. A deal was a deal. Till the last lash was given, the horse could not belong to the merchant. Nandu rode away richer by five hundred gold coins and Somendra waited in vain for several days for the final lash which never came.",
+        "totalMarks": 100,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:31:20.083Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:31:20.083Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Who is the Father of JSON ?",
+        "OptionA": "'name : value'",
+        "OptionB": "object",
+        "OptionC": "JavaScript Output Name",
+        "OptionD": "none of these",
+        "totalMarks": 20,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:33:28.133Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:33:28.133Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Paragraph",
+        "Qtitle": "Which of the following can be inferred from the given passage?",
+        "OptionA": "date",
+        "OptionB": "JavaScript Object Notation",
+        "OptionC": "he wanted to prove his claim of suitability of that part to live in",
+        "OptionD": "none of these",
+        "paragraph": "Directions: Read the following passage carefully and answer the questions given beside.  \"Memories of the love we felt in childhood towards our parents are among the most precious aspects of autobiographical memory we could think of,\" says lead author Lawrence Patihis, researcher at the University of Southern Mississippi. \"Yet our findings suggest that these memories of love are malleable -- which is not something we would want to be true.\"   \"If you change your evaluation of someone, you will likely also change your memory of your emotions towards them and this is true of memory of love towards mothers in childhood,\" Patihis explains.   For their first experiment, Patihis and coauthors Cristobal S. Cruz and Mario E. Herrera recruited 301 online participants. Some participants wrote about recent examples of their mother's positive attributes, such as showing warmth, generosity, competence, and giving good guidance; others wrote about recent examples of their mother's lack of these attributes. Participants in one comparison group wrote while receiving writing prompt and participants in another comparison group received no writing prompt at all.   The participants completed a survey assessing how they currently thought about their mother's attributes, including her warmth and generosity. They then completed the Memory of Love Towards Parents Questionnaire (MLPQ), which contained 10 items designed to measure the love participants remembered feeling for their mother at different ages (e.g., \"During the whole year when you were in first grade, how often on average did you feel love toward your mother?\" and \"During the whole year when you were in first grade, how strong on average was your love toward your mother?\"). The MLPQ also measured participants' current feelings of love for their mothers.   The participants completed the measures again 2 weeks and 4 weeks after the initial session.   The results showed that the writing prompts influenced participants' current feelings and their memories of love. Specifically, participants who were prompted to write about their mother's positive attributes tended to recall stronger feelings of love for their mother in first, sixth, and ninth grade compared with participants who wrote about their mother's lack of positive attributes.   These effects endured at the 4-week follow-up for first grade memories, but not for memories of sixth grade or ninth grade.   Additional findings showed the effects of the writing prompts were not simply the result of changes in participants' mood.   A second experiment, with another 302 online participants, replicated these findings. Importantly, the participants did not differ in their current assessments of their mother before receiving the writing prompt, indicating that the effects of the writing prompts were not due to preexisting differences among participants. The findings also revealed that participants' current feelings of love for their mothers, as measured at the start of the experiment, were misremembered 8 weeks later following the experimental manipulation. The writing prompt effects had begun to fade by the time the researchers conducted an 8-week follow-up after the experiment.   The authors plan to expand this research to explore whether the same effects emerge for other emotions and target individuals and they're also exploring whether successes in life might similarly alter childhood memories of emotion. In addition, the researchers hope to find out whether these effects might influence later behavior.   \"The significance of this research lies in the new knowledge that our current evaluations of people can be lowered if we choose to focus on the negative, and this can have a side effect: the diminishing of positive aspects of childhood memories,\" says Patihis. \"We wonder if wide-ranging reappraisals of parents -- perhaps in life or in therapy -- could lead to intergenerational heartache and estrangement. Understanding this subtle type of memory distortion is necessary if we want to prevent it.\"",
+        "totalMarks": 150,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:34:54.905Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:34:54.905Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Paragraph",
+        "Qtitle": "Which among the following is correct regarding the view of the FATF regarding Pakistan, as given in the passage? ",
+        "OptionA": "'name : value'",
+        "OptionB": "he was upset with the apathy of the British Government",
+        "OptionC": "FATF believes that Pakistan should implement strict measures against the terrorist groups in their country.",
+        "OptionD": "none of these",
+        "paragraph": "Direction: Read the following passage carefully and answer the questions that follow.  India on Sunday rejected Pakistan’s allegation that it had sought to “politicize” deliberations at the Financial Action Task Force (FATF), which concluded its plenary last week with more strictures against Pakistan.   According to sources, the government has taken a strong view of Pakistan’s accusation that India had launched a “malicious campaign” to use the FATF’s process for its own “narrow, partisan objectives” against Pakistan. Pakistan’s Foreign Ministry was, in turn, responding to India’s statement that time was running out for Islamabad to show action “Against Money Laundering and Combating Financing of Terror (AML/CFT)” by groups that pose a transnational risk.   Calling Pakistan’s statement on politicisation a “false ploy” meant to “deflect attention and evade scrutiny of [Pakistan’s] poor compliance of global standards on AML/CFT and hoodwink the global community”, the government sources pointed to Pakistan’s own attempts at trying to influence the outcome of the FATF process, which has placed the neighbour on a “greylist” of countries of concern. In June 2018, the FATF decided unanimously to put Pakistan on the greylist, and hand it a 27-point action plan meant to be implemented within 18 months (by September 2019). If it fails to fulfill its FATF commitments, it could face the “next steps” or being moved to the “blacklist”, the FATF has warned.",
+        "totalMarks": 1000,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:36:06.381Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:36:06.381Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "What is correct MIME type for JSON ?",
+        "OptionA": "application/js",
+        "OptionB": "application/json",
+        "OptionC": "string",
+        "OptionD": "none of these",
+        "totalMarks": 5,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:37:48.267Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:37:48.267Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Which of following statement is false about the space parameter in JSON.stringify() ?",
+        "OptionA": "date",
+        "OptionB": " It removes whitespace",
+        "OptionC": "FATF believes that Pakistan should implement strict measures against the terrorist groups in their country.",
+        "OptionD": "none of these",
+        "totalMarks": 35,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:39:04.679Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:39:04.679Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "What are two main structures compose JSON?",
+        "OptionA": "'name : value'",
+        "OptionB": "Using Unicode",
+        "OptionD": "Using datatype  Using lang",
+        "OptionC": "Using keys",
+        "totalMarks": 100,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:40:29.896Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:40:29.896Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "JSON stands for ________________",
+        "OptionA": " Java Standard Output Network",
+        "OptionB": "JavaScript Object Notation",
+        "OptionC": "JavaScript Output Name",
+        "OptionD": "Java Source Open Network",
+        "totalMarks": 10,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:19:15.295Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:19:15.295Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Which is correct format of writting JSON name/value pair",
+        "OptionA": "'name : value'",
+        "OptionB": "name = 'value'",
+        "OptionC": "name = \"value\"",
+        "OptionD": "\"name\" : \"value\"",
+        "totalMarks": 20,
+        "correctOption": "D",
+        "createdAt": {
+            "$date": "2021-06-24T13:21:38.456Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:21:38.456Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Which of the following is not a type in JSON?",
+        "OptionA": "date",
+        "OptionB": "object",
+        "OptionC": "string",
+        "OptionD": "array",
+        "totalMarks": 30,
+        "correctOption": "A",
+        "createdAt": {
+            "$date": "2021-06-24T13:28:15.727Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:28:15.727Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Paragraph",
+        "Qtitle": "Cook settled in the continent of Australia because :",
+        "OptionA": "he had under taken the task of criminal reforms",
+        "OptionB": "he was upset with the apathy of the British Government",
+        "OptionC": "he wanted to prove his claim of suitability of that part to live in",
+        "OptionD": "none of these",
+        "paragraph": "Directions (Q.1 to 12) Read the following passage to answer the given questions based on it. Some words/phrases are printed in bold to help you locate them while answering some of the questions.  One day Nandu rode his horse to the village fair. On his way back he met Somendra, the merchant. The merchant was a crafty man, ready to do anything to earn some money. The villages knew this. In fact no one knew what trick he would be up to next. Now, Nandu was poor and had no one in the world to call his own except a beautiful, white horse. He loved it more than anything else in the world. The merchant had his eye on the horse for a long time and tried to think of a way to get it for himself. Seeing Nandu, the merchant thought, Nandu is a simpleton. Let me see if I can trick him out of his horse. So he said to Nandu, You live all alone. How do you manage? What does a young boy like you need with a horse? Sell it to me and I shall make you rich in return. Nandu replied, \"No I don’t want to sell my horse.\"   But the merchant refused to give up so easily. He offered Nandu more money. Finally, when the offer reached five hundred gold coins, Nandu paused and said. Five hundred gold coins seems like a good price. But I have a condition. If you agree to it, I shall give you my horse. \"What is it?\", the merchant asked impatiently. \"Give me the money right now and I shall give you my horse when I have given you ten lashes.\" After all he would resell the horse for over a thousand gold coins in the market. He would take twenty lashes for such a gain. He agreed instantly. He ran home and got the money for Nandu and brought along his whip as well. Nandu counted the money carefully. He then took the whip and the lashes fell on the merchant’s back in quick succession. By the eighth lash the merchant was almost in tears but he told himself that there were only two lashes to go and the horse would be his. The merchant held his breath waiting for the final lashes. But Nandu had mounted his horse and was riding off. \"Wait!\", shouted the merchant in anger. \"What about the last lashes? Where are you going with the horse? We had a deal.   Nandu stopped and said, \"I agree to give you the horse only after I had given you ten lashes. But it is upsetting my horse. I’ll give you the last lashes later. Till then goodbye!\" \"Come back you cheat!\",  the merchant shouted. But the crowd that had gathered around agreed with Nandu. A deal was a deal. Till the last lash was given, the horse could not belong to the merchant. Nandu rode away richer by five hundred gold coins and Somendra waited in vain for several days for the final lash which never came.",
+        "totalMarks": 100,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:31:20.083Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:31:20.083Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Who is the Father of JSON ?",
+        "OptionA": "'name : value'",
+        "OptionB": "object",
+        "OptionC": "JavaScript Output Name",
+        "OptionD": "none of these",
+        "totalMarks": 20,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:33:28.133Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:33:28.133Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Paragraph",
+        "Qtitle": "Which of the following can be inferred from the given passage?",
+        "OptionA": "date",
+        "OptionB": "JavaScript Object Notation",
+        "OptionC": "he wanted to prove his claim of suitability of that part to live in",
+        "OptionD": "none of these",
+        "paragraph": "Directions: Read the following passage carefully and answer the questions given beside.  \"Memories of the love we felt in childhood towards our parents are among the most precious aspects of autobiographical memory we could think of,\" says lead author Lawrence Patihis, researcher at the University of Southern Mississippi. \"Yet our findings suggest that these memories of love are malleable -- which is not something we would want to be true.\"   \"If you change your evaluation of someone, you will likely also change your memory of your emotions towards them and this is true of memory of love towards mothers in childhood,\" Patihis explains.   For their first experiment, Patihis and coauthors Cristobal S. Cruz and Mario E. Herrera recruited 301 online participants. Some participants wrote about recent examples of their mother's positive attributes, such as showing warmth, generosity, competence, and giving good guidance; others wrote about recent examples of their mother's lack of these attributes. Participants in one comparison group wrote while receiving writing prompt and participants in another comparison group received no writing prompt at all.   The participants completed a survey assessing how they currently thought about their mother's attributes, including her warmth and generosity. They then completed the Memory of Love Towards Parents Questionnaire (MLPQ), which contained 10 items designed to measure the love participants remembered feeling for their mother at different ages (e.g., \"During the whole year when you were in first grade, how often on average did you feel love toward your mother?\" and \"During the whole year when you were in first grade, how strong on average was your love toward your mother?\"). The MLPQ also measured participants' current feelings of love for their mothers.   The participants completed the measures again 2 weeks and 4 weeks after the initial session.   The results showed that the writing prompts influenced participants' current feelings and their memories of love. Specifically, participants who were prompted to write about their mother's positive attributes tended to recall stronger feelings of love for their mother in first, sixth, and ninth grade compared with participants who wrote about their mother's lack of positive attributes.   These effects endured at the 4-week follow-up for first grade memories, but not for memories of sixth grade or ninth grade.   Additional findings showed the effects of the writing prompts were not simply the result of changes in participants' mood.   A second experiment, with another 302 online participants, replicated these findings. Importantly, the participants did not differ in their current assessments of their mother before receiving the writing prompt, indicating that the effects of the writing prompts were not due to preexisting differences among participants. The findings also revealed that participants' current feelings of love for their mothers, as measured at the start of the experiment, were misremembered 8 weeks later following the experimental manipulation. The writing prompt effects had begun to fade by the time the researchers conducted an 8-week follow-up after the experiment.   The authors plan to expand this research to explore whether the same effects emerge for other emotions and target individuals and they're also exploring whether successes in life might similarly alter childhood memories of emotion. In addition, the researchers hope to find out whether these effects might influence later behavior.   \"The significance of this research lies in the new knowledge that our current evaluations of people can be lowered if we choose to focus on the negative, and this can have a side effect: the diminishing of positive aspects of childhood memories,\" says Patihis. \"We wonder if wide-ranging reappraisals of parents -- perhaps in life or in therapy -- could lead to intergenerational heartache and estrangement. Understanding this subtle type of memory distortion is necessary if we want to prevent it.\"",
+        "totalMarks": 150,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:34:54.905Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:34:54.905Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Paragraph",
+        "Qtitle": "Which among the following is correct regarding the view of the FATF regarding Pakistan, as given in the passage? ",
+        "OptionA": "'name : value'",
+        "OptionB": "he was upset with the apathy of the British Government",
+        "OptionC": "FATF believes that Pakistan should implement strict measures against the terrorist groups in their country.",
+        "OptionD": "none of these",
+        "paragraph": "Direction: Read the following passage carefully and answer the questions that follow.  India on Sunday rejected Pakistan’s allegation that it had sought to “politicize” deliberations at the Financial Action Task Force (FATF), which concluded its plenary last week with more strictures against Pakistan.   According to sources, the government has taken a strong view of Pakistan’s accusation that India had launched a “malicious campaign” to use the FATF’s process for its own “narrow, partisan objectives” against Pakistan. Pakistan’s Foreign Ministry was, in turn, responding to India’s statement that time was running out for Islamabad to show action “Against Money Laundering and Combating Financing of Terror (AML/CFT)” by groups that pose a transnational risk.   Calling Pakistan’s statement on politicisation a “false ploy” meant to “deflect attention and evade scrutiny of [Pakistan’s] poor compliance of global standards on AML/CFT and hoodwink the global community”, the government sources pointed to Pakistan’s own attempts at trying to influence the outcome of the FATF process, which has placed the neighbour on a “greylist” of countries of concern. In June 2018, the FATF decided unanimously to put Pakistan on the greylist, and hand it a 27-point action plan meant to be implemented within 18 months (by September 2019). If it fails to fulfill its FATF commitments, it could face the “next steps” or being moved to the “blacklist”, the FATF has warned.",
+        "totalMarks": 1000,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:36:06.381Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:36:06.381Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "What is correct MIME type for JSON ?",
+        "OptionA": "application/js",
+        "OptionB": "application/json",
+        "OptionC": "string",
+        "OptionD": "none of these",
+        "totalMarks": 5,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:37:48.267Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:37:48.267Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Which of following statement is false about the space parameter in JSON.stringify() ?",
+        "OptionA": "date",
+        "OptionB": " It removes whitespace",
+        "OptionC": "FATF believes that Pakistan should implement strict measures against the terrorist groups in their country.",
+        "OptionD": "none of these",
+        "totalMarks": 35,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:39:04.679Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:39:04.679Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "What are two main structures compose JSON?",
+        "OptionA": "'name : value'",
+        "OptionB": "Using Unicode",
+        "OptionD": "Using datatype  Using lang",
+        "OptionC": "Using keys",
+        "totalMarks": 100,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:40:29.896Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:40:29.896Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "JSON stands for ________________",
+        "OptionA": " Java Standard Output Network",
+        "OptionB": "JavaScript Object Notation",
+        "OptionC": "JavaScript Output Name",
+        "OptionD": "Java Source Open Network",
+        "totalMarks": 10,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:19:15.295Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:19:15.295Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Which is correct format of writting JSON name/value pair",
+        "OptionA": "'name : value'",
+        "OptionB": "name = 'value'",
+        "OptionC": "name = \"value\"",
+        "OptionD": "\"name\" : \"value\"",
+        "totalMarks": 20,
+        "correctOption": "D",
+        "createdAt": {
+            "$date": "2021-06-24T13:21:38.456Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:21:38.456Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Which of the following is not a type in JSON?",
+        "OptionA": "date",
+        "OptionB": "object",
+        "OptionC": "string",
+        "OptionD": "array",
+        "totalMarks": 30,
+        "correctOption": "A",
+        "createdAt": {
+            "$date": "2021-06-24T13:28:15.727Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:28:15.727Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Paragraph",
+        "Qtitle": "Cook settled in the continent of Australia because :",
+        "OptionA": "he had under taken the task of criminal reforms",
+        "OptionB": "he was upset with the apathy of the British Government",
+        "OptionC": "he wanted to prove his claim of suitability of that part to live in",
+        "OptionD": "none of these",
+        "paragraph": "Directions (Q.1 to 12) Read the following passage to answer the given questions based on it. Some words/phrases are printed in bold to help you locate them while answering some of the questions.  One day Nandu rode his horse to the village fair. On his way back he met Somendra, the merchant. The merchant was a crafty man, ready to do anything to earn some money. The villages knew this. In fact no one knew what trick he would be up to next. Now, Nandu was poor and had no one in the world to call his own except a beautiful, white horse. He loved it more than anything else in the world. The merchant had his eye on the horse for a long time and tried to think of a way to get it for himself. Seeing Nandu, the merchant thought, Nandu is a simpleton. Let me see if I can trick him out of his horse. So he said to Nandu, You live all alone. How do you manage? What does a young boy like you need with a horse? Sell it to me and I shall make you rich in return. Nandu replied, \"No I don’t want to sell my horse.\"   But the merchant refused to give up so easily. He offered Nandu more money. Finally, when the offer reached five hundred gold coins, Nandu paused and said. Five hundred gold coins seems like a good price. But I have a condition. If you agree to it, I shall give you my horse. \"What is it?\", the merchant asked impatiently. \"Give me the money right now and I shall give you my horse when I have given you ten lashes.\" After all he would resell the horse for over a thousand gold coins in the market. He would take twenty lashes for such a gain. He agreed instantly. He ran home and got the money for Nandu and brought along his whip as well. Nandu counted the money carefully. He then took the whip and the lashes fell on the merchant’s back in quick succession. By the eighth lash the merchant was almost in tears but he told himself that there were only two lashes to go and the horse would be his. The merchant held his breath waiting for the final lashes. But Nandu had mounted his horse and was riding off. \"Wait!\", shouted the merchant in anger. \"What about the last lashes? Where are you going with the horse? We had a deal.   Nandu stopped and said, \"I agree to give you the horse only after I had given you ten lashes. But it is upsetting my horse. I’ll give you the last lashes later. Till then goodbye!\" \"Come back you cheat!\",  the merchant shouted. But the crowd that had gathered around agreed with Nandu. A deal was a deal. Till the last lash was given, the horse could not belong to the merchant. Nandu rode away richer by five hundred gold coins and Somendra waited in vain for several days for the final lash which never came.",
+        "totalMarks": 100,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:31:20.083Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:31:20.083Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Who is the Father of JSON ?",
+        "OptionA": "'name : value'",
+        "OptionB": "object",
+        "OptionC": "JavaScript Output Name",
+        "OptionD": "none of these",
+        "totalMarks": 20,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:33:28.133Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:33:28.133Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Paragraph",
+        "Qtitle": "Which of the following can be inferred from the given passage?",
+        "OptionA": "date",
+        "OptionB": "JavaScript Object Notation",
+        "OptionC": "he wanted to prove his claim of suitability of that part to live in",
+        "OptionD": "none of these",
+        "paragraph": "Directions: Read the following passage carefully and answer the questions given beside.  \"Memories of the love we felt in childhood towards our parents are among the most precious aspects of autobiographical memory we could think of,\" says lead author Lawrence Patihis, researcher at the University of Southern Mississippi. \"Yet our findings suggest that these memories of love are malleable -- which is not something we would want to be true.\"   \"If you change your evaluation of someone, you will likely also change your memory of your emotions towards them and this is true of memory of love towards mothers in childhood,\" Patihis explains.   For their first experiment, Patihis and coauthors Cristobal S. Cruz and Mario E. Herrera recruited 301 online participants. Some participants wrote about recent examples of their mother's positive attributes, such as showing warmth, generosity, competence, and giving good guidance; others wrote about recent examples of their mother's lack of these attributes. Participants in one comparison group wrote while receiving writing prompt and participants in another comparison group received no writing prompt at all.   The participants completed a survey assessing how they currently thought about their mother's attributes, including her warmth and generosity. They then completed the Memory of Love Towards Parents Questionnaire (MLPQ), which contained 10 items designed to measure the love participants remembered feeling for their mother at different ages (e.g., \"During the whole year when you were in first grade, how often on average did you feel love toward your mother?\" and \"During the whole year when you were in first grade, how strong on average was your love toward your mother?\"). The MLPQ also measured participants' current feelings of love for their mothers.   The participants completed the measures again 2 weeks and 4 weeks after the initial session.   The results showed that the writing prompts influenced participants' current feelings and their memories of love. Specifically, participants who were prompted to write about their mother's positive attributes tended to recall stronger feelings of love for their mother in first, sixth, and ninth grade compared with participants who wrote about their mother's lack of positive attributes.   These effects endured at the 4-week follow-up for first grade memories, but not for memories of sixth grade or ninth grade.   Additional findings showed the effects of the writing prompts were not simply the result of changes in participants' mood.   A second experiment, with another 302 online participants, replicated these findings. Importantly, the participants did not differ in their current assessments of their mother before receiving the writing prompt, indicating that the effects of the writing prompts were not due to preexisting differences among participants. The findings also revealed that participants' current feelings of love for their mothers, as measured at the start of the experiment, were misremembered 8 weeks later following the experimental manipulation. The writing prompt effects had begun to fade by the time the researchers conducted an 8-week follow-up after the experiment.   The authors plan to expand this research to explore whether the same effects emerge for other emotions and target individuals and they're also exploring whether successes in life might similarly alter childhood memories of emotion. In addition, the researchers hope to find out whether these effects might influence later behavior.   \"The significance of this research lies in the new knowledge that our current evaluations of people can be lowered if we choose to focus on the negative, and this can have a side effect: the diminishing of positive aspects of childhood memories,\" says Patihis. \"We wonder if wide-ranging reappraisals of parents -- perhaps in life or in therapy -- could lead to intergenerational heartache and estrangement. Understanding this subtle type of memory distortion is necessary if we want to prevent it.\"",
+        "totalMarks": 150,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:34:54.905Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:34:54.905Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Paragraph",
+        "Qtitle": "Which among the following is correct regarding the view of the FATF regarding Pakistan, as given in the passage? ",
+        "OptionA": "'name : value'",
+        "OptionB": "he was upset with the apathy of the British Government",
+        "OptionC": "FATF believes that Pakistan should implement strict measures against the terrorist groups in their country.",
+        "OptionD": "none of these",
+        "paragraph": "Direction: Read the following passage carefully and answer the questions that follow.  India on Sunday rejected Pakistan’s allegation that it had sought to “politicize” deliberations at the Financial Action Task Force (FATF), which concluded its plenary last week with more strictures against Pakistan.   According to sources, the government has taken a strong view of Pakistan’s accusation that India had launched a “malicious campaign” to use the FATF’s process for its own “narrow, partisan objectives” against Pakistan. Pakistan’s Foreign Ministry was, in turn, responding to India’s statement that time was running out for Islamabad to show action “Against Money Laundering and Combating Financing of Terror (AML/CFT)” by groups that pose a transnational risk.   Calling Pakistan’s statement on politicisation a “false ploy” meant to “deflect attention and evade scrutiny of [Pakistan’s] poor compliance of global standards on AML/CFT and hoodwink the global community”, the government sources pointed to Pakistan’s own attempts at trying to influence the outcome of the FATF process, which has placed the neighbour on a “greylist” of countries of concern. In June 2018, the FATF decided unanimously to put Pakistan on the greylist, and hand it a 27-point action plan meant to be implemented within 18 months (by September 2019). If it fails to fulfill its FATF commitments, it could face the “next steps” or being moved to the “blacklist”, the FATF has warned.",
+        "totalMarks": 1000,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:36:06.381Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:36:06.381Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "What is correct MIME type for JSON ?",
+        "OptionA": "application/js",
+        "OptionB": "application/json",
+        "OptionC": "string",
+        "OptionD": "none of these",
+        "totalMarks": 5,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:37:48.267Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:37:48.267Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Which of following statement is false about the space parameter in JSON.stringify() ?",
+        "OptionA": "date",
+        "OptionB": " It removes whitespace",
+        "OptionC": "FATF believes that Pakistan should implement strict measures against the terrorist groups in their country.",
+        "OptionD": "none of these",
+        "totalMarks": 35,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:39:04.679Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:39:04.679Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "What are two main structures compose JSON?",
+        "OptionA": "'name : value'",
+        "OptionB": "Using Unicode",
+        "OptionD": "Using datatype  Using lang",
+        "OptionC": "Using keys",
+        "totalMarks": 100,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:40:29.896Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:40:29.896Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "JSON stands for ________________",
+        "OptionA": " Java Standard Output Network",
+        "OptionB": "JavaScript Object Notation",
+        "OptionC": "JavaScript Output Name",
+        "OptionD": "Java Source Open Network",
+        "totalMarks": 10,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:19:15.295Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:19:15.295Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Which is correct format of writting JSON name/value pair",
+        "OptionA": "'name : value'",
+        "OptionB": "name = 'value'",
+        "OptionC": "name = \"value\"",
+        "OptionD": "\"name\" : \"value\"",
+        "totalMarks": 20,
+        "correctOption": "D",
+        "createdAt": {
+            "$date": "2021-06-24T13:21:38.456Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:21:38.456Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Which of the following is not a type in JSON?",
+        "OptionA": "date",
+        "OptionB": "object",
+        "OptionC": "string",
+        "OptionD": "array",
+        "totalMarks": 30,
+        "correctOption": "A",
+        "createdAt": {
+            "$date": "2021-06-24T13:28:15.727Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:28:15.727Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Paragraph",
+        "Qtitle": "Cook settled in the continent of Australia because :",
+        "OptionA": "he had under taken the task of criminal reforms",
+        "OptionB": "he was upset with the apathy of the British Government",
+        "OptionC": "he wanted to prove his claim of suitability of that part to live in",
+        "OptionD": "none of these",
+        "paragraph": "Directions (Q.1 to 12) Read the following passage to answer the given questions based on it. Some words/phrases are printed in bold to help you locate them while answering some of the questions.  One day Nandu rode his horse to the village fair. On his way back he met Somendra, the merchant. The merchant was a crafty man, ready to do anything to earn some money. The villages knew this. In fact no one knew what trick he would be up to next. Now, Nandu was poor and had no one in the world to call his own except a beautiful, white horse. He loved it more than anything else in the world. The merchant had his eye on the horse for a long time and tried to think of a way to get it for himself. Seeing Nandu, the merchant thought, Nandu is a simpleton. Let me see if I can trick him out of his horse. So he said to Nandu, You live all alone. How do you manage? What does a young boy like you need with a horse? Sell it to me and I shall make you rich in return. Nandu replied, \"No I don’t want to sell my horse.\"   But the merchant refused to give up so easily. He offered Nandu more money. Finally, when the offer reached five hundred gold coins, Nandu paused and said. Five hundred gold coins seems like a good price. But I have a condition. If you agree to it, I shall give you my horse. \"What is it?\", the merchant asked impatiently. \"Give me the money right now and I shall give you my horse when I have given you ten lashes.\" After all he would resell the horse for over a thousand gold coins in the market. He would take twenty lashes for such a gain. He agreed instantly. He ran home and got the money for Nandu and brought along his whip as well. Nandu counted the money carefully. He then took the whip and the lashes fell on the merchant’s back in quick succession. By the eighth lash the merchant was almost in tears but he told himself that there were only two lashes to go and the horse would be his. The merchant held his breath waiting for the final lashes. But Nandu had mounted his horse and was riding off. \"Wait!\", shouted the merchant in anger. \"What about the last lashes? Where are you going with the horse? We had a deal.   Nandu stopped and said, \"I agree to give you the horse only after I had given you ten lashes. But it is upsetting my horse. I’ll give you the last lashes later. Till then goodbye!\" \"Come back you cheat!\",  the merchant shouted. But the crowd that had gathered around agreed with Nandu. A deal was a deal. Till the last lash was given, the horse could not belong to the merchant. Nandu rode away richer by five hundred gold coins and Somendra waited in vain for several days for the final lash which never came.",
+        "totalMarks": 100,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:31:20.083Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:31:20.083Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Who is the Father of JSON ?",
+        "OptionA": "'name : value'",
+        "OptionB": "object",
+        "OptionC": "JavaScript Output Name",
+        "OptionD": "none of these",
+        "totalMarks": 20,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:33:28.133Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:33:28.133Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Paragraph",
+        "Qtitle": "Which of the following can be inferred from the given passage?",
+        "OptionA": "date",
+        "OptionB": "JavaScript Object Notation",
+        "OptionC": "he wanted to prove his claim of suitability of that part to live in",
+        "OptionD": "none of these",
+        "paragraph": "Directions: Read the following passage carefully and answer the questions given beside.  \"Memories of the love we felt in childhood towards our parents are among the most precious aspects of autobiographical memory we could think of,\" says lead author Lawrence Patihis, researcher at the University of Southern Mississippi. \"Yet our findings suggest that these memories of love are malleable -- which is not something we would want to be true.\"   \"If you change your evaluation of someone, you will likely also change your memory of your emotions towards them and this is true of memory of love towards mothers in childhood,\" Patihis explains.   For their first experiment, Patihis and coauthors Cristobal S. Cruz and Mario E. Herrera recruited 301 online participants. Some participants wrote about recent examples of their mother's positive attributes, such as showing warmth, generosity, competence, and giving good guidance; others wrote about recent examples of their mother's lack of these attributes. Participants in one comparison group wrote while receiving writing prompt and participants in another comparison group received no writing prompt at all.   The participants completed a survey assessing how they currently thought about their mother's attributes, including her warmth and generosity. They then completed the Memory of Love Towards Parents Questionnaire (MLPQ), which contained 10 items designed to measure the love participants remembered feeling for their mother at different ages (e.g., \"During the whole year when you were in first grade, how often on average did you feel love toward your mother?\" and \"During the whole year when you were in first grade, how strong on average was your love toward your mother?\"). The MLPQ also measured participants' current feelings of love for their mothers.   The participants completed the measures again 2 weeks and 4 weeks after the initial session.   The results showed that the writing prompts influenced participants' current feelings and their memories of love. Specifically, participants who were prompted to write about their mother's positive attributes tended to recall stronger feelings of love for their mother in first, sixth, and ninth grade compared with participants who wrote about their mother's lack of positive attributes.   These effects endured at the 4-week follow-up for first grade memories, but not for memories of sixth grade or ninth grade.   Additional findings showed the effects of the writing prompts were not simply the result of changes in participants' mood.   A second experiment, with another 302 online participants, replicated these findings. Importantly, the participants did not differ in their current assessments of their mother before receiving the writing prompt, indicating that the effects of the writing prompts were not due to preexisting differences among participants. The findings also revealed that participants' current feelings of love for their mothers, as measured at the start of the experiment, were misremembered 8 weeks later following the experimental manipulation. The writing prompt effects had begun to fade by the time the researchers conducted an 8-week follow-up after the experiment.   The authors plan to expand this research to explore whether the same effects emerge for other emotions and target individuals and they're also exploring whether successes in life might similarly alter childhood memories of emotion. In addition, the researchers hope to find out whether these effects might influence later behavior.   \"The significance of this research lies in the new knowledge that our current evaluations of people can be lowered if we choose to focus on the negative, and this can have a side effect: the diminishing of positive aspects of childhood memories,\" says Patihis. \"We wonder if wide-ranging reappraisals of parents -- perhaps in life or in therapy -- could lead to intergenerational heartache and estrangement. Understanding this subtle type of memory distortion is necessary if we want to prevent it.\"",
+        "totalMarks": 150,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:34:54.905Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:34:54.905Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Paragraph",
+        "Qtitle": "Which among the following is correct regarding the view of the FATF regarding Pakistan, as given in the passage? ",
+        "OptionA": "'name : value'",
+        "OptionB": "he was upset with the apathy of the British Government",
+        "OptionC": "FATF believes that Pakistan should implement strict measures against the terrorist groups in their country.",
+        "OptionD": "none of these",
+        "paragraph": "Direction: Read the following passage carefully and answer the questions that follow.  India on Sunday rejected Pakistan’s allegation that it had sought to “politicize” deliberations at the Financial Action Task Force (FATF), which concluded its plenary last week with more strictures against Pakistan.   According to sources, the government has taken a strong view of Pakistan’s accusation that India had launched a “malicious campaign” to use the FATF’s process for its own “narrow, partisan objectives” against Pakistan. Pakistan’s Foreign Ministry was, in turn, responding to India’s statement that time was running out for Islamabad to show action “Against Money Laundering and Combating Financing of Terror (AML/CFT)” by groups that pose a transnational risk.   Calling Pakistan’s statement on politicisation a “false ploy” meant to “deflect attention and evade scrutiny of [Pakistan’s] poor compliance of global standards on AML/CFT and hoodwink the global community”, the government sources pointed to Pakistan’s own attempts at trying to influence the outcome of the FATF process, which has placed the neighbour on a “greylist” of countries of concern. In June 2018, the FATF decided unanimously to put Pakistan on the greylist, and hand it a 27-point action plan meant to be implemented within 18 months (by September 2019). If it fails to fulfill its FATF commitments, it could face the “next steps” or being moved to the “blacklist”, the FATF has warned.",
+        "totalMarks": 1000,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:36:06.381Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:36:06.381Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "What is correct MIME type for JSON ?",
+        "OptionA": "application/js",
+        "OptionB": "application/json",
+        "OptionC": "string",
+        "OptionD": "none of these",
+        "totalMarks": 5,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:37:48.267Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:37:48.267Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "Which of following statement is false about the space parameter in JSON.stringify() ?",
+        "OptionA": "date",
+        "OptionB": " It removes whitespace",
+        "OptionC": "FATF believes that Pakistan should implement strict measures against the terrorist groups in their country.",
+        "OptionD": "none of these",
+        "totalMarks": 35,
+        "correctOption": "B",
+        "createdAt": {
+            "$date": "2021-06-24T13:39:04.679Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:39:04.679Z"
+        },
+        "__v": 0
+    },
+    {
+        "testId": [],
+        "Qtype": "Multiple",
+        "Qtitle": "What are two main structures compose JSON?",
+        "OptionA": "'name : value'",
+        "OptionB": "Using Unicode",
+        "OptionD": "Using datatype  Using lang",
+        "OptionC": "Using keys",
+        "totalMarks": 100,
+        "correctOption": "C",
+        "createdAt": {
+            "$date": "2021-06-24T13:40:29.896Z"
+        },
+        "updatedAt": {
+            "$date": "2021-06-24T13:40:29.896Z"
+        },
+        "__v": 0
     }
 
     ]

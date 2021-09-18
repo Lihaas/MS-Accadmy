@@ -1,0 +1,99 @@
+.header{
+    margin-bottom: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #72B4E4;
+}
+.header-prev-btn{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-prev-btn img{
+    width: 30px;
+}
+.header-section-wrapper{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+.content-section form input,
+.content-section form select{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    border-radius: 25px;
+    padding: 10px 25px;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+}
+.content-section form label{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 10px;
+}
+.content-section form select{
+    width: 84%;
+    height: 45px;
+}
+.content-section form button{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: #72B4E4;
+    font-size: 20px;
+    border: none;
+    margin-bottom: 50px;
+}
+.paid-checkbox{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+.paid-checkbox .paid-checkbox-input{
+    width: 5%;
+}
+.paid-checkbox .paid-checkbox-input input{
+    width: 100%;
+}
+.paid-checkbox .paid-checkbox-label{
+    margin-left: -90px;
+    width: 100%;
+}
+@media screen and (max-width: 900px){
+    .header-prev-btn{
+        width: 10%;
+    } 
+    .header-section-wrapper{
+        width: 90%;
+    }
+    .paid-checkbox .paid-checkbox-label{
+        margin-left: -50px;
+    }
+}  
+@media screen and (max-width: 600px){
+    .content-section form select{
+        width: 90%;
+        height: 45px;
+    }
+    .paid-checkbox .paid-checkbox-label{
+        margin-left: 0px;
+    }
+}
+ @media screen and (max-width: 400px){
+    .header-prev-btn{
+        width: 12%;
+    } 
+    .header-section-wrapper{
+        width: 88%;
+    }
+ }  

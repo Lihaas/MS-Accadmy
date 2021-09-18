@@ -4,7 +4,11 @@ import dropdown from "../../Assets/Image/whitedropdown.png";
 import laptop from "../../Assets/Image/laptop-7-240.png";
 import star from "../../Assets/Image/Union 6.png";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 const TestSeries = () => {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   return (
     <div className={styles.testseries}>
       <div className={styles["heading-poster"]}>

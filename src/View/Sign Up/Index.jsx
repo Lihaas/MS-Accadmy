@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../StyleSheets/Sign Up/signup.module.css"
 import signUpImage from "../../Assets/Image/study-at-home-2527770-2114673.png";
-import { otpSender, otpVerification } from "../../Firebase/SignWithNumber";
+import { otpSender, SignUpVerification } from "../../Firebase/SignWithNumber";
 import { Redirect } from "react-router-dom";
 import dp from "../../Assets/Image/male-user.png"
+import Loader from "../../View/loading spinner/Loader";
 
 const SignUp = () => {
   useEffect(() => {
@@ -12,7 +13,7 @@ const SignUp = () => {
   const [user,setUser] = useState(false);
   const Verification = (event)=>{
     event.preventDefault();
-    otpVerification(setUser);
+    SignUpVerification(setUser);
 }
   return (
     <div>
@@ -33,8 +34,9 @@ const SignUp = () => {
               <label>Name</label>
                 <input
                   type="text"
-                  placeholder="Full Name (e.g, Ashish Garf)"
+                  placeholder="Full Name (e.g, Ashish Garg)"
                   required
+                  id="name"
                 />
                 <label>Phone Number</label>
                 <input
@@ -50,9 +52,10 @@ const SignUp = () => {
                   type="email"
                   placeholder="Email (e.g, ashish@gmail.com)"
                   required
+                  id="email"
                 />
                   <label>Address</label>
-                  <textarea placeholder="Full Address (e.g, xyz street,xyz,pincode-xxxxxx)" required/>
+                  <textarea placeholder="Full Address (e.g, xyz street,xyz,pincode-xxxxxx)" required id="address"/>
                   <label>Batch</label>
                   <select>
                   <option selected="true" disabled="disabled">Select</option>
@@ -92,6 +95,7 @@ const SignUp = () => {
                 </form>
               </div>
             </dialog>
+            <Loader />
           </div>
         </div>
       </section>

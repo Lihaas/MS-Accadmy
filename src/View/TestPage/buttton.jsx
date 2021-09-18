@@ -1,6 +1,7 @@
 import styles from "../../StyleSheets/Test Page/testpage.module.css";
 import TestContext from "../../Store/testPageContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import Loader from "../loading spinner/Loader";
 
 const Button = () => {
   const {
@@ -8,20 +9,28 @@ const Button = () => {
     prevHander,
     reviewHandler,
     endHandler,
+    marksObtained,
+    reviewExam,
+    currentIndex,
+    notAnswered,
+    answered,
+    reviewed,
+    length
   } = useContext(TestContext);
   return (
     <>
+    <Loader />
       <div>
         <button
-          style={{ cursor: "pointer", border: "none", background: "#FFF" }}
+          className={styles["prev-btn"]}
           id="prevbtn"
           onClick={prevHander}
         >
+          <h1>Previous</h1>
           <span className={styles["entity"]}>&#171;</span>
-          Previous
         </button>
       </div>
-      <div>Test Name</div>
+      <div className={styles["test-name"]}>{localStorage.getItem("examName")}</div>
       <div>
         <div className={styles["next-rev-btn"]}>
           <input
@@ -34,20 +43,56 @@ const Button = () => {
             className={styles["review-box"]}
           ></input>
           <button
-            style={{ cursor: "pointer", border: "none", background: "#FFF" }}
+            className={styles["next-btn"]}
             id="nextSpan"
             onClick={nextHander}
           >
-            Next
+            <h1>Next</h1>
             <span className={styles["entity"]}>&#187;</span>
           </button>
           <button
             id="endTest"
-            style={{ display: "none", cursor: "pointer" }}
+            className={styles["end-btn"]}
             onClick={endHandler}
           >
-            End Test
+            <h1>Submit</h1>
           </button>
+          <div className={styles["endDialog"]} id="end-dialog">
+            <div className={styles["dialog"]}>
+              <h1>Test Result</h1>
+              <hr></hr>
+              <h2>Total Marks : {marksObtained}</h2>
+              <table>
+                <tr className={styles["table-heading"]}>
+                  <th>Test Name</th>
+                  <td>Total question</td>
+                  <td>Answered</td>
+                  <td>Not Answered</td>
+                  <td>Mark for review</td>
+                </tr>
+                <tr>
+                  <td>Paper 1</td>
+                  <td>{length}</td>
+                  <td>{answered}</td>
+                  <td>{notAnswered}</td>
+                  <td>{reviewed}</td>
+                </tr>
+              </table>
+              <div className={styles["dialog-btn"]}>
+                <a href="/home">
+                  <button className={styles["finishbtn"]}>Finish Exam</button>
+                </a>
+                <button
+                  className={styles["revbtn"]}
+                  onClick={() => {
+                    reviewExam();
+                  }}
+                >
+                  Review Exam
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

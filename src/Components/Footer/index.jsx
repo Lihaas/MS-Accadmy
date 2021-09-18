@@ -13,15 +13,15 @@ const Footer = () => {
       <div className={styles["footer-menu-wrapper"]}>
         <div className={styles["footer-menu"]}>
           <NavLink to={{pathname:"/"}}>Home</NavLink>
-          <a href="#">Courses</a>
+          <a href="/courses/paper1">Courses</a>
           <NavLink to={{pathname:"/about-us"}}>About Us</NavLink>
           <NavLink to={{pathname:"/contact-us"}}>Contact Us</NavLink>
           <NavLink to={{pathname:"/notes/testseries"}}>Test Series</NavLink>
         </div>
         <div className={styles["footer-menu"]}>
           <a href="https://www.facebook.com/MOHITSHARMACLASSES" target="_blank">Facebook</a>
-          <a href="https://www.instagram.com/mohit_sharma_classes/" target="_blank">Instagram</a>
-          <a href="https://www.youtube.com/channel/UCzhtAfVRg98UEoQypkgnebw" target="_blank">Youtube</a>
+          {/* <a href="https://www.instagram.com/mohit_sharma_classes/" target="_blank">Instagram</a> */}
+          <a href="https://www.youtube.com/c/MOHITSHARMACLASSES" target="_blank">Youtube</a>
         </div>
         <div className={styles["footer-menu"]}>
           <a href="#">Privacy Policy</a>

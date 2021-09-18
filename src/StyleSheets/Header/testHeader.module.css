@@ -1,3 +1,32 @@
+.start-blur{
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 3px solid #000;
+  opacity: .8;
+  position: fixed;
+  top: 0vh;
+}
+.start-blur button{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  z-index: 999;
+  background-color: #3164f4;
+  border: none;
+  border-radius: 20px;
+  color: #FFF;
+  width: 150px;
+  height: 50px;
+  opacity: 1;
+  cursor: pointer;
+  font-size: 20px;
+}
+.start-blur h1{
+  position: fixed;
+  top: 40%;
+  right: 40%;
+}
 .navbar {
     position: fixed;
     top: 0;
@@ -22,7 +51,8 @@
     align-items: center;
     text-align: left;
   }
-  .brand img {
+  .brand img,
+  .brand a {
     height: 100%;
   }
   .count-down-area{
@@ -34,6 +64,11 @@
     border: none;
     background: #FFF;
     font-size: 30px;
+  }
+  @media screen and (max-width: 850px){
+  .start-blur h1{
+    right: 30%;
+  }
   }
   @media screen and (max-width: 700px){
     .count-down-area{
@@ -47,4 +82,12 @@
       .count-down-area{
       width: 40%;
       }
+      .start-blur h1{
+        right: 10%;
+      }
+  }
+  @media screen and (max-width: 350px){
+    .start-blur h1{
+      right: 0%;
+    }
   }
