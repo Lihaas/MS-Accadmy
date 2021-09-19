@@ -1,11 +1,13 @@
 import styles from "../../../StyleSheets/admin/NewAdmin/questionList.module.css";
 import prev from "../../../Assets/Image/previous.png";
 import { useEffect, useState } from "react";
+import {useParams} from 'react-router-dom'
 import axios from "axios";
 import deleteIcon from "../../../Assets/Image/delete (1).png"
 import Loader from "../../loading spinner/Loader";
 
 const Edit = (props) => {
+  const id = useParams();
   useEffect(() => {
     if (props.data !== undefined) {
       document.getElementById("qtitle").value = props.data.Qtitle;
@@ -198,7 +200,7 @@ const Edit = (props) => {
         }).then((item)=>{
           console.log(item);
           document.getElementById("blurScreen").style.display="none"
-          window.location="/admin/question"
+          window.location="/admin/add-question/"+id.quesid
         }).catch((error)=>{
           console.log(error);
           alert("error occurred, please try again")

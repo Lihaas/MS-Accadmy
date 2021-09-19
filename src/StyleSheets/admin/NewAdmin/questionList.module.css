@@ -82,6 +82,11 @@
 }
 .show-header {
   display: flex;
+  justify-content: space-between;
+}
+.show-header input{
+  width: 40px;
+  margin-left: 10px;
 }
 .back-img img {
   width: 30px;

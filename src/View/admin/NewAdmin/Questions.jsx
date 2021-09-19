@@ -28,14 +28,16 @@ const Questions = () =>{
             .catch((error) => {
               alert("error occurred, please try again");
               window.location = "/home";
+              // console.log(error);
             });
         } else {
           alert("You're not authorized to view this page");
-          window.location = "/home";
+          // window.location = "/home";
         }
       })
       .catch((error) => {
         alert("error occurred, please try again");
+        // console.log(error);
         window.location = "/home";
       });
     },[])
@@ -56,6 +58,7 @@ const Questions = () =>{
                 <div className={styles["inner-content"]}>
                     <h2>Select Test</h2>
                     <select onChange={(e)=>{optionClick(e)}} id="selectTest">
+                      <option selected>Choose Test</option>
                         {
                             data.map((item,index)=>{
                                 return(
