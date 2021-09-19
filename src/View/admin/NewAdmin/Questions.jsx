@@ -9,14 +9,14 @@ const Questions = () =>{
     useEffect(()=>{
         document.getElementById("blurScreen").style.display="block"
         
-        axios.get("https://msacadmy.herokuapp.com/users/me", {
+        axios.get(process.env.REACT_APP_API_URL+"/users/me", {
       headers: {
         Authorization: localStorage.getItem("token"),
       },
     })
       .then((item) => {
         if (item.data.phoneNum === 1234567899) {
-          axios.get("https://msacadmy.herokuapp.com/v1/list/test", {
+          axios.get(process.env.REACT_APP_API_URL+"/v1/list/test", {
             headers: {
               Authorization: localStorage.getItem("token"),
             },
@@ -50,7 +50,7 @@ const Questions = () =>{
         <Loader />
         <div className={styles.Questions}>
             <div className={styles["header"]}>
-                <a href="https://msacadmy.herokuapp.com/admin"><h2>Back to Admin Panel</h2></a>
+                <a href={process.env.REACT_APP_API_URL+"/admin"}><h2>Back to Admin Panel</h2></a>
             </div>
             <div className={styles["content"]}>
                 <div className={styles["inner-content"]}>

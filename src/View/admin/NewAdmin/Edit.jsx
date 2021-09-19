@@ -98,14 +98,14 @@ const Edit = (props) => {
       const form = new FormData();
       form.append("QImage", queImage);
       axios
-        .post("https://msacadmy.herokuapp.com/upload/pic", form, {
+        .post(process.env.REACT_APP_API_URL+"/upload/pic", form, {
           headers: {
             "Content-Type": "multipart/form-data",
             Authorization: localStorage.getItem("token"),
           },
         })
         .then((item) => {
-          let img = "https://msacadmy.herokuapp.com/" + item.data;
+          let img = process.env.REACT_APP_API_URL+ "/"+ item.data;
           document.getElementById("uploadImg").src = img;
           document.getElementById("uploadImg").style.display =
             "block";
@@ -191,7 +191,7 @@ const Edit = (props) => {
           }
         }
 
-        axios.patch("https://msacadmy.herokuapp.com/v1/question/update?qId="+props.data._id,data,{
+        axios.patch(process.env.REACT_APP_API_URL+"/v1/question/update?qId="+props.data._id,data,{
           headers:{
             Authorization: localStorage.getItem('token')
           }

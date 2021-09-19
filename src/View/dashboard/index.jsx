@@ -17,7 +17,7 @@ const Dashboard=()=>{
     const update = (e) =>{
       document.getElementById("blurScreen").style.display="block"
       e.preventDefault();
-      Axios.patch("https://msacadmy.herokuapp.com/v1/app/users/me/update",{
+      Axios.patch(process.env.REACT_APP_API_URL+"/v1/app/users/me/update",{
         "user_name": document.getElementById("updateName").value,
         "email": document.getElementById("updateEmail").value,
         "address": document.getElementById("updateAddress").value,
@@ -36,7 +36,7 @@ const Dashboard=()=>{
       UpdateData(setUpdateData);
       window.scrollTo(0,0)
       document.getElementById("blurScreen").style.display="block"
-      Axios.get("https://msacadmy.herokuapp.com/users/me",{headers:{Authorization: localStorage.getItem('token')}})
+      Axios.get(process.env.REACT_APP_API_URL+"/users/me",{headers:{Authorization: localStorage.getItem('token')}})
       .then((item)=>{
         document.getElementById("blurScreen").style.display="none"
         if(item.data.user_name===undefined)

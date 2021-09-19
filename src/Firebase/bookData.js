@@ -8,6 +8,20 @@ export const bookData = (onDataFetched) => {
       onDataFetched(doc.data()["bookList"])
     });
 };
+export const paper1BookData = (onDataFetched) => {
+  DB.collection("Books")
+    .doc("Paper1")
+    .onSnapshot((doc) => {
+      onDataFetched(doc.data()["bookList"])
+    });
+};
+export const paper2BookData = (onDataFetched) => {
+  DB.collection("Books")
+    .doc("Paper2")
+    .onSnapshot((doc) => {
+      onDataFetched(doc.data()["BookList"])
+    });
+};
 
 
 // export const addBook = () =>{

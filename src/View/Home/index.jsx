@@ -83,7 +83,7 @@ const Home = (props) => {
       document.getElementById("blurScreen").style.display = "none";
       alert("Please choose Batch Type");
     } else {
-      Axios.post("https://msacadmy.herokuapp.com/create/form", {
+      Axios.post(process.env.REACT_APP_API_URL+"/create/form", {
         name: document.getElementById("enqName").value,
         phoneNumber: document.getElementById("enqPhoneNum").value,
         batchName: document.getElementById("batchType1").value,
@@ -110,7 +110,7 @@ const Home = (props) => {
       alert("Please choose Batch Type");
       document.getElementById("blurScreen").style.display = "none";
     } else {
-      Axios.post("https://msacadmy.herokuapp.com/create/form", {
+      Axios.post(process.env.REACT_APP_API_URL+"/create/form", {
         name: document.getElementById("enqName1").value,
         phoneNumber: document.getElementById("enqPhoneNum1").value,
         batchName: document.getElementById("batchType").value,

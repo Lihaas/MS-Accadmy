@@ -9,7 +9,7 @@ const AddTest = () =>{
     const id = useParams();
   useEffect(()=>{
     document.getElementById("blurScreen").style.display = "block";
-    axios.get("https://msacadmy.herokuapp.com/users/me", {
+    axios.get(process.env.REACT_APP_API_URL+"/users/me", {
       headers: {
         Authorization: localStorage.getItem("token"),
       },
@@ -48,7 +48,7 @@ const AddTest = () =>{
                 "chapterID":id.testId,
                 "totalTestTime": document.getElementById("duration").value
             }
-            axios.post("https://msacadmy.herokuapp.com/create/test", data,{
+            axios.post(process.env.REACT_APP_API_URL+"/create/test", data,{
                 headers:{
                   Authorization: localStorage.getItem('token')
                 }

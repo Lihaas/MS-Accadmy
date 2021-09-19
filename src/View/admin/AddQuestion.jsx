@@ -44,13 +44,13 @@ const AddQuestion = () => {
         document.getElementById("blurScreen").style.display="block"
         const form = new FormData();
         form.append("QImage",queImage)
-        axios.post("https://msacadmy.herokuapp.com/upload/pic",form,{
+        axios.post("upload/pic",form,{
           headers:{
               "Content-Type": "multipart/form-data",
               "Authorization": localStorage.getItem('token')
           }
         }).then((item)=>{
-          let img = "https://msacadmy.herokuapp.com/"+item.data
+          let img = process.env.REACT_APP_API_URL+"/"+item.data
           document.getElementById("uploadImg"+e.target.id).src = img
           document.getElementById("uploadImg"+e.target.id).style.display = "block"
           document.getElementById("upload-box"+e.target.id).style.display="none"
@@ -127,7 +127,7 @@ const AddQuestion = () => {
           })
         }
       }
-      axios.post("https://msacadmy.herokuapp.com/v1/multi/questions",submitData,{
+      axios.post(process.env.REACT_APP_API_URL+"/v1/multi/questions",submitData,{
         headers:{
           Authorization: localStorage.getItem('token')
         }

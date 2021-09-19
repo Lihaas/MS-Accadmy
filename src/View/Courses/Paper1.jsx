@@ -5,7 +5,7 @@ import providingImage2 from "../../Assets/Image/wide-test-series.png";
 import providingImage3 from "../../Assets/Image/online-study-2710520-2261196.png";
 import { useEffect, useState } from "react";
 import { Paper1YoutubeData } from "../../Firebase/CoursesData";
-import { bookData } from "../../Firebase/bookData";
+import { paper1BookData } from "../../Firebase/bookData";
 import closeicon from "../../Assets/Image/closeIcon.png";
 const CoursesPaper1 = () => {
   const [youtubeData, setYoutubeData] = useState([]);
@@ -13,7 +13,7 @@ const CoursesPaper1 = () => {
 
   useEffect(() => {
     Paper1YoutubeData(setYoutubeData);
-    bookData(setbookdata);
+    paper1BookData(setbookdata);
     window.scrollTo(0,0);
   }, []);
 

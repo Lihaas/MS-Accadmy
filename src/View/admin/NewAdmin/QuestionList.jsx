@@ -19,7 +19,7 @@ const QuestionList = () => {
   useEffect(() => {
     document.getElementById("blurScreen").style.display="block"
     axios
-      .get("https://msacadmy.herokuapp.com/v1/questions?testID=" + id.quesid, {
+      .get(process.env.REACT_APP_API_URL+"/v1/questions?testID=" + id.quesid, {
         headers: {
           Authorization: localStorage.getItem("token"),
         },
@@ -35,13 +35,13 @@ const QuestionList = () => {
       });
   }, []);
   const deleteQuestion = (e) =>{
-    axios.delete("https://msacadmy.herokuapp.com/v1/question/delete?qid="+e.target.id,{
+    axios.delete(process.env.REACT_APP_API_URL+"/v1/question/delete?qid="+e.target.id,{
         headers:{
           Authorization: localStorage.getItem("token")
         }
     }).then((item)=>{
       axios
-    .get("https://msacadmy.herokuapp.com/v1/questions?testID=" + id.quesid, {
+    .get(process.env.REACT_APP_API_URL+"/v1/questions?testID=" + id.quesid, {
       headers: {
         Authorization: localStorage.getItem("token"),
       },

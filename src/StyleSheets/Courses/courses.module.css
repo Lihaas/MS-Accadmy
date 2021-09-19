@@ -65,7 +65,7 @@ section{
 }
 .book-card-section{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(150px,200px));
+    grid-template-columns: repeat(auto-fill,minmax(160px,200px));
     gap: 10px;
     /* display: flex; */
     justify-content: space-between;
@@ -80,6 +80,7 @@ section{
     margin-right: 15px !important;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 .book-image{
     height: 90%;
