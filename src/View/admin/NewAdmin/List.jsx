@@ -172,7 +172,7 @@ const List = (props) => {
           </button>
         </div>
         {props.data.length === 0 ? (
-          <h1>No Data Available</h1>
+          <h1 className={styles["no-data"]}>No Data Available</h1>
         ) : (
           <table>
             <tr className={styles["ques-tabel-row"]}>

@@ -198,3 +198,19 @@
     width: 100%;
   }
 }
+@media screen and (max-width: 800px) {
+  
+  .no-data{
+    margin-top: 60px !important;
+  }
+}
+@media screen and (max-width: 430px) {
+  .no-data{
+    margin-top: 100px !important;
+  }
+  .inner-content .create-button button{
+   width: 100px !important;
+   height: 80px !important;
+   margin: 10px;
+  }
+}
