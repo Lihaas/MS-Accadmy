@@ -49,9 +49,9 @@ const NewIndex = () => {
               </ul>
               <div className={styles["btn-holder"]}>
                 <button className={styles["btn"]}><a href="/plans">Buy Test</a></button>
-                <button className={styles["btn"]} onClick={(e)=>{checkLogin(e)}} id="610f7d8853879f0015b3b54f">View all test</button>
+                <button className={styles["btn"]} onClick={(e)=>{checkLogin(e)}} id="6148abcfaafea3003e597a33">View all test</button>
               </div>
-                <button className={styles["full-btn"]} onClick={(e)=>{checkLogin(e)}} id="610f7d8853879f0015b3b54f">Attempt Free Trial</button>
+                <button className={styles["full-btn"]} onClick={(e)=>{checkLogin(e)}} id="6148abcfaafea3003e597a33">Attempt Free Trial</button>
             </div>
           </div>
           <div className={styles["card-holder"]}>
@@ -66,9 +66,9 @@ const NewIndex = () => {
               </ul>
               <div className={styles["btn-holder"]}>
                 <button className={styles["btn"]}><a href="/plans">Buy Test</a></button>
-               <button className={styles["btn"]} onClick={(e)=>{checkLogin(e)}} id="610f7d8e53879f0015b3b553">View all test</button>
+               <button className={styles["btn"]} onClick={(e)=>{checkLogin(e)}} id="6148abd4aafea3003e597a37">View all test</button>
               </div>
-                <button className={styles["full-btn"]} onClick={(e)=>{checkLogin(e)}} id="610f7d8e53879f0015b3b553">Attempt Free Trial</button>
+                <button className={styles["full-btn"]} onClick={(e)=>{checkLogin(e)}} id="6148abd4aafea3003e597a37">Attempt Free Trial</button>
                 {
                 dialog?
                 <SignUpDialog show={setDialog} redirectLink={link}/>

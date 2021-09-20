@@ -116,6 +116,7 @@ const PaperDetails = (props) => {
     }
     }
   };
+  console.log(unlock);
   return (
     <>
       <Loader />
@@ -191,7 +192,10 @@ const PaperDetails = (props) => {
                   </div>
                 </div>
                 <div className={styles["test-box-2"]}>
-                  {item.isPaid === false ? (
+                  {
+                    console.log("paid"+item.isPaid)
+                  }
+                  {item.isPaid === false || item.isPaid == undefined? (
                     <>
                     <button className={styles["free-btn"]}>FREE</button>
                     <button
@@ -203,7 +207,7 @@ const PaperDetails = (props) => {
                       Start Test
                     </button>
                     </>
-                  ) : item.testForStudents===pay? (
+                  ) : item.testForStudents===pay || pay==="Both"? (
                     <button
                       onClick={(e) => {
                         openTest(e);

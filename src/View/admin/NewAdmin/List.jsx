@@ -6,9 +6,11 @@ import showIcon from "../../../Assets/Image/view.png";
 import Loader from "../../loading spinner/Loader";
 import { useState } from "react";
 import Axios from "axios";
+import { useParams } from "react-router";
 
 const List = (props) => {
   const [file, setFile] = useState("");
+  const id = useParams();
   const deleteQuestion = (e) => {
     document.getElementById("blurScreen").style.display = "block";
     axios
@@ -54,7 +56,7 @@ const List = (props) => {
 
   const uploadPictureForm = () => {
     var hospiForm = document.getElementById("hospiForm");
-    if (hospiForm.style.display === "none") {
+    if (hospiForm.style.display === "none" || hospiForm.style.display === "") {
       hospiForm.style.display = "flex";
     } else {
       hospiForm.style.display = "none";
@@ -79,7 +81,7 @@ const List = (props) => {
     .then(()=>{
       alert("Added succesfully!")
       document.getElementById("blurScreen").style.display="none"
-      uploadPictureForm();
+      window.location="/admin/add-question/"+id.quesid
     })
     .catch(()=>{
       document.getElementById("blurScreen").style.display="none"
