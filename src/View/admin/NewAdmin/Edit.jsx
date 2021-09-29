@@ -76,7 +76,6 @@ const Edit = (props) => {
             document.getElementById("para").style.display = "none";
             document.getElementById("uploadedImg").style.display = "none";
         }else{
-            console.log("a");
             document.getElementById("uploadImg").style.display =
               "block";
             document.getElementById("uploadedImg").style.display =
@@ -131,7 +130,7 @@ const Edit = (props) => {
     document.getElementById("uploadedImg").style.display = "none";
   }
   const changeTitle = (e) => {
-    console.log(document.getElementById("qtitle").value);
+    // console.log(document.getElementById("qtitle").value);
   };
   const updateFile = () =>{
     document.getElementById("blurScreen").style.display="block"
@@ -198,7 +197,7 @@ const Edit = (props) => {
             Authorization: localStorage.getItem('token')
           }
         }).then((item)=>{
-          console.log(item);
+          // console.log(item);
           document.getElementById("blurScreen").style.display="none"
           window.location="/admin/add-question/"+id.quesid
         }).catch((error)=>{
@@ -206,7 +205,7 @@ const Edit = (props) => {
           alert("error occurred, please try again")
           document.getElementById("blurScreen").style.display="none"
         })
-        console.log(data)
+        // console.log(data)
   }
   return (
     <>

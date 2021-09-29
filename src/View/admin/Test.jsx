@@ -23,7 +23,7 @@ const AdminTest = () =>{
             },
           })
             .then((item) => {
-              console.log(item.data.searchResult);
+              // console.log(item.data.searchResult);
               setData(item.data.searchResult);
               document.getElementById("blurScreen").style.display = "none";
             })

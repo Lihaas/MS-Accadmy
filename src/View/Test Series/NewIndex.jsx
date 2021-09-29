@@ -7,13 +7,29 @@ import DownloadBanner from "../../Components/Download Banner/Index";
 import { useEffect, useState } from "react";
 import SignUpDialog from "../../Components/SignUpDialog/Index";
 import { isUserLoggedIn } from "../../Firebase/Authentication";
+import Loader from "../loading spinner/Loader";
+import axios from "axios";
 const NewIndex = () => {
+  const [data,setData] = useState([])
   const [dialog,setDialog] = useState(false);
   const [login,setLogin] = useState(false)
   const [link,setLink] = useState("")
   useEffect(()=>{
     window.scrollTo(0,0);
     isUserLoggedIn(setLogin)
+    document.getElementById("blurScreen").style.display="block"
+    axios.get(process.env.REACT_APP_API_URL+"/v1/paper/getall",{headers:{
+      Authorization: localStorage.getItem('token')
+    }}).then((item)=>{
+      // console.log(item.data.searchResult);
+      setData(item.data.searchResult)
+      document.getElementById("blurScreen").style.display="none"
+    }).catch((error)=>{
+      console.log(error);
+      alert("error occured, please try again")
+      window.location="/"
+      document.getElementById("blurScreen").style.display="none"
+    })
   },[])
   const checkLogin = (e) =>{
     if(login===true)
@@ -26,6 +42,7 @@ const NewIndex = () => {
   }
   return (
     <>
+    <Loader />
       <div className={styles.testSeries}>
           <img src={banner} className={styles["banner"]}/>
         <h1 className={styles["heading"]}> Latest Online Test Series </h1>
@@ -37,45 +54,36 @@ const NewIndex = () => {
           Teaching Exam <a href="#">See More &gt;</a>
         </h1>
         <div className={styles["card-section"]}>
-          <div className={styles["card-holder"]}>
+          {
+            data.map((item)=>{
+              return(
+                <div className={styles["card-holder"]}>
             <div className={styles["box-1"]}>
               <div className={styles["sub-card"]}>
                   <img src={nta} />
               </div>
-              <h1>Paper 1</h1>
+              <h1>{item.paperName}</h1>
               <ul>
                 <li>25+ Paid test</li>
                 <li>5+ free Mock test</li>
               </ul>
-              <div className={styles["btn-holder"]}>
-                <button className={styles["btn"]}><a href="/plans">Buy Test</a></button>
-                <button className={styles["btn"]} onClick={(e)=>{checkLogin(e)}} id="6148abcfaafea3003e597a33">View all test</button>
-              </div>
-                <button className={styles["full-btn"]} onClick={(e)=>{checkLogin(e)}} id="6148abcfaafea3003e597a33">Attempt Free Trial</button>
             </div>
-          </div>
-          <div className={styles["card-holder"]}>
-            <div className={styles["box-2"]}>
-              <div className={styles["sub-card"]}>
-              <img src={nta} />
-              </div>
-              <h1>Paper 2</h1>
-              <ul>
-              <li>25+ Paid test</li>
-              <li>5+ free Mock test</li>
-              </ul>
+            <div className={styles["plan-button-area"]}>
               <div className={styles["btn-holder"]}>
                 <button className={styles["btn"]}><a href="/plans">Buy Test</a></button>
-               <button className={styles["btn"]} onClick={(e)=>{checkLogin(e)}} id="6148abd4aafea3003e597a37">View all test</button>
+                <button className={styles["btn"]} onClick={(e)=>{checkLogin(e)}} id={item._id}>View all test</button>
               </div>
-                <button className={styles["full-btn"]} onClick={(e)=>{checkLogin(e)}} id="6148abd4aafea3003e597a37">Attempt Free Trial</button>
+                <button className={styles["full-btn"]} onClick={(e)=>{checkLogin(e)}} id={item._id}>Attempt Free Trial</button>
+          </div>
+          </div>
+              )
+            })
+          }
                 {
                 dialog?
                 <SignUpDialog show={setDialog} redirectLink={link}/>
                 :null
                 }
-            </div>
-          </div>
           </div>
           <DownloadBanner />
       </div>

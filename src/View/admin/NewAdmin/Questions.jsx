@@ -42,9 +42,9 @@ const Questions = () =>{
       });
     },[])
     const optionClick = (e) =>{
-        console.log(
-            document.getElementById("selectTest").value
-        ) 
+        // console.log(
+        //     document.getElementById("selectTest").value
+        // ) 
         window.location="/admin/add-question/"+document.getElementById("selectTest").value
     }  
     return(

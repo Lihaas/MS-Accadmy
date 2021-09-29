@@ -192,8 +192,8 @@ const Home = (props) => {
                     return (
                       <div className={styles["batch"]} key={index}>
                         <span className={styles["title"]}>{item.title}</span>
-                        <a href={item.redirect} target="_blank">
-                          <img src={item.img} />
+                        <a href={item.redirect} target="_blank" className={styles["update-a"]}>
+                          <img src={item.img}/>
                         </a>
                         <span className={styles["description"]}>
                           {item.description}
@@ -282,24 +282,34 @@ const Home = (props) => {
           <div className={styles["about-us"]}>What will you get in course?</div>
           <div className={styles["pack-detail-box"]}>
             <div className={styles["pack-detail"]}>
+            <a href="/notes/paper1">
               <img src={bookIcon} />
               <h3>Color Booklets</h3>
+              </a>
             </div>
             <div className={styles["pack-detail"]}>
+            <a href="/notes/paper1">
               <img src={notes} />
               <h3>Free Notes & PDF</h3>
+              </a>
             </div>
             <div className={styles["pack-detail"]}>
+              <a href="https://www.youtube.com/c/MOHITSHARMACLASSES" target="_blank">
               <img src={video} />
               <h3>Video Lecture</h3>
+              </a>
             </div>
             <div className={styles["pack-detail"]}>
+            <a href="/test-series">
               <img src={test} />
               <h3>Test Series</h3>
+              </a>
             </div>
             <div className={styles["pack-detail"]}>
+            <a href="https://t.me/ms00007sharma" target="_blank">
               <img src={telegram} />
               <h3>Join telegram</h3>
+              </a>
             </div>
           </div>
           {/* <div className={styles["section-wrapper"]}>
@@ -467,7 +477,7 @@ const Home = (props) => {
                 <img src={Sec401} />
               </div>
               <div className={styles["exam-detail"]}>
-                <h1>Paper 2 Management (Coming Soon)</h1>
+                <h1>Paper 2 Management</h1>
                 <p>
                   In this course, We covers each &amp; every Concept of Ugc Net
                   Paper-2 Commerce through a series of video Lectures , mock

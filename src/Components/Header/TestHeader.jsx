@@ -57,6 +57,7 @@ const TestHeader = (props) => {
                   className={styles["countDown"]}
                   disabled
                 />
+                <a href="/test-series" style={{display: "none"}} className={styles["header-testSeries-btn"]} id="headerTestSeriesButton"><button>Test Series</button></a>
           </div>
           {/* // <p className={styles["timer"]} id="countdownTimer" value="">03:00:00</p> */}
         </div>

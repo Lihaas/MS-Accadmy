@@ -13,6 +13,13 @@ export const Paper2YoutubeData = (onDataFetched) => {
   DB.collection("Youtube")
     .doc("Paper2")
     .onSnapshot((doc) => {
-      onDataFetched(doc.data()["youtube-paper2"])
+      onDataFetched(doc.data()["Commerce"])
+    });
+};
+export const Paper2ManagementYoutubeData = (onDataFetched) => {
+  DB.collection("Youtube")
+    .doc("Paper2")
+    .onSnapshot((doc) => {
+      onDataFetched(doc.data()["Management"])
     });
 };

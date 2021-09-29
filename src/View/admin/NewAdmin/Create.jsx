@@ -161,7 +161,6 @@ const Create = (props) =>{
         document.getElementById("uploadedImg"+e).style.display = "none";
       }
       const changeDefaultMarks = (e) =>{
-        console.log("chck");
         setMarks(e.target.value)
         for(let i=1;i<=length;i++)
         {

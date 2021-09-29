@@ -24,8 +24,8 @@ const Footer = () => {
           <a href="https://www.youtube.com/c/MOHITSHARMACLASSES" target="_blank">Youtube</a>
         </div>
         <div className={styles["footer-menu"]}>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms {"&"} Conditions</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms {"&"} Conditions</a>
         </div>
       </div>
     </div>

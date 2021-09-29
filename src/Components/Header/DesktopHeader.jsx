@@ -38,7 +38,8 @@ const DesktopHeader = () => {
             <span className={styles["dropbtn"]}>Courses</span>
             <div className={styles["dropdown-content"]}>
               <NavLink to={{ pathname: "/courses/paper1" }}>Paper 1</NavLink>
-              <NavLink to={{ pathname: "/courses/paper2" }}>Paper 2</NavLink>
+              <NavLink to={{ pathname: "/courses/paper2commerce" }}>Paper 2 Commerce</NavLink>
+              <NavLink to={{ pathname: "/courses/paper2management" }}>Paper 2 Management</NavLink>
               <NavLink to={{ pathname: "/test-series" }}>Test Series</NavLink>
             </div>
           </div>

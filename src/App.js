@@ -11,7 +11,8 @@ import ContactUs from "./View/ContactUs/index.jsx";
 import Dashboard from "./View/dashboard/index";
 import Login from "./View/Login/index";
 import CoursesPaper1 from "./View/Courses/Paper1";
-import CoursesPaper2 from "./View/Courses/Paper2";
+import Paper2Commerce from "./View/Courses/Paper2Commerce";
+import Paper2Management from "./View/Courses/Paper2Management"
 import NewIndex from "./View/Test Series/NewIndex";
 import { TestPanel } from "./Store/testPageContext";
 import PaperDetails from "./View/Test List/PaperDetails"
@@ -30,6 +31,11 @@ import AddQuestion from "./View/admin/AddQuestion";
 import SubjectCard from "./View/Test Series/SubjectCard";
 import Questions from "./View/admin/NewAdmin/Questions";
 import QuestionList from "./View/admin/NewAdmin/QuestionList";
+import CircleProgressBar from "./View/TestPage/CircleProgressBar"
+import Terms from "./View/Terms & Condition/Index"
+import Privacy from "./View/Privacy & Policy/Index"
+
+
 const App = () => {
   const [startTimer,setStartTimer] = useState(false)
   const [endTimer,setEndTimer] = useState(false)
@@ -62,6 +68,7 @@ const App = () => {
             <Switch>
               <Route exact path="/test-page">
                 <Test starttimer={setStartTimer} timer={endTimer}/>
+                <CircleProgressBar />
                 </Route>
             </Switch>
           </div>
@@ -79,12 +86,15 @@ const App = () => {
             <Route exact path="/about-us" component={AboutUs} />
             <Route exact path="/sign-up" component={SignUp} />
             <Route exact path="/courses/paper1" component={CoursesPaper1} />
-            <Route exact path="/courses/paper2" component={CoursesPaper2} />
+            <Route exact path="/courses/paper2commerce" component={Paper2Commerce} />
+            <Route exact path="/courses/paper2management" component={Paper2Management} />
             <Route exact path="/notes/paper1" component={NotesPaper1} />
             <Route exact path="/notes/paper2" component={NotesPaper2} />
             <Route exact path="/notes/testseries" component={NotesPaper2} />
             <Route exact path="/contact-us" component={ContactUs} />
             <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/terms" component={Terms} />
+            <Route exact path="/privacy" component={Privacy} />
             <Route exact path="/login" component={Login} />
             {/* <Route exact path="/test-series" component={TestSeries} /> */}
             <Route exact path="/test-series" component={NewIndex} />

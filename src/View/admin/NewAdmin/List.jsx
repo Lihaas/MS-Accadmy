@@ -35,7 +35,7 @@ const List = (props) => {
             }
           )
           .then((item) => {
-            console.log(item.data.searchResult);
+            // console.log(item.data.searchResult);
             props.setdata(item.data.searchResult);
             document.getElementById("blurScreen").style.display = "none";
           })
@@ -47,7 +47,7 @@ const List = (props) => {
       .catch((error) => {
         console.log(error);
       });
-    console.log(e.target.id);
+    // console.log(e.target.id);
   };
   const editQue = (e) => {
     props.edit(e);
@@ -64,7 +64,7 @@ const List = (props) => {
   };
   const fileupload = (e) => {
     e.preventDefault();
-    console.log(e.target.files[0]);
+    // console.log(e.target.files[0]);
     setFile(e.target.files[0])
   };
   const upload = (event) => {

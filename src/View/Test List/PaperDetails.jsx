@@ -116,7 +116,7 @@ const PaperDetails = (props) => {
     }
     }
   };
-  console.log(unlock);
+  // console.log(unlock);
   return (
     <>
       <Loader />
@@ -193,7 +193,7 @@ const PaperDetails = (props) => {
                 </div>
                 <div className={styles["test-box-2"]}>
                   {
-                    console.log("paid"+item.isPaid)
+                    // console.log("paid"+item.isPaid)
                   }
                   {item.isPaid === false || item.isPaid == undefined? (
                     <>

@@ -4,14 +4,18 @@ import providingImage1 from "../../Assets/Image/istockphoto-1209904658-612x612.j
 import providingImage2 from "../../Assets/Image/wide-test-series.png";
 import providingImage3 from "../../Assets/Image/online-study-2710520-2261196.png";
 import { useEffect, useState } from "react";
-import { Paper1YoutubeData } from "../../Firebase/CoursesData";
-const CoursesPaper1 = () => {
+import { Paper2YoutubeData } from "../../Firebase/CoursesData";
+
+const Paper2Commerce = () => {
   const [youtubeData, setYoutubeData] = useState([]);
 
+
   useEffect(() => {
-    Paper1YoutubeData(setYoutubeData);
-    window.scrollTo(0,0);
+    Paper2YoutubeData(setYoutubeData);
+    window.scrollTo(0,0)
+
   }, []);
+
 
   return (
     <div className={styles.examDetail}>
@@ -22,7 +26,7 @@ const CoursesPaper1 = () => {
             <img src={signUpImage} />
           </div>
           <div className={styles["paper-detail"]}>
-            <h1>Paper 1</h1>
+            <h1>Paper 2 Commerce</h1>
             <p>
               We exclusively deals in UGC net Popert & Paper 2 Commerce<br></br>
               We provide the best content material for stydu & in depth<br></br>
@@ -73,18 +77,6 @@ const CoursesPaper1 = () => {
               </div>
             );
           })}
-          {/* <div className={styles["video-section"]}>
-            <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-            <span>ABCD</span>
-          </div>
-          <div className={styles["video-section"]}>
-            <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-            <span>ABCD</span>
-          </div>
-          <div className={styles["video-section"]}>
-            <iframe src="https://www.youtube.com/embed/GfAG61wRjP8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
-            <span>ABCD</span>
-          </div> */}
         </div>
         <div className={styles["button"]}>
           <a
@@ -99,4 +91,4 @@ const CoursesPaper1 = () => {
   );
 };
 
-export default CoursesPaper1;
+export default Paper2Commerce;
