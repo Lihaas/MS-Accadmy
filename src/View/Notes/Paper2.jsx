@@ -31,6 +31,21 @@ const NotesPaper1 = () => {
         morebtn.innerHTML="See More"
       }
     }
+    const buyBox = () =>{
+      let bookOrder = ""
+      document.getElementsByName("bookCheckbox").forEach((item,index)=>{
+        if(item.checked==true)
+        {
+          bookOrder+="Book Name: "+book[index].name+" "
+        }
+      })
+      if(bookOrder==="")
+      {
+        alert("Please select Book first")
+      }else{
+        window.location="https://api.whatsapp.com/send?phone=917404717750&text="+bookOrder
+      }
+    }
   return (
     <div className={styles.notes}>
       <section className={styles["paper-detail"]}>
@@ -56,21 +71,21 @@ const NotesPaper1 = () => {
           book.slice(0,visibleBook).map((item,index)=>{
             return (
               <div className={styles["book-card"]} key={index}>
-                  <a href="#" target="_blank">
-                  <div className={styles["book-image"]}>
-                    <img src={item.img} />
-                  </div>
-                  <div className={styles["book-text"]}>
-                    <p>{item.name}</p>
-                  </div>
-              </a>
-              </div>
+              <input type="checkbox" name="bookCheckbox"/>
+                <div className={styles["book-image"]}>
+                  <img src={item.img} />
+                </div>
+                <div className={styles["book-text"]}>
+                  <p>{item.name}</p>
+                </div>
+            </div>
             );
           })
         }
       </section>
         <div className={styles["book-section-button"]}>
-          <button onClick={()=>{seeMore()}} id="seemorebtn">See More</button>
+        <button onClick={()=>{seeMore()}} id="seemorebtn">See More</button>
+          <button onClick={()=>{buyBox()}}>Buy Now</button>
         </div>
       <section className={styles["chapter-section"]}>
           <h1>Demo Study Material</h1>

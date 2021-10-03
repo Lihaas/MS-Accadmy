@@ -2,7 +2,7 @@ import styles from "../../StyleSheets/Test Series/newtestseries.module.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import nta from "../../Assets/Image/NTA.png"
-import banner from "../../Assets/Image/homepage-banner1.jpg"
+import banner from "../../Assets/Image/Test Series Banner.png"
 import DownloadBanner from "../../Components/Download Banner/Index";
 import { useEffect, useState } from "react";
 import SignUpDialog from "../../Components/SignUpDialog/Index";
@@ -44,7 +44,9 @@ const NewIndex = () => {
     <>
     <Loader />
       <div className={styles.testSeries}>
-          <img src={banner} className={styles["banner"]}/>
+        <div className={styles["banner"]}>
+
+        </div>
         <h1 className={styles["heading"]}> Latest Online Test Series </h1>
         <div className={styles["filter"]}>
           <div className={styles["gradient-1"]}>Paper-1</div>
