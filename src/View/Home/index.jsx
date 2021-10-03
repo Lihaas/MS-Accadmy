@@ -27,6 +27,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CoachingCenter from "../../Assets/Image/Video Full Hd 1920X1080 Px (6)-1.m4v";
+import {isUserLoggedIn} from "../../Firebase/Authentication"
 
 // about mohit icon
 import study from "../../Assets/Image/study (1).png";
@@ -44,9 +45,11 @@ import video from "../../Assets/Image/video-lecture.png";
 
 const Home = (props) => {
   const [updateData, setUpdateData] = useState([]);
+  const [loginStatus,setLoginStatus] = useState(false)
   useEffect(() => {
     UpdateData(setUpdateData);
     window.scrollTo(0, 0);
+    isUserLoggedIn(setLoginStatus)
   }, []);
   const settings = {
     dots: true,
@@ -127,6 +130,14 @@ const Home = (props) => {
         });
     }
   };
+  const enrollRedirect = () =>{
+    if(loginStatus)
+    {
+      window.location="/plans"
+    }else{
+      window.location="/sign-up"
+    }
+  }
   return (
     <>
       <div className={styles.home}>
@@ -445,9 +456,9 @@ const Home = (props) => {
                   way that it provides complete coverage of entire syllabus so
                   that you can make higher score in Paper-1.
                 </p>
-                <NavLink to="/courses/paper1">
-                  <button style={{ cursor: "pointer" }}>Enroll Now</button>
-                </NavLink>
+                {/* <NavLink to="/courses/paper1"> */}
+                  <button style={{ cursor: "pointer" }} onClick={()=>{enrollRedirect()}}>Enroll Now</button>
+                {/* </NavLink> */}
               </div>
             </div>
             <div className={styles["exam-2"]}>
@@ -462,9 +473,9 @@ const Home = (props) => {
                   able to get in depth Knowledge of all topics covered in Paper
                   2 Commerce Syllabus.
                 </p>
-                <NavLink to="/courses/paper2">
-                  <button style={{ cursor: "pointer" }}>Enroll Now</button>
-                </NavLink>
+                {/* <NavLink to="/courses/paper2"> */}
+                  <button style={{ cursor: "pointer" }} onClick={()=>{enrollRedirect()}}>Enroll Now</button>
+                {/* </NavLink> */}
               </div>
 
               <div className={styles["exam-img"]}>
@@ -487,9 +498,9 @@ const Home = (props) => {
                   able to get in depth Knowledge of all topics covered in Paper
                   2 Commerce Syllabus.
                 </p>
-                <NavLink to="/courses/paper2">
-                  <button style={{ cursor: "pointer" }}>Enroll Now</button>
-                </NavLink>
+                {/* <NavLink to="/courses/paper2"> */}
+                  <button style={{ cursor: "pointer" }} onClick={()=>{enrollRedirect()}}>Enroll Now</button>
+                {/* </NavLink> */}
               </div>
             </div>
 

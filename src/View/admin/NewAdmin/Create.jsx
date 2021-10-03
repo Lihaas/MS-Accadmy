@@ -200,6 +200,7 @@ const Create = (props) =>{
                       onChange={(e) => {
                         questionType(e);
                       }}
+                      defaultChecked="checked"
                     />
                     <label>Multiple</label>
                   </div>
