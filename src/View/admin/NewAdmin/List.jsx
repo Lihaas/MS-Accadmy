@@ -128,13 +128,7 @@ const List = (props) => {
           &#10539;
         </h1>
         <form
-          style={{
-            transform: "translate(-25%)",
-            background: "white",
-            marginTop: "100px",
-            width: "40%",
-            height: "150px",
-          }}
+        className={styles["upload-form-input"]}
           onSubmit={(event) => upload(event)}
         >
           <input

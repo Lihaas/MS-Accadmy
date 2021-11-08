@@ -58,7 +58,14 @@ const Paper2Commerce = () => {
             </span>
           </div>
         </div>
-        
+        <div className={styles["button"]}>
+          <a
+            href="https://www.canva.com/design/DAEssBkigsU/Igp5MZZ0ejXwBqafCQRfjA/view?website#2:title-page"
+            // target="_blank"
+          >
+            <button>See More</button>
+          </a>
+        </div>
       </section>
       <section className={styles["demo-class"]}>
         <h1>Our Demo Class</h1>
