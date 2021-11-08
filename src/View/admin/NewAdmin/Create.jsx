@@ -7,9 +7,10 @@ import Loader from "../../../View/loading spinner/Loader"
 import deleteIcon from "../../../Assets/Image/delete (1).png"
 
 const Create = (props) =>{
-    const [data,setData] = useState([])
-    const [length, setLength] = useState(0);
-    const [queImage,setQueImage] = useState("")
+    const [data,setData] = useState([{}])
+    const [length, setLength] = useState(1);
+    const [queImage,setQueImage] = useState(""); 
+    const [marks,setMarks] = useState()
     const id = useParams();
     useEffect(() => {
       
@@ -135,7 +136,7 @@ const Create = (props) =>{
           }
         }).then((item)=>{
           alert(length+" questions are succesfully submitted")
-          window.location="/admin/question"
+          window.location="/admin/add-question/"+id.quesid
         }).catch((error)=>{
           if(error.response.status===401)
           {
@@ -149,8 +150,8 @@ const Create = (props) =>{
         })
     }
     const hide = () =>{
-        setData([])
-        setLength(0)
+        setData([{}])
+        setLength(1)
         props.hide()
     }
     const deleteImage = (e)=>{
@@ -159,6 +160,13 @@ const Create = (props) =>{
         document.getElementById("para"+e).style.display = "none";
         document.getElementById("uploadedImg"+e).style.display = "none";
       }
+      const changeDefaultMarks = (e) =>{
+        setMarks(e.target.value)
+        for(let i=1;i<=length;i++)
+        {
+          document.getElementById("marks"+i).value = e.target.value;
+        }
+      }
     return(
         <>  
         <Loader />
@@ -166,6 +174,10 @@ const Create = (props) =>{
             <div className={styles["show-header"]}>
           <div className={styles["back-img"]}>
             <img src={prev} onClick={()=>{hide()}} />
+          </div>
+          <div className={styles["default-marks"]}>
+            <label>Default Marks</label>
+            <input type="number" onChange={(e)=>{changeDefaultMarks(e)}}/>
           </div>
         </div>
             <div className={styles["question-form"]}>
@@ -188,6 +200,7 @@ const Create = (props) =>{
                       onChange={(e) => {
                         questionType(e);
                       }}
+                      defaultChecked="checked"
                     />
                     <label>Multiple</label>
                   </div>
@@ -234,7 +247,7 @@ const Create = (props) =>{
                     <option value="C">C</option>
                     <option value="D">D</option>
                   </select>
-                  <input type="text" placeholder="Total Marks" id={"marks"+(index+1)} required/>
+                  <input type="text" placeholder="Total Marks" defaultValue={marks} id={"marks"+(index+1)} required/>
                   <label className={styles["upload-img-label"]} id={"uploadImageLabel"+(index+1)} style={{display: "none"}}>Upload Image</label>
 
                   <div id={"uploadedImg"+(index+1)} className={styles["uploadedImg"]} style={{ display: "none", margin: "auto" }}>

@@ -1,0 +1,15 @@
+.privacy{
+    padding-top: 10em;
+    padding-bottom: 5em;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-direction: column;
+}
+.privacy h1{
+    text-align: center;
+    color: #00aeef;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1em !important;
+}

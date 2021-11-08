@@ -41,7 +41,8 @@ const MobileHeader = () => {
         <h1 onClick={courseHideShow}>Courses<img src={dropdown} /></ h1>
         <div className={styles["hide-show"]} id="course-drop-down">
         <NavLink to={{ pathname: "/courses/paper1" }} onClick={drawerHandler}>Paper 1</NavLink>
-        <NavLink to={{ pathname: "/courses/paper2" }} onClick={drawerHandler}>Paper 2</NavLink>
+        <NavLink to={{ pathname: "/courses/paper2commerce" }} onClick={drawerHandler}>Paper 2 Commerce</NavLink>
+        <NavLink to={{ pathname: "/courses/paper2management" }} onClick={drawerHandler}>Paper 2 Management</NavLink>
         <NavLink to={{ pathname: "/test-series" }} onClick={drawerHandler}>Test Series</NavLink>
         </div>
         <h1 onClick={noteHideShow}>Notes <img src={dropdown} /></ h1>

@@ -20,6 +20,12 @@ export const TestPanel = ({ children }) => {
   const [notAnswered,setNotAnswered] = useState(0)
   const [answered,setAnswered] = useState(0)
   const [reviewed,setReviewed] = useState(0)
+  const [topperList,setTopperList] = useState([])
+  const [analysisData,setAnalysisData] = useState({
+    "questionAttempt": 0,
+    "totalquestion": 0,
+    "correctquestion":0,
+  })
   // const [Test,setTest] = useState([])
   useEffect(() => {
     // if(id!==0)
@@ -104,12 +110,14 @@ export const TestPanel = ({ children }) => {
     localStorage.setItem("answers",JSON.stringify(answers));
   };
   let marks = 0;
+  let noCorrectAns = 0;
   const endHandler = () => {
     document.getElementById("blurScreen").style.display = "block"
     let answers = JSON.parse(localStorage.getItem("answers"));
     Test.map((item, index) => {
       if (answers[index].option === item.correctOption) {
         marks += item.totalMarks;
+        noCorrectAns++;
       }
     });
     let noanswer = 0;
@@ -141,21 +149,43 @@ export const TestPanel = ({ children }) => {
         }
       })
       .then((item)=>{
+        // console.log(item.data.user_name);
         Axios.post(process.env.REACT_APP_API_URL+"/create/result",
         {
           "tId":localStorage.getItem('examID'),
           "marksObtain":marks,
           "uid":item.data._id,
           "totalQuesAttempt":answergiven,
-          "totalMarks":localStorage.getItem('totalMarks')
+          "totalMarks":localStorage.getItem('totalMarks'),
+          "userName": item.data.user_name
         },{
           headers:{
             "Authorization": localStorage.getItem('token')
           }
         })
         .then((item)=>{
+          document.getElementById("blurScreen").style.display = "none"
         }).catch((error)=>{
           console.log(error)
+          alert("error occurred, trying again")
+          Axios.post(process.env.REACT_APP_API_URL+"/create/result",
+        {
+          "tId":localStorage.getItem('examID'),
+          "marksObtain":marks,
+          "uid":item.data._id,
+          "totalQuesAttempt":answergiven,
+          "totalMarks":localStorage.getItem('totalMarks'),
+          "userName": item.data.user_name
+        },{
+          headers:{
+            "Authorization": localStorage.getItem('token')
+          }
+        }).then((item)=>{
+          document.getElementById("blurScreen").style.display = "none"
+        }).catch((error)=>{
+          alert("Result not created, Sorry for the inconvinence!")
+          document.getElementById("blurScreen").style.display = "none"
+        })
         })
       }).catch((error)=>{
         console.log(error)
@@ -164,10 +194,15 @@ export const TestPanel = ({ children }) => {
     setAnswered(answergiven)
     setNotAnswered(noanswer)
     setReviewed(reviewedque)
-    document.getElementById("blurScreen").style.display = "none"
     document.getElementById("countdownTimer").style.display="none"
     document.getElementById("end-dialog").style.display="block"
     // setCurrentIndex(0);
+      setAnalysisData({
+        "questionAttempt": answergiven,
+        "totalquestion": Test.length,
+        "correctquestion":noCorrectAns,
+      })
+    // console.log(noCorrectAns,Test.length,answergiven);
   };
   const radioHandler = (e) => {
     let answers = JSON.parse(localStorage.getItem('answers'));
@@ -178,6 +213,33 @@ export const TestPanel = ({ children }) => {
     document.getElementsByClassName(currentIndex)[1].style.backgroundColor = "#00B536"
     document.getElementById("reviewbtn").value = "Mark for Review";
   };
+  const showAnalysis = () =>{
+    document.getElementById("blurScreen").style.display="block"
+    let link = "/v1/topResult?tid="+localStorage.getItem('examID')+"&limit=10"
+    Axios
+        .get(
+          process.env.REACT_APP_API_URL +link,
+          {
+            headers: {
+              Authorization: localStorage.getItem("token"),
+            },
+          }
+        )
+        .then((item) => {
+          setTopperList(item.data) 
+          document.getElementById("blurScreen").style.display = "none";
+          document.getElementById("analysisPage").style.display="block";
+          document.getElementById("testPage").style.display="none"
+          // setCurrentIndex(0)
+          // console.log(topperList);
+        })
+        .catch((error) => {
+          console.log(error);
+          alert("Error Occurred, Please try again");
+          showAnalysis();
+          // document.getElementById("blurScreen").style.display = "none";
+        });
+  }
   const reviewExam = () =>{
     setRev(true)
     // console.log(currentIndex);
@@ -187,6 +249,9 @@ export const TestPanel = ({ children }) => {
     document.getElementById("countdownTimer").style.display="none"
     document.getElementsByClassName("endbtn2")[0].style.display="none"
     document.getElementsByClassName("endbtn2")[1].style.display="none"
+    document.getElementById("analysisPage").style.display="none";
+    document.getElementById("testPage").style.display="block"
+    document.getElementById("headerTestSeriesButton").style.display="flex"
     let answers = JSON.parse(localStorage.getItem('answers'));
     Test.map((item,index)=>{
       if(index===currentIndex)
@@ -232,7 +297,10 @@ export const TestPanel = ({ children }) => {
                 answered,
                 notAnswered,
                 reviewed,
-                Test
+                Test,
+                showAnalysis,
+                topperList,
+                analysisData
               }}
             >
               {children}

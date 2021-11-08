@@ -116,8 +116,6 @@ h5 {
 .upcomming-batch .batch span {
   color: white;
 }
-.upcomming-batch .batch img , 
-.upcomming-batch .batch a,
 .upcomming-batch .batch iframe
 {
   width: 350px !important;
@@ -513,15 +511,20 @@ h5 {
   padding: 10px;
   background-color: #FFF;
 }
-.pack-detail{
+.pack-detail a{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+  text-decoration: none;
 }
 .pack-detail img{
   width: 30%;
+}
+.pack-detail h3{
+  text-decoration: none;
+  color: #000;
 }
 @media screen and (max-width: 1535px) {
 
@@ -843,6 +846,11 @@ h5 {
   background: url(../../Assets/Image/graduate\ banner.jpg) no-repeat;
   background-size: cover;
   background-position-y: 0px;
+}
+.update-a,
+.update-a img{
+  width: 170px !important;
+  height: 150px !important;
 }
 @media screen and (max-width: 740px) {
   .mobile-hero-section .mobile-hero-top h2 {

@@ -16,9 +16,9 @@ const TestPage = () => {
   }
   return (
     <>
-    <div className={styles.TestPage}>
+    <div className={styles.TestPage} id="testPage">
       {/* <TestPanel> */}
-        <div className={styles["test-name-one"]}><h1>Test Name</h1></div>
+        <div className={styles["test-name-one"]}><h1>{localStorage.getItem("examName")}</h1></div>
         <section className={styles["section-wrapper"]}>
           <div className={styles["section-1"]}>
               <Questions />

@@ -13,7 +13,7 @@ export const Paper2NotesData = (onDataFetched) => {
   DB.collection("Notes-Paper2")
     .doc("Chapter1")
     .onSnapshot((doc) => {
-      console.log(doc.data());
+      // console.log(doc.data());
       onDataFetched(doc.data())
     });
 };

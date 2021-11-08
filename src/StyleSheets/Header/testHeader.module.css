@@ -65,6 +65,22 @@
     background: #FFF;
     font-size: 30px;
   }
+  .header-testSeries-btn{
+    text-decoration: none;
+
+  }
+  .header-testSeries-btn button{
+    width: 130px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+    font-size: 15px;
+    border: 1px solid #000;
+    cursor: pointer;
+  }
   @media screen and (max-width: 850px){
   .start-blur h1{
     right: 30%;

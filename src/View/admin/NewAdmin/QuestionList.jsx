@@ -15,7 +15,7 @@ const QuestionList = () => {
   const [showData,setShowData] = useState([])
   const [quesNo,setQuesNo] = useState(0)
   const id = useParams();
-  console.log(id);
+  // console.log(id);
   useEffect(() => {
     document.getElementById("blurScreen").style.display="block"
     axios
@@ -25,7 +25,7 @@ const QuestionList = () => {
         },
       })
       .then((item) => {
-        console.log(item.data.searchResult);
+        // console.log(item.data.searchResult);
         setData(item.data.searchResult);
         document.getElementById("blurScreen").style.display="none"
       })
@@ -47,7 +47,7 @@ const QuestionList = () => {
       },
     })
     .then((item) => {
-      console.log(item.data.searchResult);
+      // console.log(item.data.searchResult);
       setData(item.data.searchResult);
     })
     .catch((error) => {
@@ -56,7 +56,7 @@ const QuestionList = () => {
     }).catch((error)=>{
         console.log(error);
     })
-    console.log(e.target.id);
+    // console.log(e.target.id);
 }
   const showQuestion = (e) =>{
     document.getElementById("questionList").style.display="none"

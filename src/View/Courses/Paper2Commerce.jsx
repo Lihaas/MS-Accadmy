@@ -5,33 +5,17 @@ import providingImage2 from "../../Assets/Image/wide-test-series.png";
 import providingImage3 from "../../Assets/Image/online-study-2710520-2261196.png";
 import { useEffect, useState } from "react";
 import { Paper2YoutubeData } from "../../Firebase/CoursesData";
-import { paper2BookData } from "../../Firebase/bookData";
-import closeicon from "../../Assets/Image/closeIcon.png";
 
-const Paper2 = () => {
+const Paper2Commerce = () => {
   const [youtubeData, setYoutubeData] = useState([]);
-  const [bookdata, setbookdata] = useState([]);
 
 
   useEffect(() => {
     Paper2YoutubeData(setYoutubeData);
-    paper2BookData(setbookdata);
     window.scrollTo(0,0)
 
   }, []);
 
-  const seeMoreDialog = () => {
-    if (
-      document.getElementById("see-more").style.display === "none" ||
-      document.getElementById("see-more").style.display === ""
-    ) {
-      document.getElementById("see-more").style.display = "block";
-      document.getElementById("bookbtn").value = "Hide";
-    } else {
-      document.getElementById("see-more").style.display = "none";
-      document.getElementById("bookbtn").value = "See More";
-    }
-  };
 
   return (
     <div className={styles.examDetail}>
@@ -42,7 +26,7 @@ const Paper2 = () => {
             <img src={signUpImage} />
           </div>
           <div className={styles["paper-detail"]}>
-            <h1>Paper 2</h1>
+            <h1>Paper 2 Commerce</h1>
             <p>
               We exclusively deals in UGC net Popert & Paper 2 Commerce<br></br>
               We provide the best content material for stydu & in depth<br></br>
@@ -55,7 +39,7 @@ const Paper2 = () => {
         </div>
       </section>
       <section className={styles["providing"]}>
-        <h1>Why We are Providing?</h1>
+        <h1>What are we Providing?</h1>
         <div className={styles["section-wrapper"]}>
           <div className={styles["image-section"]}>
             <img src={providingImage1} />
@@ -74,31 +58,13 @@ const Paper2 = () => {
             </span>
           </div>
         </div>
-        <div>
-        <div className={styles["see-more-section"]} id="see-more">
-            <div className={styles["book-card-section"]}>
-              {bookdata.map((item, index) => {
-                let link="https://api.whatsapp.com/send?phone=919996177761&text=" + item.name
-                return (
-                  <div className={styles["book-card"]} key={index}>
-                      <a href={link} target="_blank">
-                      <div className={styles["book-image"]}>
-                        <img src={item.img} />
-                      </div>
-                      <div className={styles["book-text"]}>
-                        <p>{item.name}</p>
-                      </div>
-                  </a>
-                    </div>
-                );
-              })}
-            </div>
-          </div>
         <div className={styles["button"]}>
-        <input onClick={() => {
-              seeMoreDialog();
-            }} type="button" value="See More" id="bookbtn"></input>
-          </div>
+          <a
+            href="https://www.canva.com/design/DAEssBkigsU/Igp5MZZ0ejXwBqafCQRfjA/view?website#2:title-page"
+            // target="_blank"
+          >
+            <button>See More</button>
+          </a>
         </div>
       </section>
       <section className={styles["demo-class"]}>
@@ -132,4 +98,4 @@ const Paper2 = () => {
   );
 };
 
-export default Paper2;
+export default Paper2Commerce;

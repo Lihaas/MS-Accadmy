@@ -27,6 +27,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CoachingCenter from "../../Assets/Image/Video Full Hd 1920X1080 Px (6)-1.m4v";
+import {isUserLoggedIn} from "../../Firebase/Authentication"
 
 // about mohit icon
 import study from "../../Assets/Image/study (1).png";
@@ -44,9 +45,11 @@ import video from "../../Assets/Image/video-lecture.png";
 
 const Home = (props) => {
   const [updateData, setUpdateData] = useState([]);
+  const [loginStatus,setLoginStatus] = useState(false)
   useEffect(() => {
     UpdateData(setUpdateData);
     window.scrollTo(0, 0);
+    isUserLoggedIn(setLoginStatus)
   }, []);
   const settings = {
     dots: true,
@@ -127,6 +130,14 @@ const Home = (props) => {
         });
     }
   };
+  const enrollRedirect = () =>{
+    if(loginStatus)
+    {
+      window.location="/plans"
+    }else{
+      window.location="/sign-up"
+    }
+  }
   return (
     <>
       <div className={styles.home}>
@@ -192,8 +203,8 @@ const Home = (props) => {
                     return (
                       <div className={styles["batch"]} key={index}>
                         <span className={styles["title"]}>{item.title}</span>
-                        <a href={item.redirect} target="_blank">
-                          <img src={item.img} />
+                        <a href={item.redirect} target="_blank" className={styles["update-a"]}>
+                          <img src={item.img}/>
                         </a>
                         <span className={styles["description"]}>
                           {item.description}
@@ -282,24 +293,34 @@ const Home = (props) => {
           <div className={styles["about-us"]}>What will you get in course?</div>
           <div className={styles["pack-detail-box"]}>
             <div className={styles["pack-detail"]}>
+            <a href="/notes/paper1">
               <img src={bookIcon} />
               <h3>Color Booklets</h3>
+              </a>
             </div>
             <div className={styles["pack-detail"]}>
+            <a href="/notes/paper1">
               <img src={notes} />
               <h3>Free Notes & PDF</h3>
+              </a>
             </div>
             <div className={styles["pack-detail"]}>
+              <a href="https://www.youtube.com/c/MOHITSHARMACLASSES" target="_blank">
               <img src={video} />
               <h3>Video Lecture</h3>
+              </a>
             </div>
             <div className={styles["pack-detail"]}>
+            <a href="/test-series">
               <img src={test} />
               <h3>Test Series</h3>
+              </a>
             </div>
             <div className={styles["pack-detail"]}>
+            <a href="https://t.me/ms00007sharma" target="_blank">
               <img src={telegram} />
               <h3>Join telegram</h3>
+              </a>
             </div>
           </div>
           {/* <div className={styles["section-wrapper"]}>
@@ -435,9 +456,9 @@ const Home = (props) => {
                   way that it provides complete coverage of entire syllabus so
                   that you can make higher score in Paper-1.
                 </p>
-                <NavLink to="/courses/paper1">
-                  <button style={{ cursor: "pointer" }}>Enroll Now</button>
-                </NavLink>
+                {/* <NavLink to="/courses/paper1"> */}
+                  <button style={{ cursor: "pointer" }} onClick={()=>{enrollRedirect()}}>Enroll Now</button>
+                {/* </NavLink> */}
               </div>
             </div>
             <div className={styles["exam-2"]}>
@@ -452,9 +473,9 @@ const Home = (props) => {
                   able to get in depth Knowledge of all topics covered in Paper
                   2 Commerce Syllabus.
                 </p>
-                <NavLink to="/courses/paper2">
-                  <button style={{ cursor: "pointer" }}>Enroll Now</button>
-                </NavLink>
+                {/* <NavLink to="/courses/paper2"> */}
+                  <button style={{ cursor: "pointer" }} onClick={()=>{enrollRedirect()}}>Enroll Now</button>
+                {/* </NavLink> */}
               </div>
 
               <div className={styles["exam-img"]}>
@@ -467,7 +488,7 @@ const Home = (props) => {
                 <img src={Sec401} />
               </div>
               <div className={styles["exam-detail"]}>
-                <h1>Paper 2 Management (Coming Soon)</h1>
+                <h1>Paper 2 Management</h1>
                 <p>
                   In this course, We covers each &amp; every Concept of Ugc Net
                   Paper-2 Commerce through a series of video Lectures , mock
@@ -477,9 +498,9 @@ const Home = (props) => {
                   able to get in depth Knowledge of all topics covered in Paper
                   2 Commerce Syllabus.
                 </p>
-                <NavLink to="/courses/paper2">
-                  <button style={{ cursor: "pointer" }}>Enroll Now</button>
-                </NavLink>
+                {/* <NavLink to="/courses/paper2"> */}
+                  <button style={{ cursor: "pointer" }} onClick={()=>{enrollRedirect()}}>Enroll Now</button>
+                {/* </NavLink> */}
               </div>
             </div>
 

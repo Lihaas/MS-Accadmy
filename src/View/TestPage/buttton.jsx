@@ -15,7 +15,8 @@ const Button = () => {
     notAnswered,
     answered,
     reviewed,
-    length
+    length,
+    showAnalysis
   } = useContext(TestContext);
   return (
     <>
@@ -79,17 +80,17 @@ const Button = () => {
                 </tr>
               </table>
               <div className={styles["dialog-btn"]}>
-                <a href="/home">
-                  <button className={styles["finishbtn"]}>Finish Exam</button>
-                </a>
-                <button
+                  <button className={styles["finishbtn"]} onClick={() => {
+                    showAnalysis();
+                  }}>Finish Exam</button>
+                {/* <button
                   className={styles["revbtn"]}
                   onClick={() => {
                     reviewExam();
                   }}
                 >
                   Review Exam
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
