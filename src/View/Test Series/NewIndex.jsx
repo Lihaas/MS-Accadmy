@@ -18,14 +18,14 @@ const NewIndex = () => {
     window.scrollTo(0,0);
     isUserLoggedIn(setLogin)
     document.getElementById("blurScreen").style.display="block"
-    axios.get(process.env.REACT_APP_API_URL+"/v1/paper/getall",{headers:{
-      Authorization: localStorage.getItem('token')
-    }}).then((item)=>{
+    axios.get(process.env.REACT_APP_API_URL+"/v1/paper/getall",
+    ).then((item)=>{
       // console.log(item.data.searchResult);
       setData(item.data.searchResult)
       document.getElementById("blurScreen").style.display="none"
     }).catch((error)=>{
-      console.log(error);
+      // console.log(error);
+      // console.log(error.response.data)
       alert("error occured, please try again")
       window.location="/"
       document.getElementById("blurScreen").style.display="none"

@@ -1,5 +1,6 @@
 import firebase from "./firebase";
 import Axios from "axios";
+import {logout} from "./Authentication"
 export const otpDialog = (e) => {
   e.preventDefault();
   const captcha = new firebase.auth.RecaptchaVerifier("recaptcha");
@@ -17,7 +18,7 @@ export const otpDialog = (e) => {
       window.confirminationResult = confirminationResult;
     })
     .catch((error) => {
-      console.log(error);
+      // console.log(error);
     });
 };
 
@@ -44,15 +45,17 @@ export const VerifyDialog = (setLogin) => {
           // window.location="/test-series"
         }).catch((error)=>{
           alert("error Occured try again")
-          console.log(error)
+          // console.log(error)
         document.getElementById("blurScreen").style.display="none"
+        logout();
         })
 
       })
       .catch((error) => {
-        console.log(error)
+        // console.log(error)
         document.getElementById("incorrect").style.display = "block";
         document.getElementById("otp").style.borderColor = "red";
         document.getElementById("otp").style.height = "2.5rem";
+        logout();
       });
 };

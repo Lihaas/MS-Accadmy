@@ -1,5 +1,6 @@
 import firebase from "./firebase";
 import Axios from "axios"
+import {logout} from "./Authentication"
 export const otpSender = (e) => {
   e.preventDefault();
   const captcha = new firebase.auth.RecaptchaVerifier("recaptchabox");
@@ -14,7 +15,7 @@ export const otpSender = (e) => {
       window.confirminationResult = confirminationResult;
     })
     .catch((error) => {
-      console.log(error);
+      // console.log(error);
     });
 };
 
@@ -40,8 +41,9 @@ export const SignUpVerification = (setUser) => {
           setUser(true)
         }).catch((error)=>{
           alert("error Occured try again")
-          console.log(error)
+          // console.log(error)
         document.getElementById("blurScreen").style.display="none"
+        logout();
         })
         // setUser(true);
       })
@@ -50,6 +52,7 @@ export const SignUpVerification = (setUser) => {
         document.getElementById("incorrectOTP").style.display = "block";
         document.getElementById("otpBox").style.borderColor = "red";
         document.getElementById("otpBox").style.height = "2.5rem";
+        logout();
       });
 };
 export const LoginVerification = (setUser) => {
@@ -73,15 +76,16 @@ export const LoginVerification = (setUser) => {
           }
         }).catch((error)=>{
           alert("error Occured try again")
-          console.log(error)
+          // console.log(error)
+          logout();
         document.getElementById("blurScreen").style.display="none"
         })
-        // setUser(true);
       })
       .catch(() => {
         document.getElementById("blurScreen").style.display="none"
         document.getElementById("incorrectOTP").style.display = "block";
         document.getElementById("otpBox").style.borderColor = "red";
         document.getElementById("otpBox").style.height = "2.5rem";
+        logout();
       });
 };

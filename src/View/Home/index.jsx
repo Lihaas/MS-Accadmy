@@ -98,7 +98,7 @@ const Home = (props) => {
         })
         .catch((error) => {
           document.getElementById("blurScreen").style.display = "none";
-          console.log(error);
+          // console.log(error);
           alert("Error Occurred, Please try again after some time ");
         });
     }
@@ -126,7 +126,7 @@ const Home = (props) => {
         .catch((error) => {
           document.getElementById("blurScreen").style.display = "none";
           alert("Error Occurred, Please try again after some time ");
-          console.log(error);
+          // console.log(error);
         });
     }
   };
@@ -254,11 +254,12 @@ const Home = (props) => {
                     type="text"
                     placeholder="Full Name"
                     required
+                    maxLength="20"
                     id="enqName"
                   />
                   <label>Phone Number</label>
                   <input
-                    type="text"
+                    type="tel"
                     placeholder="Phone Number"
                     required
                     maxLength="10"
@@ -544,10 +545,11 @@ const Home = (props) => {
                     placeholder="Full Name"
                     required
                     id="enqName1"
+                    maxLength="20"
                   />
                   <label>Phone Number</label>
                   <input
-                    type="text"
+                    type="tel"
                     placeholder="Phone Number"
                     required
                     pattern="[0-9]{10}"

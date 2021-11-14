@@ -166,7 +166,7 @@ export const TestPanel = ({ children }) => {
         .then((item)=>{
           document.getElementById("blurScreen").style.display = "none"
         }).catch((error)=>{
-          console.log(error)
+          // console.log(error)
           alert("error occurred, trying again")
           Axios.post(process.env.REACT_APP_API_URL+"/create/result",
         {
@@ -188,7 +188,7 @@ export const TestPanel = ({ children }) => {
         })
         })
       }).catch((error)=>{
-        console.log(error)
+        // console.log(error)
       })
     setMarksObtained(marks)
     setAnswered(answergiven)
@@ -234,7 +234,7 @@ export const TestPanel = ({ children }) => {
           // console.log(topperList);
         })
         .catch((error) => {
-          console.log(error);
+          // console.log(error);
           alert("Error Occurred, Please try again");
           showAnalysis();
           // document.getElementById("blurScreen").style.display = "none";

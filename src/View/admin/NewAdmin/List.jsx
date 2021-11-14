@@ -41,11 +41,11 @@ const List = (props) => {
           })
           .catch((error) => {
             document.getElementById("blurScreen").style.display = "none";
-            console.log(error);
+            // console.log(error);
           });
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
     // console.log(e.target.id);
   };

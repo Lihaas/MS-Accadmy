@@ -117,7 +117,7 @@ const Edit = (props) => {
             document.getElementById("blurScreen").style.display="none"
         })
         .catch((error) => {
-          console.log(error);
+          // console.log(error);
           alert("Error occurred, Please try again");
           document.getElementById("blurScreen").style.display="none"
         });
@@ -201,7 +201,7 @@ const Edit = (props) => {
           document.getElementById("blurScreen").style.display="none"
           window.location="/admin/add-question/"+id.quesid
         }).catch((error)=>{
-          console.log(error);
+          // console.log(error);
           alert("error occurred, please try again")
           document.getElementById("blurScreen").style.display="none"
         })

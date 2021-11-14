@@ -28,7 +28,7 @@ const Dashboard=()=>{
         setData(item.data)
       }).catch((error)=>{
         document.getElementById("blurScreen").style.display="none"
-        console.log(error)
+        // console.log(error)
         alert("error occurred, please try again")
       })
     }
@@ -48,7 +48,7 @@ const Dashboard=()=>{
       }).catch((error)=>{
         document.getElementById("blurScreen").style.display="none"
         alert("Error occurred, Please try again")
-        console.log(error)
+        // console.log(error)
       })
     },[])
     return(

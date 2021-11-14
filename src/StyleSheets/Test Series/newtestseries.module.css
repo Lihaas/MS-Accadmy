@@ -2,7 +2,7 @@
 }
 .banner{
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     margin-bottom: 100px;
     background: url(../../Assets/Image/Test\ Series\ Banner.png) no-repeat;
     background-size: 100% 90%;
@@ -176,6 +176,7 @@
         padding-left: 50px;
     }
     .banner{
-        height: 50vh;
+        height: 30vh;
+        margin-bottom: 50px;
     }
 }

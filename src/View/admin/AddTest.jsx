@@ -58,7 +58,7 @@ const AddTest = () =>{
               document.getElementById("blurScreen").style.display="none"
               }).catch((error)=>{
                 alert("Error Occurred Please try again")
-                console.log(error);
+                // console.log(error);
               document.getElementById("blurScreen").style.display="none"
               })
         }

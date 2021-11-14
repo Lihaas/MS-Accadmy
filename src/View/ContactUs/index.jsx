@@ -30,9 +30,13 @@ const ContactUs = () => {
       })
       .then((item)=>{
         alert("Enquiry Submitted Succesfully")
+        document.getElementById("FullName").value=""
+        document.getElementById("PhoneNumber").value=""
+        document.getElementById("Enquiry").value=""
+        document.getElementById("Email").value=""
     document.getElementById("blurScreen").style.display="none"
       }).catch((error)=>{
-        console.log(error)
+        // console.log(error)
         alert("Error occurred, Please try again")
     document.getElementById("blurScreen").style.display="none"
       })
@@ -51,12 +55,12 @@ const ContactUs = () => {
           <div>
             <div className={styles["contact-form"]}>
               <form 
-              // onSubmit={(e)=>{enquiry(e)}}
+              onSubmit={(e)=>{enquiry(e)}}
               >
                 <label>Full Name</label>
-                <input type="text" placeholder="Full Name" required id="FullName"/>
+                <input type="text" placeholder="Full Name" required id="FullName" maxLength="20"/>
                 <label>Phone Number</label>
-                <input type="text" placeholder="Phone Number" required pattern="[0-9]{10}" maxLength="10" id="PhoneNumber"/>
+                <input type="tel" placeholder="Phone Number" required pattern="[0-9]{10}" maxLength="10" id="PhoneNumber"/>
                 <label>Email</label>
                 <input type="email" placeholder="Email" required id="Email"/>
                 {/* <label>Batch Name</label>
@@ -80,7 +84,7 @@ const ContactUs = () => {
                   required
                   id="Enquiry"
                 />
-                <button type="submit" onClick={(e)=>{enquiry(e)}}>Submit</button>
+                <button type="submit" >Submit</button>
               </form>
               <div className={styles["whatsapp-section"]}>
               <h1>OR</h1>

@@ -51,10 +51,10 @@ const QuestionList = () => {
       setData(item.data.searchResult);
     })
     .catch((error) => {
-      console.log(error);
+      // console.log(error);
     });
     }).catch((error)=>{
-        console.log(error);
+        // console.log(error);
     })
     // console.log(e.target.id);
 }

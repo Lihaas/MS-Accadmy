@@ -60,7 +60,7 @@ const Create = (props) =>{
             document.getElementById("blurScreen").style.display="none"
             setQueImage("")
           }).catch((error)=>{
-            console.log(error);
+            // console.log(error);
             alert("Error occurred, Please try again")
           })
         }
@@ -145,7 +145,7 @@ const Create = (props) =>{
           }else{
             alert("error occurred please try again")
         document.getElementById("blurScreen").style.display="none"
-        console.log(error)
+        // console.log(error)
           }
         })
     }

@@ -37,10 +37,11 @@ const SignUp = () => {
                   placeholder="Full Name (e.g, Ashish Garg)"
                   required
                   id="name"
+                  maxLength="20"
                 />
                 <label>Phone Number</label>
                 <input
-                  type="text"
+                  type="tel"
                   id="phoneNumber"
                   placeholder="Mobile Number (e.g, 8989112233)"
                   required

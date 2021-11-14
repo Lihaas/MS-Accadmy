@@ -32,12 +32,12 @@ const PaperDetails = (props) => {
         {
           alert("Session Expired, Please login again")
           document.getElementById("blurScreen").style.display="none"
-          console.log(error);
+          // console.log(error);
           window.location="/login"
         }else{
           alert("Error Occurred, Please try again")
           document.getElementById("blurScreen").style.display="none"
-          console.log(error);
+          // console.log(error);
         }
       });
       Axios.get(process.env.REACT_APP_API_URL+"/users/me", {
@@ -56,10 +56,10 @@ const PaperDetails = (props) => {
         }
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         alert("Error Occurred, Please try again")
         document.getElementById("blurScreen").style.display="none"
-        console.log(error);
+        // console.log(error);
       });
   }, []);
   const openTest = (e) => {
@@ -81,7 +81,7 @@ const PaperDetails = (props) => {
           document.getElementById("blurScreen").style.display = "none";
         })
         .catch((error) => {
-          console.log(error);
+          // console.log(error);
           document.getElementById("blurScreen").style.display = "none";
         alert("Error Occurred, Please try again")
         });
@@ -106,7 +106,7 @@ const PaperDetails = (props) => {
           document.getElementById("blurScreen").style.display = "none";
         })
         .catch((error) => {
-          console.log(error);
+          // console.log(error);
           document.getElementById("blurScreen").style.display = "none";
         alert("Error Occurred, Please try again")
         });
