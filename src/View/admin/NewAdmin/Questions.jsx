@@ -15,7 +15,7 @@ const Questions = () =>{
       },
     })
       .then((item) => {
-        if (item.data.phoneNum === 1234567899) {
+        if (item.data.phoneNum === 1234567890) {
           axios.get(process.env.REACT_APP_API_URL+"/v1/list/test", {
             headers: {
               Authorization: localStorage.getItem("token"),
