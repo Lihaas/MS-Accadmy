@@ -5,19 +5,17 @@ import { otpSender, SignUpVerification } from "../../Firebase/SignWithNumber";
 import { Redirect } from "react-router-dom";
 import dp from "../../Assets/Image/male-user.png"
 import Loader from "../../View/loading spinner/Loader";
-import {isUserLoggedIn} from "../../Firebase/Authentication"
+
 
 const SignUp = () => {
-  const [logged,setLogged] = useState(false);
   useEffect(() => {
     window.scrollTo(0,0);
-    isUserLoggedIn(setLogged)
-    if(logged===true)
+    if(localStorage.getItem("token")!==null)
     {
-      // alert("You're already logged in.")
+      alert("You're already logged in")
       window.location="/dashboard"
     }
-  }, [logged]);
+  }, []);
   const [user,setUser] = useState(false);
   const Verification = (event)=>{
     event.preventDefault();
