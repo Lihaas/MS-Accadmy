@@ -172,6 +172,111 @@
     margin-top: 5px;
     margin-bottom: 30px;
   }
+  
+
+
+  /* topper   */
+  .show-topper{
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.topper-list{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: rgb(0 0 0 / 0.2);
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+}
+.topper-section{
+    width: 80%;
+    height: 80%;
+    margin: 0px auto;
+    margin-top: 5em;
+    margin-bottom: 3em;
+    background-color: #FFF;
+    border-radius: 20px;
+    overflow: auto;
+}
+.topper-heading{
+   display: flex;
+   align-items: center;
+   background-color: rgb(71, 69, 69);
+}
+.topper-heading h1{
+    font-size: 2em;
+    margin-bottom: .5em !important;
+    width: 95%;
+    color: #FFF;
+}
+.topper-heading img{
+    background-color: #FFF;
+    width: 30px !important;
+    height: 30px !important; 
+    border-radius: 10px;
+}
+.topper-content{
+    margin-top: 60px;
+    display: grid;
+    /* grid-template-columns: repeat(4,1fr); */
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+    grid-gap: 60px;
+    margin: 10px;
+}
+
+.topper-rank
+{
+    width: 100px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: #23ccef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 0px !important;
+}
+
+.a-box {
+    border-radius: 15px !important;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    border: 2px solid rgb(230, 227, 227);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .2);
+    background-color: #FFF;
+    position: relative;
+    height: 200px;
+    min-width: 200px;
+  }
+  .a-box:hover{
+    border: 4px solid rgb(230, 227, 227);
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, .2);
+  }
+  .inner-skew{
+      position: absolute;
+      top: 2px;
+  }
+  .inner-skew img{
+      width: 100px !important;
+      height: 100px !important;
+      z-index: 99;
+  }
+  .topper-text-container{
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .topper-text-container p{
+      margin: 0px;
+      padding: 0px;
+  }
 @media screen and (max-width:900px){
     .left-box{
         width: 50%;
@@ -187,6 +292,9 @@
     }
     .result-box img{
         width: 15px;
+    }
+    .topper-heading h1{
+        width: 90%;
     }
 }
 @media screen and (max-width: 800px){

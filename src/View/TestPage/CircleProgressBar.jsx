@@ -41,10 +41,10 @@ const CircleProgressBar = () => {
     },
     {
       percentage:
-        (analysisData.correctquestion / analysisData.totalquestion) * 100,
+        ((analysisData.correctquestion / analysisData.totalquestion) * 100).toFixed(2),
       title: "Percentage",
       text:
-        (analysisData.correctquestion / analysisData.totalquestion) * 100 + "%",
+      ((analysisData.correctquestion / analysisData.totalquestion) * 100).toFixed(1) + "%",
     },
   ];
   const rank = [

@@ -95,6 +95,10 @@ const Home = (props) => {
         .then((item) => {
           document.getElementById("blurScreen").style.display = "none";
           alert("enquiry submitted sucesfully");
+          document.getElementById("enqName").value=""
+          document.getElementById("enqPhoneNum").value=""
+          document.getElementById("subjectName").value=""
+          document.getElementById("batchType1").value="Select"
         })
         .catch((error) => {
           document.getElementById("blurScreen").style.display = "none";
@@ -122,6 +126,10 @@ const Home = (props) => {
         .then((item) => {
           document.getElementById("blurScreen").style.display = "none";
           alert("enquiry submitted sucesfully");
+          document.getElementById("enqName1").value=""
+          document.getElementById("enqPhoneNum1").value=""
+          document.getElementById("batchType").value="Select"
+          document.getElementById("enquiry").value=""
         })
         .catch((error) => {
           document.getElementById("blurScreen").style.display = "none";

@@ -119,20 +119,24 @@
     margin: 10px 0px !important;
 }
   
-  .a-box {
+.a-box {
+    border-radius: 15px !important;
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     padding: 10px 0px;
-    border: 1px solid #000;
-    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, .2);
+    border: 2px solid rgb(230, 227, 227);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .2);
     background-color: #FFF;
     position: relative;
     height: 200px;
     min-width: 200px;
   }
-
+  .a-box:hover{
+    border: 4px solid rgb(230, 227, 227);
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, .2);
+  }
   .inner-skew{
       position: absolute;
       top: -80px;

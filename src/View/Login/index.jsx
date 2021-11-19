@@ -3,13 +3,21 @@ import styles from "../../StyleSheets/Login/login.module.css";
 import signUpImage from "../../Assets/Image/study-at-home-2527770-2114673.png";
 import { otpSender, LoginVerification } from "../../Firebase/SignWithNumber";
 import { Redirect } from "react-router-dom";
+import {isUserLoggedIn} from "../../Firebase/Authentication"
 import dp from "../../Assets/Image/male-user.png";
 import Loader from "../loading spinner/Loader";
 const Login = () => {
   const [user,setUser] = useState(false);
+  const [logged,setLogged] = useState(false);
   useEffect(() => {
     window.scrollTo(0,0);
-  }, []);
+    isUserLoggedIn(setLogged)
+    if(logged===true)
+    {
+      // alert("You're already logged in.")
+      window.location="/dashboard"
+    }
+  }, [logged]);
   const Verification = (event)=>{
       event.preventDefault();
       LoginVerification(setUser);
