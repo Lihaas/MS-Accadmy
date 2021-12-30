@@ -20,12 +20,14 @@ const CircleProgressBar = () => {
         (analysisData.questionAttempt / analysisData.totalquestion) * 100,
       title: "Question Attempt",
       text: analysisData.questionAttempt + "/" + analysisData.totalquestion,
+      background: "#EA8300"
     },
     {
       percentage:
         (analysisData.correctquestion / analysisData.totalquestion) * 100,
       title: "Correct Question",
       text: analysisData.correctquestion + "/" + analysisData.totalquestion,
+      background: "#148C43"
     },
     {
       percentage:
@@ -38,6 +40,7 @@ const CircleProgressBar = () => {
         analysisData.correctquestion +
         "/" +
         analysisData.totalquestion,
+        background: "#C32626"
     },
     {
       percentage:
@@ -45,6 +48,7 @@ const CircleProgressBar = () => {
       title: "Percentage",
       text:
       ((analysisData.correctquestion / analysisData.totalquestion) * 100).toFixed(1) + "%",
+      background: "#2B60B4"
     },
   ];
   const rank = [
@@ -95,7 +99,7 @@ const CircleProgressBar = () => {
                       background
                       backgroundPadding={6}
                       styles={buildStyles({
-                        backgroundColor: "#3e98c7",
+                        backgroundColor: item.background,
                         textColor: "#fff",
                         pathColor: "#fff",
                         trailColor: "transparent",

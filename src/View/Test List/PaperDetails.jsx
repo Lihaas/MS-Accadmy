@@ -218,7 +218,7 @@ const PaperDetails = (props) => {
                     </button>
                   ) : (
                     <button className={styles["unlock-btn"]}>
-                      <a href="/plans">Unlock</a>
+                      {/* <a href="/plans">Unlock</a> */}
                     </button>
                   )}
                 </div>

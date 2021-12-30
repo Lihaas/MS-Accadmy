@@ -460,12 +460,7 @@ h5 {
 }
 
 .section-6{
-  background: url(../../Assets/Image/graduate\ banner.jpg) no-repeat;
-  background-size: cover;
-  background-position-y: -50px;
-  height: 50vh; 
-  padding-top: 50px;
-  overflow: hidden;
+
 }
 .carousel-content{
   /* background: #FFF; */
@@ -842,15 +837,16 @@ h5 {
   align-items: center;
   justify-content: center;
 }
-.section-6{
-  background: url(../../Assets/Image/graduate\ banner.jpg) no-repeat;
-  background-size: cover;
-  background-position-y: 0px;
-}
 .update-a,
 .update-a img{
-  width: 170px !important;
-  height: 150px !important;
+  width: 250px !important;
+  height: 250px !important;
+  display: flex;
+}
+.upcomming-batch .batch iframe{
+  margin-top: 25px !important;
+  height: 200px !important;
+  width: 400px !important;
 }
 @media screen and (max-width: 740px) {
   .mobile-hero-section .mobile-hero-top h2 {

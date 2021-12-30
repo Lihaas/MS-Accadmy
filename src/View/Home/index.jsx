@@ -28,6 +28,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CoachingCenter from "../../Assets/Image/Video Full Hd 1920X1080 Px (6)-1.m4v";
 import {isUserLoggedIn} from "../../Firebase/Authentication"
+import Testimonal from "./Testimonal";
+
 
 // about mohit icon
 import study from "../../Assets/Image/study (1).png";
@@ -42,6 +44,7 @@ import telegram from "../../Assets/Image/telegram.png";
 import notes from "../../Assets/Image/note.png";
 import test from "../../Assets/Image/test.png";
 import video from "../../Assets/Image/video-lecture.png";
+
 
 const Home = (props) => {
   const [updateData, setUpdateData] = useState([]);
@@ -466,7 +469,7 @@ const Home = (props) => {
                   that you can make higher score in Paper-1.
                 </p>
                 {/* <NavLink to="/courses/paper1"> */}
-                  <button style={{ cursor: "pointer" }} onClick={()=>{enrollRedirect()}}>Enroll Now</button>
+                <a href="https://api.whatsapp.com/send?phone=917404717750&text=enroll in paper 1" target="_blank"><button style={{ cursor: "pointer" }}>Enroll Now</button></a>
                 {/* </NavLink> */}
               </div>
             </div>
@@ -483,7 +486,7 @@ const Home = (props) => {
                   2 Commerce Syllabus.
                 </p>
                 {/* <NavLink to="/courses/paper2"> */}
-                  <button style={{ cursor: "pointer" }} onClick={()=>{enrollRedirect()}}>Enroll Now</button>
+                <a href="https://api.whatsapp.com/send?phone=917404717750&text=enroll in paper 2 commerce" target="_blank"><button style={{ cursor: "pointer" }}>Enroll Now</button></a>
                 {/* </NavLink> */}
               </div>
 
@@ -508,7 +511,7 @@ const Home = (props) => {
                   2 Commerce Syllabus.
                 </p>
                 {/* <NavLink to="/courses/paper2"> */}
-                  <button style={{ cursor: "pointer" }} onClick={()=>{enrollRedirect()}}>Enroll Now</button>
+                <a href="https://api.whatsapp.com/send?phone=917404717750&text=enroll in paper 2 management" target="_blank"><button style={{ cursor: "pointer" }}>Enroll Now</button></a>
                 {/* </NavLink> */}
               </div>
             </div>
@@ -599,98 +602,7 @@ const Home = (props) => {
           </div>
         </section>
         <section className={styles["section-6"]}>
-          <Slider {...settings}>
-            {/* <div className={styles["carousel-wrapper"]}> */}
-            <div className={styles["carousel-content"]}>
-              <img src={starRating} />
-              <h3>Sanghmitra Verma</h3>
-              <p>
-                "Sir's teaching is amazing. The study material is appropriate
-                and contains everything required, no extra material required to
-                study. The app requires some improvement, but the teaching that
-                is provided is excellent."
-              </p>
-            </div>
-            <div className={styles["carousel-content"]}>
-              <img src={starRating} />
-              <h3>Doli Chauhan</h3>
-              <p>
-                "It will be more helpful when they provide "download" option as
-                "Unacademy". Because connectivity is the basic problem most of
-                the time."
-              </p>
-            </div>
-            <div className={styles["carousel-content"]}>
-              <img src={starRating} />
-              <h3>Jai</h3>
-              <p>
-                "This is Only Best Platform for NET/JRF aspirants I have came
-                across. 👉Most Important Content delivery by Mohit Sir!!!!
-                👉Explanation in Lucid Language 👉Excellent Study Material.
-                👉Audios for Revision 👉 QB for Practice including Py &
-                Expected. 👉 Quick resolution of Queries. Thanks to entire team
-                of M. Smart Academy. Way to JRF🎓🎓🎓"
-              </p>
-            </div>
-            {/* </div> */}
-            {/* <div className={styles["carousel-wrapper"]}> */}
-            <div className={styles["carousel-content"]}>
-              <img src={starRating} />
-              <h3>Ayushi Goyal</h3>
-              <p>
-                "Its very good class... Mohit sir is very good teacher and his
-                teaching is Soo good... Full of study material of paper2 and
-                each explaination is soo good and clear..."
-              </p>
-            </div>
-            <div className={styles["carousel-content"]}>
-              <img src={starRating} />
-              <h3>Yogesh Solanki</h3>
-              <p>
-                "If you are in commerce you must buy this course.... No matter
-                you are doing NET or not... All the commerce concepts are taught
-                in such a manner that you can get them easily...."
-              </p>
-            </div>
-            <div className={styles["carousel-content"]}>
-              <img src={starRating} />
-              <h3>Srinivas Sathyanaraya</h3>
-              <p>
-                "Very very clarity in teaching but I want it in more of English
-                language"
-              </p>
-            </div>
-            <div className={styles["carousel-content"]}>
-              <img src={starRating} />
-              <h3>Barkha Saxena</h3>
-              <p>
-                "If anyone want to crack UGC NET from commerce subject this is
-                only the way or platform to crack ....even not only NET .....JRF
-                or also have a lot of topics which help for IAS PCS main or some
-                other exams ...... You make your afforts as well as your Ideal
-                after that your success is sure .... In Start..."
-              </p>
-            </div>
-            <div className={styles["carousel-content"]}>
-              <img src={starRating} />
-              <h3>Kunjal Modi</h3>
-              <p>
-                "I am very much satisfied with the content what Mr. Mohit sir
-                teaching for us. I respect the sir from core of my heart.
-                Thanks"
-              </p>
-            </div>
-            <div className={styles["carousel-content"]}>
-              <img src={starRating} />
-              <h3>Swati Jha</h3>
-              <p>
-                "Mr.Mohit sharma.. ..One of the best teacher...have with easy
-                way of learning...i must say those who want to get JRF...
-                definitely enhance own learning with him...thank you..."
-              </p>
-            </div>
-            {/* </div> */}
-          </Slider>
+        <Testimonal />
           {/* <div>
             <img src={Image1} />
             <img src={Image2} />

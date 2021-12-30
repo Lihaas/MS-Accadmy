@@ -88,7 +88,7 @@ const ContactUs = () => {
               </form>
               <div className={styles["whatsapp-section"]}>
               <h1>OR</h1>
-              <a href="https://wa.me/919996177761" target="_blank"><img src={whatsapp} className={styles["whatsapp-png"]}/></a>
+              <a href="https://wa.me/917404717750" target="_blank"><img src={whatsapp} className={styles["whatsapp-png"]}/></a>
               </div>
             </div>
             <div className={styles["image-layer"]}>

@@ -72,7 +72,7 @@ const NewIndex = () => {
             </div>
             <div className={styles["plan-button-area"]}>
               <div className={styles["btn-holder"]}>
-                <button className={styles["btn"]}><a href="/plans">Buy Test</a></button>
+                <button className={styles["btn"]}><a href="#">Buy Test</a></button>
                 <button className={styles["btn"]} onClick={(e)=>{checkLogin(e)}} id={item._id}>View all test</button>
               </div>
                 <button className={styles["full-btn"]} onClick={(e)=>{checkLogin(e)}} id={item._id}>Attempt Free Trial</button>
