@@ -15,11 +15,7 @@ const Admin = () => {
     })
       .then((item) => {
         if (item.data.phoneNum === 1234567899) {
-          Axios.get(process.env.REACT_APP_API_URL+"/v1/paper/getall", {
-            headers: {
-              Authorization: localStorage.getItem("token"),
-            },
-          })
+          Axios.get(process.env.REACT_APP_API_URL+"/v1/paper/getall")
             .then((item) => {
               setData(item.data.searchResult);
               document.getElementById("blurScreen").style.display = "none";
