@@ -9,13 +9,14 @@ const SubjectCard = () => {
   const [data, setData] = useState([]);
   const [type, setType] = useState("S");
   const [heading,setHeading] = useState("Choose Subject")
+  const [subjectName,setSubjectName] = useState("");
   let id = useParams();
+  console.log(id.subjectId);
   useEffect(() => {
     document.getElementById("blurScreen").style.display = "block";
     axios
       .get(
-        process.env.REACT_APP_API_URL+"/v1/subject/getall?questionPaperID=" +
-          id.subjectId,
+        process.env.REACT_APP_API_URL+"/v2/subject/getall",
         {
           headers: {
             Authorization: localStorage.getItem("token"),
@@ -24,6 +25,7 @@ const SubjectCard = () => {
       )
       .then((item) => {
         setData(item.data.searchResult);
+        console.log(item.data.searchResult.paperName);
         setType("S")
         setHeading("Choose Subject")
         document.getElementById("blurScreen").style.display = "none";
@@ -36,10 +38,10 @@ const SubjectCard = () => {
   }, []);
   const openSubject = (e) => {
       document.getElementById("blurScreen").style.display="block"
+      setSubjectName(e.target.id);
     axios
       .get(
-        process.env.REACT_APP_API_URL+"/v1/chapter/getall?subejectID=" +
-          e.target.id,
+        process.env.REACT_APP_API_URL+"/v2/chapter/getall",
         {
           headers: {
             Authorization: localStorage.getItem("token"),
@@ -70,31 +72,34 @@ const SubjectCard = () => {
           <h1 id="subHeading">{heading}</h1>
         </div>
         <div className={styles["subject-card-content"]}>
-          {data.map((item, index) => {
-            if (type==="S") {
-                return(
-              <div
+          {
+            type==="S"?
+            data.filter(item=>item.paperName===id.subjectId).map(item=>{
+              return(
+                <div
                 onClick={(e) => {
                   openSubject(e);
                 }}
-                id={item._id}
+                id={item.subjectName}
               >
-                <Card name={item.subjectName} id={item._id} />
+                <Card name={item.subjectName} id={item.subjectName} />
               </div>
                 )
-            } else {
-                    return(
-                  <div
-                    onClick={(e) => {
-                      openTestList(e);
-                    }}
-                    id={item._id}
-                  >
-                    <Card name={item.chapterName} id={item._id} />
-                  </div>
-                    )
-            }
-          })}
+            })
+            :
+            data.filter(item=>item.subjectName===subjectName).map(item=>{
+              return(
+                <div
+                onClick={(e) => {
+                  openTestList(e);
+                }}
+                id={item.chapterName}
+              >
+                <Card name={item.chapterName} id={item.chapterName} />
+              </div>
+                )
+            })
+          }
         </div>
       </div>
     </>

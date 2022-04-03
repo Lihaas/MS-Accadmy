@@ -47,11 +47,11 @@ const NewIndex = () => {
         <div className={styles["banner"]}>
 
         </div>
-        <h1 className={styles["heading"]}> Latest Online Test Series </h1>
+        {/* <h1 className={styles["heading"]}> Latest Online Test Series </h1>
         <div className={styles["filter"]}>
           <div className={styles["gradient-1"]}>Paper-1</div>
           <div className={styles["gradient-2"]}>Paper-2</div>
-        </div>
+        </div> */}
         <h1 className={styles["category-1"]}>
           Teaching Exam <a href="#">See More &gt;</a>
         </h1>
@@ -73,9 +73,9 @@ const NewIndex = () => {
             <div className={styles["plan-button-area"]}>
               <div className={styles["btn-holder"]}>
                 <button className={styles["btn"]}><a href="#">Buy Test</a></button>
-                <button className={styles["btn"]} onClick={(e)=>{checkLogin(e)}} id={item._id}>View all test</button>
+                <button className={styles["btn"]} onClick={(e)=>{checkLogin(e)}} id={item.paperName}>View all test</button>
               </div>
-                <button className={styles["full-btn"]} onClick={(e)=>{checkLogin(e)}} id={item._id}>Attempt Free Trial</button>
+                <button className={styles["full-btn"]} onClick={(e)=>{checkLogin(e)}} id={item.paperName}>Attempt Free Trial</button>
           </div>
           </div>
               )

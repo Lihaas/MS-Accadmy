@@ -23,12 +23,13 @@ const Questions = () =>{
           })
             .then((item) => {
                 setData(item.data)
+                console.log("line 1"+data);
               document.getElementById("blurScreen").style.display = "none";
             })
             .catch((error) => {
               alert("error occurred, please try again");
               window.location = "/home";
-              // console.log(error);
+              console.log("line 2"+error);
             });
         } else {
           alert("You're not authorized to view this page");
