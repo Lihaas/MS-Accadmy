@@ -55,7 +55,7 @@ const Dashboard = () => {
       })
       .catch((error) => {
         document.getElementById("blurScreen").style.display = "none";
-        // console.log(error)
+        console.log(error)
         alert("error occurred, please try again");
       });
   };

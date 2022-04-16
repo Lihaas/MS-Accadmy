@@ -92,7 +92,7 @@ h5 {
 }
 
 .section-1 .upcomming-batch {
-  width: 50%;
+  width: 60%;
   text-align: center;
 }
 
@@ -118,7 +118,7 @@ h5 {
 }
 .upcomming-batch .batch iframe
 {
-  width: 350px !important;
+  width: 600px !important;
   height: 150px;
 }
 .upcomming-batch .batch iframe{
@@ -839,14 +839,14 @@ h5 {
 }
 .update-a,
 .update-a img{
-  width: 250px !important;
-  height: 250px !important;
+  width: 350px !important;
+  height: 350px !important;
   display: flex;
 }
 .upcomming-batch .batch iframe{
   margin-top: 25px !important;
-  height: 200px !important;
-  width: 400px !important;
+  height: 300px !important;
+  width: 500px !important;
 }
 @media screen and (max-width: 740px) {
   .mobile-hero-section .mobile-hero-top h2 {

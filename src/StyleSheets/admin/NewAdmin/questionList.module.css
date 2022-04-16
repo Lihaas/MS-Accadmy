@@ -59,21 +59,31 @@
   cursor: pointer;
 }
 .inner-content table {
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 .inner-content table,
 .inner-content tr,
 .inner-content td,
 .inner-content th {
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   border: none;
 }
+.inner-content tr:nth-child(even)
+{
+  background-color: #EDEDED;
+}
+.inner-content tr:nth-child(odd)
+{
+  background-color: #FFF;
+}
+
 .inner-content th {
   font-size: 20px;
 }
 .inner-content table th .inner-content .ques-tabel-row {
   height: 15px;
-  border: none;
+  border: none;;
 }
 .inner-content .ques-tabel-row .ques-tabel-img img {
   width: 20px;
@@ -95,16 +105,18 @@
 .show-content p {
   margin: 0px;
   padding: 0px;
+  margin: 10px 0px 10px 0px;
   font-weight: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 25px;
 }
 .show-content h2 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 20px 0px 0px 0px;
-  padding: 20px 0px 0px 0px;
-  font-size: 20px;
+  padding: 20px 0px 10px 0px;
+  font-size: 30px;
   font-weight: 700;
+  background-color: #EDEDED;
 }
 .question-card {
   margin-top: 30px;

@@ -34,7 +34,7 @@
 	line-height: 28px;
 }
 .testimonial-area {
-	background: #8a6bff;
+	background: #005dff;
 	position: relative;
 	z-index: 2;
 	padding: 50px 0;
@@ -63,7 +63,7 @@
 	position: absolute;
 	left: -35px;
 	top: -35px;
-	background: url(https://i.ibb.co/nb8Hjms/quote.png) no-repeat #8a6bff;
+	background: url(https://i.ibb.co/nb8Hjms/quote.png) no-repeat #005dff;
 	background-size: 60%;
 	width: 126px;
 	height: 100px;
@@ -75,7 +75,7 @@
 	position: absolute;
 	right: -35px;
 	bottom: -34px;
-	background: url(https://i.ibb.co/nb8Hjms/quote.png) no-repeat #8a6bff;
+	background: url(https://i.ibb.co/nb8Hjms/quote.png) no-repeat #005dff;
 	background-size: 60%;
 	width: 126px;
 	height: 100px;

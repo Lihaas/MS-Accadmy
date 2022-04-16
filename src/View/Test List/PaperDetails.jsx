@@ -19,7 +19,7 @@ const PaperDetails = (props) => {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.getElementById("blurScreen").style.display="block"
-    Axios.get(process.env.REACT_APP_API_URL+"/v1/get/test?chapterId=" + id, {
+    Axios.get(process.env.REACT_APP_API_URL+"/v2/test/getall", {
       headers: { Authorization: localStorage.getItem("token") },
     })
       .then((item) => {
@@ -116,7 +116,7 @@ const PaperDetails = (props) => {
     }
     }
   };
-  // console.log(unlock);
+  console.log(id);
   return (
     <>
       <Loader />
@@ -132,7 +132,7 @@ const PaperDetails = (props) => {
         </div>
         <h1 style={{ paddingTop: "50px", paddingLeft: "130px" }}>All Test</h1>
         <div className={styles["test-list"]}>
-          {data.map((item, index) => {
+          {data.filter(item=>item.testForChapter===id).map((item, index) => {
             const time = item.totalTestTime;
             let hour = Math.floor(time/60);
            hour= hour<10?
