@@ -62,12 +62,11 @@ const PaperDetails = (props) => {
         // console.log(error);
       });
   }, []);
-  const openTest = (e) => {
+  const openTest = (e,paperID) => {
     document.getElementById("blurScreen").style.display = "block";
     if(data[e.target.id].openDate==="ABCD")
     {
       localStorage.setItem("examName", data[e.target.id].title);
-      const id = data[e.target.id]._id;
       localStorage.setItem("examID",id)
       localStorage.setItem("totalMarks",data[e.target.id].totalMarks)
       Axios.get(process.env.REACT_APP_API_URL+"/v1/questions?testID=" + id, {
@@ -95,11 +94,12 @@ const PaperDetails = (props) => {
       const id = data[e.target.id]._id;
       localStorage.setItem("examID",id)
       localStorage.setItem("totalMarks",data[e.target.id].totalMarks)
-      Axios.get(process.env.REACT_APP_API_URL+"/v1/questions?testID=" + id, {
+      Axios.get(process.env.REACT_APP_API_URL+"/v1/questions?testID=" + paperID, {
         headers: { Authorization: localStorage.getItem("token") },
       })
       .then((item) => {
           localStorage.setItem("testTime", data[e.target.id].totalTestTime)
+          console.log(item.data.searchResult);
           let que = item.data.searchResult;
           localStorage.setItem("questions", JSON.stringify(que));
           window.location = "/test-page";
@@ -141,16 +141,16 @@ const PaperDetails = (props) => {
             let minute = time%60;
             minute=minute<10?"0"+minute:minute
             let testTime = hour+":"+minute
+            let paperID = item._id
             return (
               <div className={styles["test-box"]} key={index}>
                 <div className={styles["test-box-1"]}>
                   <div className={styles["sub-test-box-1"]}>
                     <div className={styles["paper-name"]}>
                     <h1>{item.title} &nbsp;&nbsp;&nbsp;</h1>
-
                     {
                       result!==[]?
-                      result.map((Item)=>{
+                      result.map((Item,index)=>{
                         {
                           if( Item.paperId===item._id)
                           {
@@ -200,7 +200,7 @@ const PaperDetails = (props) => {
                     <button className={styles["free-btn"]}>FREE</button>
                     <button
                       onClick={(e) => {
-                        openTest(e);
+                        openTest(e,paperID);
                       }}
                       id={index}
                     >
@@ -210,7 +210,7 @@ const PaperDetails = (props) => {
                   ) : item.testForStudents===pay || pay==="Both"? (
                     <button
                       onClick={(e) => {
-                        openTest(e);
+                        openTest(e,paperID);
                       }}
                       id={index}
                     >
