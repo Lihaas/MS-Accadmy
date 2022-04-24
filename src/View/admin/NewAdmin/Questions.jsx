@@ -4,7 +4,7 @@ import { useState } from "react";
 import styles from "../../../StyleSheets/admin/NewAdmin/question.module.css"
 import Loader from "../../loading spinner/Loader";
 
-const Questions = () =>{
+const Questions = (props) =>{
     const [data,setData] = useState([])
     useEffect(()=>{
         document.getElementById("blurScreen").style.display="block"
@@ -16,20 +16,20 @@ const Questions = () =>{
     })
       .then((item) => {
         if (item.data.phoneNum === 1234567890) {
-          axios.get(process.env.REACT_APP_API_URL+"/v1/list/test", {
+          axios.get(process.env.REACT_APP_API_URL+"/v2/test/getall", {
             headers: {
               Authorization: localStorage.getItem("token"),
             },
           })
             .then((item) => {
-                setData(item.data)
-                console.log("line 1"+data);
+                setData(item.data.searchResult)
+                console.log(item.data.searchResult);
               document.getElementById("blurScreen").style.display = "none";
             })
             .catch((error) => {
-              alert("error occurred, please try again");
-              window.location = "/home";
-              console.log("line 2"+error);
+              // alert("error occurred, please try again");
+              // window.location = "/home";
+              console.log(error);
             });
         } else {
           alert("You're not authorized to view this page");
@@ -45,7 +45,7 @@ const Questions = () =>{
     const optionClick = (e) =>{
         // console.log(
         //     document.getElementById("selectTest").value
-        // ) 
+        // )
         window.location="/admin/add-question/"+document.getElementById("selectTest").value
     }  
     return(

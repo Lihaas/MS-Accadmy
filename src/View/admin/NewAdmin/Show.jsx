@@ -62,7 +62,7 @@ const Show = (props) => {
                 <h2>Question Type</h2>
                   <p>Image</p>
                   <h2>Image</h2>
-                  <img src = {props.data.picLink} width="200" height="200"/>
+                  <img src = {props.data.picLink}/>
                   <h2>Question Title</h2>
                   <p>{props.data.Qtitle}</p>
                   <h2>Option A</h2>

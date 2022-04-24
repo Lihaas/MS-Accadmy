@@ -10,7 +10,7 @@ const Create = (props) =>{
     const [data,setData] = useState([{}])
     const [length, setLength] = useState(1);
     const [queImage,setQueImage] = useState(""); 
-    const [marks,setMarks] = useState()
+    const [marks,setMarks] = useState();
     const id = useParams();
     useEffect(() => {
       
@@ -167,6 +167,7 @@ const Create = (props) =>{
           document.getElementById("marks"+i).value = e.target.value;
         }
       }
+      console.log(props.totalquestion,props.data.length)
     return(
         <>  
         <Loader />
@@ -175,7 +176,10 @@ const Create = (props) =>{
           <div className={styles["back-img"]}>
             <img src={prev} onClick={()=>{hide()}} />
           </div>
+          <div>
+          </div>
           <div className={styles["default-marks"]}>
+            <h3>Questions = {props.data.length}/{props.totalquestion}</h3>
             <label>Default Marks</label>
             <input type="number" onChange={(e)=>{changeDefaultMarks(e)}}/>
           </div>
