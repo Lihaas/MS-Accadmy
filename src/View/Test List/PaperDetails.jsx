@@ -142,6 +142,7 @@ const PaperDetails = (props) => {
             minute=minute<10?"0"+minute:minute
             let testTime = hour+":"+minute
             let paperID = item._id
+            console.log(data);
             return (
               <div className={styles["test-box"]} key={index}>
                 <div className={styles["test-box-1"]}>
@@ -193,7 +194,7 @@ const PaperDetails = (props) => {
                 </div>
                 <div className={styles["test-box-2"]}>
                   {
-                    // console.log("paid"+item.isPaid)
+                    console.log(item.isPaid)
                   }
                   {item.isPaid === false || item.isPaid == undefined? (
                     <>
@@ -217,8 +218,8 @@ const PaperDetails = (props) => {
                       Start Test
                     </button>
                   ) : (
-                    <button className={styles["unlock-btn"]}>
-                      {/* <a href="/plans">Unlock</a> */}
+                    <button className={styles["unlock-btn"]} onClick={()=>{alert("Please contact admin to buy")}}>
+                      Unlock
                     </button>
                   )}
                 </div>

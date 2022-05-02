@@ -10,10 +10,11 @@ import Edit from "./Edit";
 import Create from "./Create"
 import Loader from "../../loading spinner/Loader";
 
-const QuestionList = () => {
+const QuestionList = (props) => {
   const [data, setData] = useState([]);
   const [showData,setShowData] = useState([])
   const [quesNo,setQuesNo] = useState(0)
+  const [totalQuestion,setTotalQuestion] = useState()
   const id = useParams();
   // console.log(id);
   useEffect(() => {
@@ -33,6 +34,26 @@ const QuestionList = () => {
         alert("error occurred, please try again")
         document.getElementById("blurScreen").style.display="none"
       });
+      axios.get(process.env.REACT_APP_API_URL+"/v2/test/getall", {
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
+      })
+        .then((item) => {
+          for(let i=0;i<item.data.searchResult.length;i++)
+          {
+            if(item.data.searchResult[i]._id===id.quesid)
+            {
+              setTotalQuestion(item.data.searchResult[i].totalQuestions);
+            }
+          }
+          document.getElementById("blurScreen").style.display = "none";
+        })
+        .catch((error) => {
+          // alert("error occurred, please try again");
+          // window.location = "/home";
+          console.log(error);
+        });
   }, []);
   const deleteQuestion = (e) =>{
     axios.delete(process.env.REACT_APP_API_URL+"/v1/question/delete?qid="+e.target.id,{
@@ -47,8 +68,7 @@ const QuestionList = () => {
       },
     })
     .then((item) => {
-      // console.log(item.data.searchResult);
-      setData(item.data.searchResult);
+      console.log(item.data.searchResult);
     })
     .catch((error) => {
       // console.log(error);
@@ -97,7 +117,7 @@ const QuestionList = () => {
                 <List data={data} setdata={setData} id={id.quesid} show={showQuestion} edit={editQuestion} create={createQuestion} />
                 <Show data={data[quesNo]} id={id.quesid} hide={showList} edit={editQuestion} queno={quesNo}/>
                 <Edit data={data[quesNo]} hide={showList}/>
-                <Create hide={showList}/>
+                <Create hide={showList} data={data} totalquestion={totalQuestion}/>
           </div>
           </div>
         </div>
